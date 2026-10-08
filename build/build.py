@@ -27,13 +27,13 @@ FEATURED = [
     ('b30',  '',     '', '', 'Frame'),
     ('b25',  '',     '', '', 'Frame'),
     # row B: wide | std std | wide (6 cells)
-    ('b93',  'wide', 'Adrift', 'Narrative', 'Man lying on a wooden plank in open water, black and white'),
+    ('b95',  'wide', '', '', 'Frame'),
     ('b13',  '',     '', '', 'Frame'),
-    ('b15',  '',     '', '', 'Frame'),
+    ('b93',  '',     '', '', 'Frame'),
     ('b02',  'wide', '', '', 'Frame'),
     # everything after: even 1x1 rows of six
     ('b47',  '', '', '', 'Frame'), ('b78', '', '', '', 'Frame'), ('b83', '', '', '', 'Frame'), ('b21', '', '', '', 'Frame'), ('b16', '', '', '', 'Frame'), ('b08', '', '', '', 'Frame'),
-    ('b61',  '', '', '', 'Frame'), ('b64', '', '', '', 'Frame'), ('b33', '', '', '', 'Frame'), ('b40', '', '', '', 'Frame'), ('b56', '', '', '', 'Frame'), ('b11', '', '', '', 'Frame'),
+    ('b61',  '', '', '', 'Frame'), ('b64', '', '', '', 'Frame'), ('b33', '', '', '', 'Frame'), ('b40', '', '', '', 'Frame'), ('b56', '', '', '', 'Frame'), ('b15', '', '', '', 'Frame'),
 ]
 
 all_clips = sorted(f[:-4] for f in os.listdir(os.path.join(ROOT, 'boom')) if f.endswith('.mp4'))
