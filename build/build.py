@@ -25,7 +25,7 @@ FEATURED = [
     ('b30', '', '', '', 'Artist in a silver headpiece reaching toward the camera'),
     ('b25', '', '', '', 'Monster truck firing a flamethrower in a shipping yard'),
     ('b13', '', '', '', 'Face in clear glasses washed in violet light'),
-    ('b67', '', '', '', 'Woman on a yellow pool float at a lake party'),
+    ('b15', '', '', '', 'Artist in a white fur coat under blue and red light'),
     ('b93', '', '', '', 'Black-and-white shot of a man at the edge of the ocean'),
 ]
 
