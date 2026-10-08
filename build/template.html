@@ -220,7 +220,8 @@ input:focus,select:focus,textarea:focus{outline:0}
 .mark .rule{width:100%;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:22px;color:var(--dim)}
 .mark .rule::before,.mark .rule::after{content:"";height:2px;background:var(--band) center/100% 2px}
 .mark .logo-chrome{width:clamp(210px,24vw,340px);height:auto;filter:drop-shadow(0 40px 70px rgba(0,0,0,.9))}
-footer .lwspin{display:inline-block;margin:0 0 26px}
+footer .lwwrap{display:flex;justify-content:center;margin:0 0 34px}
+footer .lwspin{display:inline-block}
 footer .lw{display:block;width:clamp(200px,20vw,300px);height:auto;transform-style:preserve-3d;backface-visibility:visible}
 footer .lwspin:hover .lw{animation:lwspin 2.4s linear infinite}
 @keyframes lwspin{from{transform:rotateY(0)}to{transform:rotateY(360deg)}}
@@ -442,7 +443,7 @@ footer .giant.vwrap svg{position:absolute;inset:0;width:100%;height:100%}
 </main>
 
 <footer>
-    <span class="spin lwspin"><img class="lw" src="media/lightworks-liquid.webp" alt="Lightworks Productions" width="1200" height="683" loading="lazy"></span>
+    <div class="lwwrap"><span class="spin lwspin"><img class="lw" src="media/lightworks-liquid.webp" alt="Lightworks Productions" width="1200" height="683" loading="lazy"></span></div>
   <div class="bar mono dim">
     <span><img src="media/logo-liquid-mark.webp" alt="" width="22" height="22" style="vertical-align:middle;margin-right:10px;display:inline-block" aria-hidden="true">FRAMEXGOD © 2026</span>
     <span>FramexGod Lightworks Productions</span>
