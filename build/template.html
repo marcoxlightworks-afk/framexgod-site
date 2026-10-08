@@ -136,6 +136,23 @@ nav .book{justify-self:end}
 @media (max-width:900px){.work{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:560px){.work{grid-template-columns:1fr}.tile.big,.tile.wide{grid-column:auto;grid-row:auto}}
 
+
+/* LAND / AIR / SEA — hover-scrub posters */
+.las{display:grid;gap:14px}
+.las .card{position:relative;aspect-ratio:16/9;overflow:hidden;background:#000;perspective:1400px;cursor:crosshair}
+.las .card .plane{position:absolute;inset:0;transform-style:preserve-3d;transition:transform .9s var(--out);will-change:transform}
+.las .card img,.las .card video{position:absolute;inset:-3%;width:106%;height:106%;object-fit:cover;filter:grayscale(1) contrast(1.25) brightness(.78)}
+.las .card video{opacity:0;transition:opacity .5s}
+.las .card.on video{opacity:1}
+.las .card .ui{position:absolute;inset:0;pointer-events:none;transform:translateZ(60px)}
+.las .card .ui .w{position:absolute;left:4%;bottom:12%;font:900 clamp(60px,15vw,260px)/.8 var(--sans);font-variation-settings:"wdth" 125;letter-spacing:-.04em;text-transform:uppercase;background:var(--tex) center/cover;-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 20px 40px rgba(0,0,0,.7))}
+.las .card .ui .c{position:absolute;right:4%;bottom:12%;text-align:right;font:900 clamp(16px,2.6vw,44px)/1 var(--sans);font-variation-settings:"wdth" 125;letter-spacing:-.01em}
+.las .card .ui .c small{display:block;margin-top:10px;font:500 10px/1.6 var(--mono);letter-spacing:.2em;color:var(--dim)}
+.las .card .ui .t{position:absolute;left:4%;top:5%;right:4%;display:flex;justify-content:space-between;font:500 10px/1.6 var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--dim)}
+.las .card .ui .b{position:absolute;left:4%;right:4%;bottom:4%;display:flex;justify-content:space-between;font:500 10px/1.6 var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--dim);border-top:1px solid rgba(255,255,255,.18);padding-top:10px}
+.las .card .bar{position:absolute;left:0;bottom:0;height:2px;width:0;background:#fff;transition:width .15s linear}
+@media (max-width:700px){.las .card .ui .t,.las .card .ui .b{display:none}}
+
 /* REEL */
 .reel{position:relative;aspect-ratio:16/9;background:#000;border:1px solid var(--line);overflow:hidden}
 .reel video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
@@ -287,6 +304,7 @@ footer .giant.vwrap svg{position:absolute;inset:0;width:100%;height:100%}
 <nav aria-label="Main">
   <a class="brand" href="#top"><img class="navlogo" src="media/logo-liquid-mark.webp" alt="" width="160" height="160" aria-hidden="true">Frame X God</a>
   <ul class="mono">
+    <li><a href="#las">Land · Air · Sea</a></li>
     <li><a href="#work">Work</a></li>
     <li><a href="#reel">Reel</a></li>
     <li><a href="#credits">Credits</a></li>
@@ -336,6 +354,55 @@ footer .giant.vwrap svg{position:absolute;inset:0;width:100%;height:100%}
   </div>
   <div class="work">
 {{FEATURED}}
+  </div>
+</section>
+
+<section class="sec" id="las">
+  <div class="head rv">
+    <span class="no" aria-hidden="true">00</span>
+    <h2><span class="jp">陸 空 海</span>Land · Air · Sea</h2>
+    <span class="mono dim">Move the mouse across each frame</span>
+  </div>
+  <div class="las">
+    <div class="card" data-las="land">
+      <div class="plane">
+        <img src="media/las/land.jpg" alt="LAND" width="2560" height="1440" loading="lazy">
+        <video muted playsinline preload="metadata"><source src="media/las/land.mp4" type="video/mp4"><source src="media/las/land.webm" type="video/webm"></video>
+      </div>
+      <div class="ui">
+        <div class="t"><span>FRAMEXGOD · 神フレーム</span><span>LIGHTWORKS PRODUCTIONS · MMXXVI · 01 / 03</span></div>
+        <div class="w">LAND</div>
+        <div class="c">25.7617° N<br>80.1918° W<small>MIAMI, FL · USA</small></div>
+        <div class="b"><span>FRAMEXGOD.COM</span><span>INFO@FRAMEXGOD.COM</span><span>305 778 5526</span><span>TECHNO CRANE · CHROME UNIT 01</span></div>
+      </div>
+      <div class="bar"></div>
+    </div>
+    <div class="card" data-las="air">
+      <div class="plane">
+        <img src="media/las/air.jpg" alt="AIR" width="2560" height="1440" loading="lazy">
+        <video muted playsinline preload="metadata"><source src="media/las/air.mp4" type="video/mp4"><source src="media/las/air.webm" type="video/webm"></video>
+      </div>
+      <div class="ui">
+        <div class="t"><span>FRAMEXGOD · 神フレーム</span><span>LIGHTWORKS PRODUCTIONS · MMXXVI · 02 / 03</span></div>
+        <div class="w">AIR</div>
+        <div class="c">25.7617° N<br>80.1918° W<small>MIAMI, FL · USA</small></div>
+        <div class="b"><span>FRAMEXGOD.COM</span><span>INFO@FRAMEXGOD.COM</span><span>305 778 5526</span><span>FPV CINEMA DRONE · CHROME UNIT 02</span></div>
+      </div>
+      <div class="bar"></div>
+    </div>
+    <div class="card" data-las="sea">
+      <div class="plane">
+        <img src="media/las/sea.jpg" alt="SEA" width="2560" height="1440" loading="lazy">
+        <video muted playsinline preload="metadata"><source src="media/las/sea.mp4" type="video/mp4"><source src="media/las/sea.webm" type="video/webm"></video>
+      </div>
+      <div class="ui">
+        <div class="t"><span>FRAMEXGOD · 神フレーム</span><span>LIGHTWORKS PRODUCTIONS · MMXXVI · 03 / 03</span></div>
+        <div class="w">SEA</div>
+        <div class="c">25.7617° N<br>80.1918° W<small>MIAMI, FL · USA</small></div>
+        <div class="b"><span>FRAMEXGOD.COM</span><span>INFO@FRAMEXGOD.COM</span><span>305 778 5526</span><span>UNDERWATER HOUSING · CHROME UNIT 03</span></div>
+      </div>
+      <div class="bar"></div>
+    </div>
   </div>
 </section>
 
@@ -535,6 +602,15 @@ footer .giant.vwrap svg{position:absolute;inset:0;width:100%;height:100%}
     function off(){turn.classList.remove('on');setTimeout(function(){tv.pause();cancelAnimationFrame(raf);},400);}
     turn.addEventListener('mouseenter',on);turn.addEventListener('mouseleave',off);
     turn.addEventListener('touchstart',function(){turn.classList.contains('on')?off():on();},{passive:true});}
+
+  /* LAND / AIR / SEA hover scrub + depth tilt */
+  document.querySelectorAll('.las .card').forEach(function(c){var v=c.querySelector('video'),pl=c.querySelector('.plane'),bar=c.querySelector('.bar'),tgt=0,cur=0,raf=0,hot=false;
+    function loop(){cur+=(tgt-cur)*.12;var d=v.duration;if(isFinite(d)&&d>0&&!v.seeking&&Math.abs(v.currentTime-cur*d)>0.02){try{v.currentTime=cur*d;}catch(e){}}bar.style.width=(cur*100)+'%';if(hot||Math.abs(tgt-cur)>.002)raf=requestAnimationFrame(loop);}
+    c.addEventListener('mouseenter',function(){hot=true;c.classList.add('on');if(v.readyState<1)v.load();cancelAnimationFrame(raf);loop();});
+    c.addEventListener('mousemove',function(e){var r=c.getBoundingClientRect();var x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;tgt=Math.min(1,Math.max(0,x));pl.style.transform='rotateY('+((x-.5)*8)+'deg) rotateX('+((.5-y)*6)+'deg) scale(1.03)';});
+    c.addEventListener('mouseleave',function(){hot=false;tgt=0;pl.style.transform='';setTimeout(function(){if(!hot)c.classList.remove('on');},900);});
+    c.addEventListener('touchstart',function(){if(!c.classList.contains('on')){c.classList.add('on');v.currentTime=0;var p=v.play();if(p&&p.catch)p.catch(function(){});}else{c.classList.remove('on');v.pause();}},{passive:true});
+  });
   /* mercury loops: play when in view, faster on hover */
   var loops=document.querySelectorAll('.vloop');
   var io=new IntersectionObserver(function(es){es.forEach(function(e){var v=e.target; if(e.isIntersecting){if(!v.src){var mp4=v.canPlayType('video/mp4; codecs="avc1.42E01E"'); v.src=mp4?v.dataset.src:v.dataset.src.replace('.mp4','.webm');} var p=v.play(); if(p&&p.catch)p.catch(function(){});} else v.pause();});},{threshold:.1});
