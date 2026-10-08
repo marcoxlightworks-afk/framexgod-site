@@ -220,7 +220,9 @@ input:focus,select:focus,textarea:focus{outline:0}
 .mark .rule{width:100%;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:22px;color:var(--dim)}
 .mark .rule::before,.mark .rule::after{content:"";height:2px;background:var(--band) center/100% 2px}
 .mark .logo-chrome{width:clamp(210px,24vw,340px);height:auto;filter:drop-shadow(0 40px 70px rgba(0,0,0,.9))}
-footer .lw{display:block;width:clamp(150px,14vw,200px);height:auto;margin:0 0 26px}
+footer .lwspin{display:inline-block;perspective:1200px;margin:0 0 26px}
+footer .lw{display:block;width:clamp(200px,20vw,300px);height:auto;transition:transform 1.4s cubic-bezier(.16,1,.3,1);transform-style:preserve-3d;filter:drop-shadow(0 30px 60px rgba(0,0,0,.9))}
+footer .lwspin:hover .lw{transform:rotateY(360deg)}
 
 /* FOOTER */
 footer{position:relative;overflow:hidden;border-top:1px solid var(--line);padding:28px var(--pad) calc(28px + env(safe-area-inset-bottom,0px))}
@@ -255,7 +257,11 @@ footer .giant.vwrap svg{position:absolute;inset:0;width:100%;height:100%}
 
 /* OPENER */
 .open{position:relative;min-height:100svh;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:clamp(18px,2.6vw,30px);padding:calc(90px + env(safe-area-inset-top,0px)) var(--pad) 70px;isolation:isolate}
-.open .o-logo .logo-chrome{width:clamp(220px,28vw,420px);height:auto;filter:drop-shadow(0 50px 90px rgba(0,0,0,.95))}
+.open .o-logo .turn{position:relative;display:inline-block;width:clamp(220px,28vw,420px)}
+.open .o-logo .logo-chrome{width:100%;height:auto;display:block;filter:drop-shadow(0 50px 90px rgba(0,0,0,.95));transition:opacity .4s}
+.open .o-logo .turnvid{position:absolute;left:50%;top:50%;width:150%;height:auto;aspect-ratio:1/1;transform:translate(-50%,-50%);opacity:0;pointer-events:none;mix-blend-mode:screen;-webkit-mask:radial-gradient(circle at 50% 50%,#000 58%,transparent 70%);mask:radial-gradient(circle at 50% 50%,#000 58%,transparent 70%);transition:opacity .4s}
+.open .o-logo .turn.on .logo-chrome{opacity:0}
+.open .o-logo .turn.on .turnvid{opacity:1}
 .open .o-lines{display:flex;flex-direction:column;gap:9px;max-width:70ch}
 .open .o-lines .mono:first-child{letter-spacing:.34em;color:#fff}
 .open .o-scroll{position:absolute;left:50%;bottom:calc(22px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:10px}
@@ -287,7 +293,7 @@ footer .giant.vwrap svg{position:absolute;inset:0;width:100%;height:100%}
 </nav>
 
 <section class="open" id="top" aria-label="FRAMEXGOD">
-  <div class="o-logo" data-depth="0.5"><span class="spin"><img class="logo-chrome" src="media/logo-liquid.webp" alt="FRAME X GOD 神フレーム" width="1000" height="1345" fetchpriority="high"></span></div>
+  <div class="o-logo" data-depth="0.5"><span class="turn" id="turn"><img class="logo-chrome" src="media/logo-liquid.webp" alt="FRAME X GOD 神フレーム" width="1000" height="1345" fetchpriority="high"><video class="turnvid" muted loop playsinline preload="metadata" aria-hidden="true"><source src="media/logo-turn.webm" type="video/webm"><source src="media/logo-turn.mp4" type="video/mp4"></video></span></div>
   <div class="o-lines" data-depth="0.25">
     <span class="mono">Lightworks Productions</span>
     <span class="mono dim">Feature Length Films · Music Videos · Commercials · Social Media Marketing · AI Creative Design</span>
@@ -529,7 +535,7 @@ footer .giant.vwrap svg{position:absolute;inset:0;width:100%;height:100%}
 </main>
 
 <footer>
-    <img class="lw" src="media/lightworks.png" alt="Lightworks Productions" width="592" height="245" loading="lazy">
+    <span class="spin lwspin"><img class="lw" src="media/lightworks-liquid.webp" alt="Lightworks Productions" width="1200" height="683" loading="lazy"></span>
   <div class="bar mono dim">
     <span><img src="media/logo-liquid-mark.webp" alt="" width="22" height="22" style="vertical-align:middle;margin-right:10px;display:inline-block" aria-hidden="true">FRAMEXGOD © 2026</span>
     <span>FramexGod Lightworks Productions</span>
@@ -611,6 +617,12 @@ footer .giant.vwrap svg{position:absolute;inset:0;width:100%;height:100%}
     (function mp(){mx+=(tx-mx)*.06; my+=(ty-my)*.06; planes.forEach(function(p){var d=+p.dataset.depth; p.style.setProperty('--px',(mx*40*d)+'px'); p.style.setProperty('--py',(my*30*d)+'px');}); requestAnimationFrame(mp);})();
     var style=document.createElement('style'); style.textContent='.open [data-depth]{translate:var(--px,0) var(--py,0)}'; document.head.appendChild(style);
   }
+  /* 3D turntable on hover */
+  var turn=document.getElementById('turn'), tv=turn&&turn.querySelector('video');
+  if(turn&&tv){function on(){tv.currentTime=0;var p=tv.play();if(p&&p.catch)p.catch(function(){});turn.classList.add('on');}
+    function off(){turn.classList.remove('on');setTimeout(function(){tv.pause();},400);}
+    turn.addEventListener('mouseenter',on);turn.addEventListener('mouseleave',off);
+    turn.addEventListener('touchstart',function(){turn.classList.contains('on')?off():on();},{passive:true});}
   /* mercury loops: play when in view, faster on hover */
   var loops=document.querySelectorAll('.vloop');
   var io=new IntersectionObserver(function(es){es.forEach(function(e){var v=e.target; if(e.isIntersecting){if(!v.src){var mp4=v.canPlayType('video/mp4; codecs="avc1.42E01E"'); v.src=mp4?v.dataset.src:v.dataset.src.replace('.mp4','.webm');} var p=v.play(); if(p&&p.catch)p.catch(function(){});} else v.pause();});},{threshold:.1});
