@@ -19,7 +19,7 @@
 <style>
 :root{
   --bg:#0b0b0b;--bg2:#121211;--fg:#edebe6;--dim:#8d8b86;--mute:#5d5b57;--line:#262523;
-  --accent:#ff5a1f;
+  --accent:#e4e4e4;--chrome:linear-gradient(180deg,#ffffff 0%,#d9d9d9 38%,#7d7d7d 50%,#e9e9e9 62%,#9c9c9c 100%);
   --sans:'Archivo','Helvetica Neue',Helvetica,sans-serif;
   --mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
   --jp:'Zen Kaku Gothic New','Hiragino Sans','Yu Gothic',sans-serif;
@@ -33,8 +33,8 @@ html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--bg);color:var(--fg);font:400 16px/1.55 var(--sans);font-variation-settings:"wdth" 100;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{color:inherit;text-decoration:none}
 img,video{display:block;max-width:100%}
-::selection{background:var(--accent);color:var(--bg)}
-:focus-visible{outline:1px solid var(--accent);outline-offset:3px}
+::selection{background:#fff;color:#000}
+:focus-visible{outline:1px solid #fff;outline-offset:3px}
 
 /* film grain */
 body::after{content:"";position:fixed;inset:-50%;z-index:100;pointer-events:none;opacity:.07;
@@ -45,15 +45,18 @@ body::after{content:"";position:fixed;inset:-50%;z-index:100;pointer-events:none
 .mono{font:500 11px/1.4 var(--mono);letter-spacing:.08em;text-transform:uppercase;font-variant-numeric:tabular-nums}
 .jp{font-family:var(--jp);font-weight:500;letter-spacing:.12em}
 .dim{color:var(--dim)}
-.acc{color:var(--accent)}
+.acc{background:var(--chrome);-webkit-background-clip:text;background-clip:text;color:transparent}
 
 /* hanko seal */
-.seal{display:inline-grid;place-items:center;width:30px;height:30px;background:var(--accent);color:var(--bg);font:900 17px/1 var(--jp)}
+.seal{display:inline-grid;place-items:center;width:30px;height:30px;background:var(--chrome);color:#000;font:900 17px/1 var(--jp)}
+.chrome{background:var(--chrome);-webkit-background-clip:text;background-clip:text;color:transparent}
 
 /* NAV */
 nav{position:fixed;inset:0 0 auto 0;z-index:50;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:calc(16px + env(safe-area-inset-top,0px)) var(--pad) 16px;color:var(--fg);background:var(--bg);border-bottom:1px solid var(--line)}
 nav.solid{background:rgba(11,11,11,.97);border-bottom-color:var(--line)}
-nav .brand{display:flex;align-items:center;gap:12px;font:800 12px/1 var(--sans);font-variation-settings:"wdth" 125;letter-spacing:.24em;text-transform:uppercase}
+nav .brand{display:flex;align-items:center;gap:12px;}
+nav .navlogo{width:30px;height:30px;object-fit:contain}
+nav .brand{font:800 12px/1 var(--sans);font-variation-settings:"wdth" 125;letter-spacing:.24em;text-transform:uppercase}
 nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0}
 nav ul a{position:relative}
 nav ul a::after{content:"";position:absolute;left:0;right:0;bottom:-5px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .5s var(--out)}
@@ -66,7 +69,7 @@ nav .book{justify-self:end}
 .hero .lead{position:sticky;top:calc(92px + env(safe-area-inset-top,0px));display:flex;flex-direction:column;gap:clamp(28px,4vw,48px);min-width:0}
 .hero .meta{display:flex;flex-direction:column;gap:6px;padding-top:4px}
 .hero .meta .dim{color:#b9b6b0}
-.hero .meta .rec::before{content:"";display:inline-block;width:7px;height:7px;background:var(--accent);margin-right:9px;vertical-align:1px;animation:blink 1.6s steps(1) infinite}
+.hero .meta .rec::before{content:"";display:inline-block;width:7px;height:7px;background:#fff;margin-right:9px;vertical-align:1px;animation:blink 1.6s steps(1) infinite}
 @keyframes blink{50%{opacity:0}}
 .hero .stack{display:flex;flex-direction:column;gap:clamp(14px,1.6vw,22px);min-width:0}
 .hero .win{position:relative;aspect-ratio:16/9;max-width:100%;overflow:hidden;background:#000;border:1px solid var(--line)}
@@ -74,7 +77,7 @@ nav .book{justify-self:end}
 .hero .win video{opacity:0;transition:opacity .8s var(--out)}
 .hero .win.live video{opacity:1}
 .hero .reelcap{margin-top:8px;display:flex;justify-content:space-between;gap:12px;color:var(--dim)}
-.hero .reelcap b{color:var(--accent);font-weight:500}
+.hero .reelcap b{color:#fff;font-weight:500}
 .hero .vert{position:sticky;top:calc(92px + env(safe-area-inset-top,0px));writing-mode:vertical-rl;font:900 clamp(26px,3.4vw,54px)/1 var(--jp);letter-spacing:.3em;color:var(--fg)}
 .display{margin:0;font-weight:900;font-variation-settings:"wdth" 125;text-transform:uppercase;letter-spacing:-.035em;line-height:.9}
 .hero h1{font-size:clamp(30px,4.5vw,84px)}
@@ -82,11 +85,11 @@ nav .book{justify-self:end}
 .hero h1 .ln span{display:block;transform:translateY(105%);animation:rise 1.1s var(--out) forwards}
 .hero h1 .ln:nth-child(2) span{animation-delay:.08s}
 .hero h1 .ln:nth-child(3) span{animation-delay:.16s}
-.hero h1 .ln:nth-child(4) span{animation-delay:.24s;color:var(--accent)}
+.hero h1 .ln:nth-child(4) span{animation-delay:.24s;background:var(--chrome);-webkit-background-clip:text;background-clip:text;color:transparent}
 @keyframes rise{to{transform:translateY(0)}}
 .hero .side{display:flex;flex-direction:column;align-items:flex-start;gap:16px;opacity:0;animation:fade 1s var(--out) .6s forwards}
 @keyframes fade{to{opacity:1}}
-.cta{white-space:nowrap;display:inline-flex;align-items:center;gap:14px;height:52px;padding:0 22px;background:var(--accent);color:var(--bg);font:800 12px/1 var(--sans);font-variation-settings:"wdth" 112;letter-spacing:.2em;text-transform:uppercase;transition:transform .5s var(--out),background .3s}
+.cta{white-space:nowrap;display:inline-flex;align-items:center;gap:14px;height:52px;padding:0 24px;background:var(--chrome);color:#000;box-shadow:0 0 0 1px rgba(255,255,255,.25) inset,0 18px 44px rgba(0,0,0,.6);font:800 12px/1 var(--sans);font-variation-settings:"wdth" 112;letter-spacing:.2em;text-transform:uppercase;transition:transform .5s var(--out),background .3s}
 .cta:hover{transform:translateX(6px)}
 .cta i{font-style:normal;transition:transform .5s var(--out)}
 .cta:hover i{transform:translateX(4px)}
@@ -103,7 +106,7 @@ nav .book{justify-self:end}
 .head{display:grid;grid-template-columns:auto 1fr auto;align-items:end;gap:20px;padding-bottom:18px;border-bottom:1px solid var(--line);margin-bottom:clamp(28px,4vw,56px)}
 .head .no{font:900 clamp(56px,9vw,150px)/.8 var(--sans);font-variation-settings:"wdth" 125;letter-spacing:-.05em;color:transparent;-webkit-text-stroke:1px var(--mute)}
 .head h2{margin:0;font:900 clamp(26px,3.4vw,54px)/.9 var(--sans);font-variation-settings:"wdth" 125;letter-spacing:-.03em;text-transform:uppercase}
-.head h2 .jp{display:block;font-size:13px;letter-spacing:.4em;color:var(--accent);margin-bottom:12px;font-weight:500}
+.head h2 .jp{display:block;font-size:13px;letter-spacing:.4em;margin-bottom:12px;font-weight:500;background:var(--chrome);-webkit-background-clip:text;background-clip:text;color:transparent}
 .head .mono{text-align:right}
 @media (max-width:640px){.head{grid-template-columns:auto 1fr}.head>.mono{display:none}}
 
@@ -130,7 +133,7 @@ nav .book{justify-self:end}
 .reel .play{position:absolute;inset:0;z-index:2;display:grid;place-items:center;background:rgba(11,11,11,.35);border:0;color:var(--fg);cursor:pointer;transition:background .5s var(--out)}
 .reel .play:hover{background:rgba(11,11,11,.15)}
 .reel .play span{display:flex;align-items:center;gap:18px;font:900 clamp(22px,3.4vw,52px)/1 var(--sans);font-variation-settings:"wdth" 125;letter-spacing:-.02em;text-transform:uppercase}
-.reel .play span::before{content:"";width:0;height:0;border-left:clamp(16px,2vw,28px) solid var(--accent);border-top:clamp(10px,1.25vw,17px) solid transparent;border-bottom:clamp(10px,1.25vw,17px) solid transparent}
+.reel .play span::before{content:"";width:0;height:0;border-left:clamp(16px,2vw,28px) solid #fff;border-top:clamp(10px,1.25vw,17px) solid transparent;border-bottom:clamp(10px,1.25vw,17px) solid transparent}
 .reel .play.gone{opacity:0;pointer-events:none;transition:opacity .6s var(--out)}
 .reel-meta{display:flex;justify-content:space-between;gap:16px;padding-top:14px}
 
@@ -141,7 +144,7 @@ nav .book{justify-self:end}
 .row .t{font:900 clamp(22px,2.6vw,40px)/.95 var(--sans);font-variation-settings:"wdth" 118;letter-spacing:-.025em;text-transform:uppercase}
 .row .a{color:#c9c6c0;font-size:15px}
 .row .views{font:900 clamp(28px,3.6vw,60px)/.9 var(--sans);font-variation-settings:"wdth" 125;letter-spacing:-.04em;text-align:right;font-variant-numeric:tabular-nums}
-.row .views.top{color:var(--accent)}
+.row .views.top{background:var(--chrome);-webkit-background-clip:text;background-clip:text;color:transparent}
 @media (max-width:900px){.row{grid-template-columns:40px 1fr auto;row-gap:6px}.row .a,.row .r{grid-column:2/4}.row .views{grid-column:3;grid-row:1}}
 
 .clients{margin:clamp(36px,5vw,64px) 0 0;display:grid;grid-template-columns:180px 1fr;gap:24px;align-items:start}
@@ -156,14 +159,15 @@ nav .book{justify-self:end}
 .svc p{margin:0;color:#c9c6c0;max-width:46ch}
 .svc .price{text-align:right}
 .svc .price b{display:block;font:900 clamp(30px,4.2vw,72px)/.85 var(--sans);font-variation-settings:"wdth" 125;letter-spacing:-.045em;font-variant-numeric:tabular-nums}
-.svc .price a{display:inline-block;margin-top:14px;color:var(--accent);border-bottom:1px solid var(--accent);padding-bottom:3px}
+.svc .price b{background:var(--chrome);-webkit-background-clip:text;background-clip:text;color:transparent}
+.svc .price a{display:inline-block;margin-top:14px;color:#fff;border-bottom:1px solid #fff;padding-bottom:3px}
 @media (max-width:900px){.svc{grid-template-columns:40px 1fr}.svc p,.svc .price{grid-column:2}.svc .price{text-align:left}}
 
 /* ARCHIVE */
 details.arch{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 details.arch summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;padding:22px 0;font:900 clamp(20px,2.4vw,36px)/1 var(--sans);font-variation-settings:"wdth" 125;letter-spacing:-.02em;text-transform:uppercase}
 details.arch summary::-webkit-details-marker{display:none}
-details.arch summary .plus{font:500 28px/1 var(--mono);color:var(--accent);transition:transform .5s var(--out)}
+details.arch summary .plus{font:500 28px/1 var(--mono);color:#fff;transition:transform .5s var(--out)}
 details.arch[open] summary .plus{transform:rotate(45deg)}
 .agrid{display:grid;grid-template-columns:repeat(8,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-bottom:28px}
 .agrid .tile .cap{display:none}
@@ -174,7 +178,7 @@ details.arch[open] summary .plus{transform:rotate(45deg)}
 .contact{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(32px,6vw,96px);padding-bottom:clamp(60px,8vw,120px)}
 .contact .big{font-size:clamp(52px,7.4vw,128px)}
 .contact .lines{margin-top:clamp(28px,4vw,48px);display:flex;flex-direction:column;gap:8px}
-.contact .lines a{font:800 clamp(24px,3vw,44px)/1.05 var(--sans);font-variation-settings:"wdth" 118;letter-spacing:-.02em;width:fit-content;background:linear-gradient(var(--accent),var(--accent)) 0 100%/0 2px no-repeat;transition:background-size .6s var(--out)}
+.contact .lines a{font:800 clamp(24px,3vw,44px)/1.05 var(--sans);font-variation-settings:"wdth" 118;letter-spacing:-.02em;width:fit-content;background:linear-gradient(#fff,#fff) 0 100%/0 2px no-repeat;transition:background-size .6s var(--out)}
 .contact .lines a:hover{background-size:100% 2px}
 .coords{margin-top:clamp(28px,4vw,48px);display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:4px 32px}
 .coords .jp{font-size:12px;color:var(--dim)}
@@ -183,15 +187,15 @@ form{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);b
 .f.full{grid-column:1/-1}
 label{font:500 10px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
 input,select,textarea{width:100%;background:transparent;border:0;border-radius:0;color:var(--fg);font:500 16px/1.3 var(--sans);padding:2px 0;appearance:none;-webkit-appearance:none}
-select{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23ff5a1f'/%3E%3C/svg%3E") right center no-repeat}
+select{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23bbbbbb'/%3E%3C/svg%3E") right center no-repeat}
 select option{background:#121211;color:#edebe6}
 input[type=date]{color-scheme:dark}
 textarea{height:96px;resize:vertical}
 .f:focus-within{background:var(--bg2)}
-.f:focus-within label{color:var(--accent)}
+.f:focus-within label{color:#fff}
 input:focus,select:focus,textarea:focus{outline:0}
 .actions{grid-column:1/-1;display:grid;grid-template-columns:1fr auto;gap:1px;background:var(--line)}
-.btn{height:60px;border:0;border-radius:0;background:var(--accent);color:var(--bg);font:800 12px/1 var(--sans);font-variation-settings:"wdth" 112;letter-spacing:.2em;text-transform:uppercase;cursor:pointer;transition:filter .3s}
+.btn{height:60px;border:0;border-radius:0;background:var(--chrome);color:#000;font:800 12px/1 var(--sans);font-variation-settings:"wdth" 112;letter-spacing:.2em;text-transform:uppercase;cursor:pointer;transition:filter .3s}
 .btn:hover{filter:brightness(1.08)}
 .btn.alt{background:var(--bg);color:var(--fg);padding:0 22px}
 .btn.alt:hover{background:var(--bg2)}
@@ -206,7 +210,7 @@ input:focus,select:focus,textarea:focus{outline:0}
 .mark{display:flex;flex-direction:column;align-items:center;gap:22px;padding:clamp(90px,12vw,170px) var(--pad) 0}
 .mark .rule{width:100%;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:22px;color:var(--dim)}
 .mark .rule::before,.mark .rule::after{content:"";height:1px;background:var(--line)}
-.mark img{width:clamp(150px,17vw,250px);height:auto}
+.mark img{width:clamp(190px,21vw,300px);height:auto;filter:drop-shadow(0 30px 60px rgba(0,0,0,.8))}
 footer .lw{display:block;width:clamp(150px,14vw,200px);height:auto;margin:0 0 26px}
 
 /* FOOTER */
@@ -224,7 +228,7 @@ footer .bar{display:flex;flex-wrap:wrap;justify-content:space-between;align-item
 <body>
 
 <nav aria-label="Main">
-  <a class="brand" href="#top"><span class="seal" aria-hidden="true">神</span>Frame X God</a>
+  <a class="brand" href="#top"><img class="navlogo" src="media/logo-mark.png" alt="" width="64" height="64" aria-hidden="true">Frame X God</a>
   <ul class="mono">
     <li><a href="#work">Work</a></li>
     <li><a href="#reel">Reel</a></li>
@@ -285,7 +289,7 @@ footer .bar{display:flex;flex-wrap:wrap;justify-content:space-between;align-item
 
 <section class="mark rv" aria-label="FRAMEXGOD">
   <div class="rule mono"><span>Frame X God</span></div>
-  <img src="media/framexgod-logo.png" alt="FRAME X GOD 神フレーム" width="722" height="985" loading="lazy">
+  <img src="media/logo-chrome.png" alt="FRAME X GOD 神フレーム" width="900" height="1152" loading="lazy">
   <span class="mono dim">Miami · New York · Los Angeles</span>
 </section>
 
@@ -293,18 +297,18 @@ footer .bar{display:flex;flex-wrap:wrap;justify-content:space-between;align-item
   <div class="head rv">
     <span class="no" aria-hidden="true">03</span>
     <h2><span class="jp">実績</span>Credits</h2>
-    <span class="mono dim">Selected · 2008—2026</span>
+    <span class="mono dim">Views on YouTube · 2008—2026</span>
   </div>
   <ol class="index">
     <li class="row rv"><span class="mono dim">01</span><span class="t">105°F Remix</span><span class="a">Kevvo, Chencho Corleone, Farruko, Myke Towers, Arcángel, Ñengo Flow, Darell, Brytiago</span><span class="r mono dim">Producer · Director · DP · Editor</span><span class="views top">750M+</span></li>
     <li class="row rv"><span class="mono dim">02</span><span class="t">Hard Drive</span><span class="a">Shenseea × Konshens × Rvssian</span><span class="r mono dim">Producer · Director · DP · Editor</span><span class="views">40M+</span></li>
     <li class="row rv"><span class="mono dim">03</span><span class="t">Stay Schemin</span><span class="a">Rick Ross ft. Drake, French Montana</span><span class="r mono dim">Director of Photography</span><span class="views">25M+</span></li>
-    <li class="row rv"><span class="mono dim">04</span><span class="t">BEBE</span><span class="a">6ix9ine ft. Anuel AA</span><span class="r mono dim">Producer · Director</span><span class="views"></span></li>
-    <li class="row rv"><span class="mono dim">05</span><span class="t">Power</span><span class="a">Kevvo ft. Myke Towers, Jhay Cortez, Darell</span><span class="r mono dim">Producer · Director · DP · Editor</span><span class="views"></span></li>
-    <li class="row rv"><span class="mono dim">06</span><span class="t">Passion Whine</span><span class="a">Farruko ft. Sean Paul</span><span class="r mono dim">Producer</span><span class="views"></span></li>
-    <li class="row rv"><span class="mono dim">07</span><span class="t">Embalao</span><span class="a">Farruko, White Star, J. Cross</span><span class="r mono dim">Producer · Director · DP · Editor</span><span class="views"></span></li>
-    <li class="row rv"><span class="mono dim">08</span><span class="t">Nobody's Favorite</span><span class="a">Rick Ross ft. Gunplay</span><span class="r mono dim">Director of Photography</span><span class="views"></span></li>
-    <li class="row rv"><span class="mono dim">09</span><span class="t">Mada</span><span class="a">Kalash · Universal France</span><span class="r mono dim">Producer · DP · Editor</span><span class="views"></span></li>
+    <li class="row rv"><span class="mono dim">04</span><span class="t">BEBE</span><span class="a">6ix9ine ft. Anuel AA</span><span class="r mono dim">Producer · Director</span><span class="views top">1.6B+</span></li>
+    <li class="row rv"><span class="mono dim">05</span><span class="t">Power</span><span class="a">Kevvo ft. Myke Towers, Jhay Cortez, Darell</span><span class="r mono dim">Producer · Director · DP · Editor</span><span class="views">40M+</span></li>
+    <li class="row rv"><span class="mono dim">06</span><span class="t">Passion Whine</span><span class="a">Farruko ft. Sean Paul</span><span class="r mono dim">Producer</span><span class="views top">750M+</span></li>
+    <li class="row rv"><span class="mono dim">07</span><span class="t">Embalao</span><span class="a">Farruko, White Star, J. Cross</span><span class="r mono dim">Producer · Director · DP · Editor</span><span class="views">3.8M+</span></li>
+    <li class="row rv"><span class="mono dim">08</span><span class="t">Nobody's Favorite</span><span class="a">Rick Ross ft. Gunplay</span><span class="r mono dim">Director of Photography</span><span class="views">19M+</span></li>
+    <li class="row rv"><span class="mono dim">09</span><span class="t">Mada</span><span class="a">Kalash · Universal France</span><span class="r mono dim">Producer · DP · Editor</span><span class="views">16M+</span></li>
     <li class="row rv"><span class="mono dim">10</span><span class="t">Trapxficante</span><span class="a">Farruko world tour and album · Sony Music</span><span class="r mono dim">15 music videos · campaign · merch · album design</span><span class="views"></span></li>
     <li class="row rv"><span class="mono dim">11</span><span class="t">La 167</span><span class="a">Farruko world tour and album</span><span class="r mono dim">3 music videos · campaign · merch</span><span class="views"></span></li>
     <li class="row rv"><span class="mono dim">12</span><span class="t">Merlin</span><span class="a">Feature film · 2025 · People's Choice Award, Chandler Film Festival</span><span class="r mono dim">Creative Producer · Production Design</span><span class="views"></span></li>

@@ -55,8 +55,9 @@ feat_html = '\n'.join(
 arch_rows = []
 for i, c in enumerate(archive):
     alt = f'FRAMEXGOD archive clip {i + 1:02d}'
+    z = zoom(c); zs = f' style="--z:{z}"' if z != 1 else ''
     arch_rows.append(
-        f'    <div class="tile"{(lambda z: f' style="--z:{z}"' if z != 1 else '')(zoom(c))} tabindex="0" role="button" aria-label="{alt} — play the reel">'
+        f'    <div class="tile"{zs} tabindex="0" role="button" aria-label="{alt} — play the reel">'
         f'<img src="media/thumbs/{c}.webp" alt="{alt}" width="720" height="405" loading="lazy" decoding="async">'
         f'<video muted loop playsinline preload="none" data-src="boom/{c}.mp4"></video></div>')
 

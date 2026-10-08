@@ -9,17 +9,17 @@
 <meta property="og:description" content="Music videos, commercials and films. Miami · New York · Los Angeles.">
 <meta property="og:url" content="https://framexgod.com/">
 <meta property="og:image" content="https://framexgod.com/media/min-begin.jpg">
-<meta name="theme-color" content="#000000">
+<meta name="theme-color" content="#0b0b0b">
 <link rel="canonical" href="https://framexgod.com/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;900&display=swap&text=%E3%82%A2%E3%82%A4%E3%82%AF%E3%82%B5%E3%82%B9%E3%82%BC%E3%83%8B%E3%83%95%E3%83%9E%E3%83%9F%E3%83%A0%E3%83%A5%E3%83%A8%E3%83%AA%E3%83%AB%E3%83%AC%E3%83%AD%E3%83%B3%E3%83%BC%E4%BA%88%E4%BD%9C%E5%93%81%E5%AE%9F%E5%AE%A2%E6%96%99%E7%A5%9E%E7%B4%84%E7%B8%BE%E9%87%91%E9%A1%A7" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;900&display=swap&text=%E3%82%A2%E3%82%A4%E3%82%AB%E3%82%AF%E3%82%B5%E3%82%B9%E3%82%BC%E3%83%8B%E3%83%95%E3%83%96%E3%83%9E%E3%83%9F%E3%83%A0%E3%83%A5%E3%83%A8%E3%83%AA%E3%83%AB%E3%83%AC%E3%83%AD%E3%83%B3%E3%83%BC%E4%BA%88%E4%BD%9C%E5%93%81%E5%AE%9F%E5%AE%A2%E6%96%99%E7%A5%9E%E7%B4%84%E7%B8%BE%E9%87%91%E9%A1%A7" rel="stylesheet">
 <link rel="preload" as="image" href="media/min-begin.jpg">
 <style>
 :root{
-  --bg:#000;--bg2:#0c0c0c;--fg:#fff;--dim:#9a9a9a;--mute:#5c5c5c;--line:#1c1c1c;
-  --accent:#e8e8e8;--chrome:linear-gradient(180deg,#ffffff 0%,#d9d9d9 38%,#7d7d7d 50%,#e9e9e9 62%,#9c9c9c 100%);
+  --bg:#0b0b0b;--bg2:#121211;--fg:#edebe6;--dim:#8d8b86;--mute:#5d5b57;--line:#262523;
+  --accent:#e4e4e4;--chrome:linear-gradient(180deg,#ffffff 0%,#d9d9d9 38%,#7d7d7d 50%,#e9e9e9 62%,#9c9c9c 100%);
   --sans:'Archivo','Helvetica Neue',Helvetica,sans-serif;
   --mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
   --jp:'Zen Kaku Gothic New','Hiragino Sans','Yu Gothic',sans-serif;
@@ -45,7 +45,7 @@ body::after{content:"";position:fixed;inset:-50%;z-index:100;pointer-events:none
 .mono{font:500 11px/1.4 var(--mono);letter-spacing:.08em;text-transform:uppercase;font-variant-numeric:tabular-nums}
 .jp{font-family:var(--jp);font-weight:500;letter-spacing:.12em}
 .dim{color:var(--dim)}
-.acc{color:var(--accent)}
+.acc{background:var(--chrome);-webkit-background-clip:text;background-clip:text;color:transparent}
 
 /* hanko seal */
 .seal{display:inline-grid;place-items:center;width:30px;height:30px;background:var(--chrome);color:#000;font:900 17px/1 var(--jp)}
@@ -54,7 +54,9 @@ body::after{content:"";position:fixed;inset:-50%;z-index:100;pointer-events:none
 /* NAV */
 nav{position:fixed;inset:0 0 auto 0;z-index:50;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:calc(16px + env(safe-area-inset-top,0px)) var(--pad) 16px;color:var(--fg);background:var(--bg);border-bottom:1px solid var(--line)}
 nav.solid{background:rgba(11,11,11,.97);border-bottom-color:var(--line)}
-nav .brand{display:flex;align-items:center;gap:12px;font:800 12px/1 var(--sans);font-variation-settings:"wdth" 125;letter-spacing:.24em;text-transform:uppercase}
+nav .brand{display:flex;align-items:center;gap:12px;}
+nav .navlogo{width:30px;height:30px;object-fit:contain}
+nav .brand{font:800 12px/1 var(--sans);font-variation-settings:"wdth" 125;letter-spacing:.24em;text-transform:uppercase}
 nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0}
 nav ul a{position:relative}
 nav ul a::after{content:"";position:absolute;left:0;right:0;bottom:-5px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .5s var(--out)}
@@ -76,19 +78,18 @@ nav .book{justify-self:end}
 .hero .win.live video{opacity:1}
 .hero .reelcap{margin-top:8px;display:flex;justify-content:space-between;gap:12px;color:var(--dim)}
 .hero .reelcap b{color:#fff;font-weight:500}
-.hero .vert{position:sticky;top:calc(92px + env(safe-area-inset-top,0px));writing-mode:vertical-rl;font:900 clamp(26px,3.4vw,54px)/1 var(--jp);letter-spacing:.3em;background:var(--chrome);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .vert{position:sticky;top:calc(92px + env(safe-area-inset-top,0px));writing-mode:vertical-rl;font:900 clamp(26px,3.4vw,54px)/1 var(--jp);letter-spacing:.3em;color:var(--fg)}
 .display{margin:0;font-weight:900;font-variation-settings:"wdth" 125;text-transform:uppercase;letter-spacing:-.035em;line-height:.9}
-.hero h1{font-size:clamp(26px,3.9vw,72px)}
+.hero h1{font-size:clamp(30px,4.5vw,84px)}
 .hero h1 .ln{display:block;overflow:hidden;padding-bottom:.03em}
 .hero h1 .ln span{display:block;transform:translateY(105%);animation:rise 1.1s var(--out) forwards}
 .hero h1 .ln:nth-child(2) span{animation-delay:.08s}
 .hero h1 .ln:nth-child(3) span{animation-delay:.16s}
-.hero h1 .ln:nth-child(4) span{animation-delay:.24s}
-.hero h1 .ln:nth-child(5) span{animation-delay:.32s;background:var(--chrome);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero h1 .ln:nth-child(4) span{animation-delay:.24s;background:var(--chrome);-webkit-background-clip:text;background-clip:text;color:transparent}
 @keyframes rise{to{transform:translateY(0)}}
 .hero .side{display:flex;flex-direction:column;align-items:flex-start;gap:16px;opacity:0;animation:fade 1s var(--out) .6s forwards}
 @keyframes fade{to{opacity:1}}
-.cta{white-space:nowrap;display:inline-flex;align-items:center;gap:14px;height:52px;padding:0 26px;background:var(--chrome);color:#000;box-shadow:0 0 0 1px rgba(255,255,255,.25) inset,0 20px 50px rgba(0,0,0,.6);font:800 12px/1 var(--sans);font-variation-settings:"wdth" 112;letter-spacing:.2em;text-transform:uppercase;transition:transform .5s var(--out),background .3s}
+.cta{white-space:nowrap;display:inline-flex;align-items:center;gap:14px;height:52px;padding:0 24px;background:var(--chrome);color:#000;box-shadow:0 0 0 1px rgba(255,255,255,.25) inset,0 18px 44px rgba(0,0,0,.6);font:800 12px/1 var(--sans);font-variation-settings:"wdth" 112;letter-spacing:.2em;text-transform:uppercase;transition:transform .5s var(--out),background .3s}
 .cta:hover{transform:translateX(6px)}
 .cta i{font-style:normal;transition:transform .5s var(--out)}
 .cta:hover i{transform:translateX(4px)}
@@ -103,32 +104,28 @@ nav .book{justify-self:end}
 /* SECTION HEAD */
 .sec{padding:clamp(80px,12vw,180px) var(--pad) 0}
 .head{display:grid;grid-template-columns:auto 1fr auto;align-items:end;gap:20px;padding-bottom:18px;border-bottom:1px solid var(--line);margin-bottom:clamp(28px,4vw,56px)}
-.head .no{font:900 clamp(56px,9vw,150px)/.8 var(--sans);font-variation-settings:"wdth" 125;letter-spacing:-.05em;color:transparent;-webkit-text-stroke:1px #3a3a3a}
+.head .no{font:900 clamp(56px,9vw,150px)/.8 var(--sans);font-variation-settings:"wdth" 125;letter-spacing:-.05em;color:transparent;-webkit-text-stroke:1px var(--mute)}
 .head h2{margin:0;font:900 clamp(26px,3.4vw,54px)/.9 var(--sans);font-variation-settings:"wdth" 125;letter-spacing:-.03em;text-transform:uppercase}
-.head h2 .jp{display:block;font-size:13px;letter-spacing:.4em;color:var(--dim);margin-bottom:12px;font-weight:500}
+.head h2 .jp{display:block;font-size:13px;letter-spacing:.4em;margin-bottom:12px;font-weight:500;background:var(--chrome);-webkit-background-clip:text;background-clip:text;color:transparent}
 .head .mono{text-align:right}
 @media (max-width:640px){.head{grid-template-columns:auto 1fr}.head>.mono{display:none}}
 
 /* WORK */
-.work{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.work{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
 .tile{position:relative;overflow:hidden;background:#000;aspect-ratio:16/9;cursor:pointer}
 .tile.big{grid-column:span 2;grid-row:span 2}
 .tile.wide{grid-column:span 2}
 .tile img,.tile video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(var(--z,1));transition:transform 1.2s var(--out),opacity .4s var(--out)}
 .tile video{opacity:0}
 .tile.live video{opacity:1}
-.tile:hover img,.tile:hover video,.tile.live video{transform:scale(calc(var(--z,1) * 1.05))}
-.tile::after{content:"";position:absolute;inset:0;box-shadow:0 0 0 1px rgba(255,255,255,0) inset;transition:box-shadow .4s;pointer-events:none}
-.tile:hover::after{box-shadow:0 0 0 1px rgba(255,255,255,.35) inset}
+.tile:hover img,.tile:hover video{transform:scale(calc(var(--z,1) * 1.035))}
 .tile .cap{position:absolute;left:0;right:0;bottom:0;z-index:2;display:flex;justify-content:space-between;align-items:end;gap:12px;padding:14px 16px;background:linear-gradient(0deg,rgba(11,11,11,.8),rgba(11,11,11,0))}
 .tile .cap b{display:block;font:800 clamp(15px,1.5vw,22px)/1 var(--sans);font-variation-settings:"wdth" 118;letter-spacing:-.01em;text-transform:uppercase}
 .tile.big .cap b{font-size:clamp(26px,3.4vw,56px);letter-spacing:-.03em}
 .tile .cap .mono{color:var(--dim)}
-.tile .idx{position:absolute;top:10px;left:10px;z-index:2;color:#fff;mix-blend-mode:difference;opacity:0;transition:opacity .4s}
-.tile:hover .idx,.tile.live .idx{opacity:.85}
-@media (max-width:1100px){.work{grid-template-columns:repeat(3,1fr)}}
-@media (max-width:900px){.work{grid-template-columns:repeat(2,1fr);gap:4px}}
-
+.tile .idx{position:absolute;top:10px;left:10px;z-index:2;color:var(--fg);background:rgba(11,11,11,.6);padding:4px 7px}
+@media (max-width:900px){.work{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.work{grid-template-columns:1fr}.tile.big,.tile.wide{grid-column:auto;grid-row:auto}}
 
 /* REEL */
 .reel{position:relative;aspect-ratio:16/9;background:#000;border:1px solid var(--line);overflow:hidden}
@@ -147,8 +144,7 @@ nav .book{justify-self:end}
 .row .t{font:900 clamp(22px,2.6vw,40px)/.95 var(--sans);font-variation-settings:"wdth" 118;letter-spacing:-.025em;text-transform:uppercase}
 .row .a{color:#c9c6c0;font-size:15px}
 .row .views{font:900 clamp(28px,3.6vw,60px)/.9 var(--sans);font-variation-settings:"wdth" 125;letter-spacing:-.04em;text-align:right;font-variant-numeric:tabular-nums}
-.row .views{background:var(--chrome);-webkit-background-clip:text;background-clip:text;color:transparent}
-.row .views.sm{font:500 10px/1.5 var(--mono);letter-spacing:.12em;text-transform:uppercase;background:none;color:#c9c9c9;-webkit-text-fill-color:#c9c9c9}
+.row .views.top{background:var(--chrome);-webkit-background-clip:text;background-clip:text;color:transparent}
 @media (max-width:900px){.row{grid-template-columns:40px 1fr auto;row-gap:6px}.row .a,.row .r{grid-column:2/4}.row .views{grid-column:3;grid-row:1}}
 
 .clients{margin:clamp(36px,5vw,64px) 0 0;display:grid;grid-template-columns:180px 1fr;gap:24px;align-items:start}
@@ -192,7 +188,7 @@ form{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);b
 label{font:500 10px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
 input,select,textarea{width:100%;background:transparent;border:0;border-radius:0;color:var(--fg);font:500 16px/1.3 var(--sans);padding:2px 0;appearance:none;-webkit-appearance:none}
 select{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23bbbbbb'/%3E%3C/svg%3E") right center no-repeat}
-select option{background:#0c0c0c;color:#fff}
+select option{background:#121211;color:#edebe6}
 input[type=date]{color-scheme:dark}
 textarea{height:96px;resize:vertical}
 .f:focus-within{background:var(--bg2)}
@@ -214,15 +210,14 @@ input:focus,select:focus,textarea:focus{outline:0}
 .mark{display:flex;flex-direction:column;align-items:center;gap:22px;padding:clamp(90px,12vw,170px) var(--pad) 0}
 .mark .rule{width:100%;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:22px;color:var(--dim)}
 .mark .rule::before,.mark .rule::after{content:"";height:1px;background:var(--line)}
-.mark img{width:clamp(170px,19vw,280px);height:auto;filter:drop-shadow(0 30px 60px rgba(0,0,0,.8))}
+.mark img{width:clamp(190px,21vw,300px);height:auto;filter:drop-shadow(0 30px 60px rgba(0,0,0,.8))}
 footer .lw{display:block;width:clamp(150px,14vw,200px);height:auto;margin:0 0 26px}
 
 /* FOOTER */
 footer{position:relative;overflow:hidden;border-top:1px solid var(--line);padding:28px var(--pad) calc(28px + env(safe-area-inset-bottom,0px))}
-footer .giant{font:900 21vw/.78 var(--sans);font-variation-settings:"wdth" 125;letter-spacing:-.06em;text-transform:uppercase;color:transparent;-webkit-text-stroke:1px #2a2a2a;white-space:nowrap;margin:0 0 24px -1vw;user-select:none}
+footer .giant{font:900 21vw/.78 var(--sans);font-variation-settings:"wdth" 125;letter-spacing:-.06em;text-transform:uppercase;color:transparent;-webkit-text-stroke:1px var(--line);white-space:nowrap;margin:0 0 24px -1vw;user-select:none}
 footer .bar{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px 28px}
 
-.lb{position:fixed;inset:0;z-index:200;background:#000;display:none;align-items:center;justify-content:center}.lb.on{display:flex}.lb video{width:100%;height:100%;object-fit:contain}.lb .x{position:absolute;top:calc(18px + env(safe-area-inset-top,0px));right:var(--pad);z-index:2;background:none;border:0;color:#fff;cursor:pointer;padding:8px}
 /* REVEAL */
 .rv{opacity:0;transform:translateY(28px);transition:opacity .9s var(--out),transform .9s var(--out);transition-delay:calc(var(--i,0) * 70ms)}
 .rv.in{opacity:1;transform:none}
@@ -233,7 +228,7 @@ footer .bar{display:flex;flex-wrap:wrap;justify-content:space-between;align-item
 <body>
 
 <nav aria-label="Main">
-  <a class="brand" href="#top"><span class="seal" aria-hidden="true">神</span>Frame X God</a>
+  <a class="brand" href="#top"><img class="navlogo" src="media/logo-mark.png" alt="" width="64" height="64" aria-hidden="true">Frame X God</a>
   <ul class="mono">
     <li><a href="#work">Work</a></li>
     <li><a href="#reel">Reel</a></li>
@@ -248,12 +243,12 @@ footer .bar{display:flex;flex-wrap:wrap;justify-content:space-between;align-item
     <div class="meta mono">
       <span class="rec">Lightworks Productions</span>
       <span class="dim">Miami · New York · Los Angeles</span>
-      <span class="dim">Reel 2026 · 24 fps · ARRI</span>
+      <span class="dim">Reel 2026 · 24 fps</span>
     </div>
-    <h1 class="display"><span class="ln"><span>Feature Length Films.</span></span><span class="ln"><span>Music Videos.</span></span><span class="ln"><span>Commercials.</span></span><span class="ln"><span>Social Media Marketing.</span></span><span class="ln"><span>AI Creative Design.</span></span></h1>
+    <h1 class="display"><span class="ln"><span>Film.</span></span><span class="ln"><span>Music Video.</span></span><span class="ln"><span>Commercial.</span></span><span class="ln"><span>Digital Marketing.</span></span></h1>
     <div class="side">
-      <span class="mono dim">1.6B+ views on a single video</span>
-      <a class="cta" href="#contact">Book FRAMEXGOD <i aria-hidden="true">→</i></a>
+      <span class="mono dim">750M+ views on a single video</span>
+      <a class="cta" href="#contact">Book a date <i aria-hidden="true">→</i></a>
     </div>
   </div>
   <div class="stack">
@@ -269,104 +264,19 @@ footer .bar{display:flex;flex-wrap:wrap;justify-content:space-between;align-item
 <section class="sec" id="work">
   <div class="head rv">
     <span class="no" aria-hidden="true">01</span>
-    <h2><span class="jp">作品</span>Work</h2>
-    <span class="mono dim">94 frames · Hover to play · Click for the reel</span>
+    <h2><span class="jp">作品</span>Selected Work</h2>
+    <span class="mono dim">9 pieces · Hover to play</span>
   </div>
   <div class="work">
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 01 — play the reel"><span class="idx mono">01</span><img src="media/thumbs/b01.webp" alt="" width="720" height="405" loading="eager" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b01.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 02 — play the reel"><span class="idx mono">02</span><img src="media/thumbs/b02.webp" alt="" width="720" height="405" loading="eager" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b02.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 03 — play the reel"><span class="idx mono">03</span><img src="media/thumbs/b03.webp" alt="" width="720" height="405" loading="eager" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b03.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 04 — play the reel"><span class="idx mono">04</span><img src="media/thumbs/b04.webp" alt="" width="720" height="405" loading="eager" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b04.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 05 — play the reel"><span class="idx mono">05</span><img src="media/thumbs/b05.webp" alt="" width="720" height="405" loading="eager" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b05.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 06 — play the reel"><span class="idx mono">06</span><img src="media/thumbs/b06.webp" alt="" width="720" height="405" loading="eager" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b06.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 07 — play the reel"><span class="idx mono">07</span><img src="media/thumbs/b07.webp" alt="" width="720" height="405" loading="eager" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b07.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 08 — play the reel"><span class="idx mono">08</span><img src="media/thumbs/b08.webp" alt="" width="720" height="405" loading="eager" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b08.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 09 — play the reel"><span class="idx mono">09</span><img src="media/thumbs/b09.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b09.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 10 — play the reel"><span class="idx mono">10</span><img src="media/thumbs/b10.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b10.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 11 — play the reel"><span class="idx mono">11</span><img src="media/thumbs/b11.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b11.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 12 — play the reel"><span class="idx mono">12</span><img src="media/thumbs/b12.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b12.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 13 — play the reel"><span class="idx mono">13</span><img src="media/thumbs/b13.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b13.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 14 — play the reel"><span class="idx mono">14</span><img src="media/thumbs/b14.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b14.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 15 — play the reel"><span class="idx mono">15</span><img src="media/thumbs/b15.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b15.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 16 — play the reel"><span class="idx mono">16</span><img src="media/thumbs/b16.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b16.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 17 — play the reel"><span class="idx mono">17</span><img src="media/thumbs/b17.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b17.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 18 — play the reel"><span class="idx mono">18</span><img src="media/thumbs/b18.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b18.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 19 — play the reel"><span class="idx mono">19</span><img src="media/thumbs/b19.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b19.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 20 — play the reel"><span class="idx mono">20</span><img src="media/thumbs/b20.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b20.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 21 — play the reel"><span class="idx mono">21</span><img src="media/thumbs/b21.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b21.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 22 — play the reel"><span class="idx mono">22</span><img src="media/thumbs/b22.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b22.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 23 — play the reel"><span class="idx mono">23</span><img src="media/thumbs/b23.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b23.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 24 — play the reel"><span class="idx mono">24</span><img src="media/thumbs/b24.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b24.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 25 — play the reel"><span class="idx mono">25</span><img src="media/thumbs/b25.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b25.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 26 — play the reel"><span class="idx mono">26</span><img src="media/thumbs/b26.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b26.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 27 — play the reel"><span class="idx mono">27</span><img src="media/thumbs/b27.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b27.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 28 — play the reel"><span class="idx mono">28</span><img src="media/thumbs/b28.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b28.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 29 — play the reel"><span class="idx mono">29</span><img src="media/thumbs/b29.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b29.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 30 — play the reel"><span class="idx mono">30</span><img src="media/thumbs/b30.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b30.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 31 — play the reel"><span class="idx mono">31</span><img src="media/thumbs/b31.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b31.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 32 — play the reel"><span class="idx mono">32</span><img src="media/thumbs/b32.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b32.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 33 — play the reel"><span class="idx mono">33</span><img src="media/thumbs/b33.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b33.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 34 — play the reel"><span class="idx mono">34</span><img src="media/thumbs/b34.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b34.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 35 — play the reel"><span class="idx mono">35</span><img src="media/thumbs/b35.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b35.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 36 — play the reel"><span class="idx mono">36</span><img src="media/thumbs/b36.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b36.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 37 — play the reel"><span class="idx mono">37</span><img src="media/thumbs/b37.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b37.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 38 — play the reel"><span class="idx mono">38</span><img src="media/thumbs/b38.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b38.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 39 — play the reel"><span class="idx mono">39</span><img src="media/thumbs/b39.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b39.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 40 — play the reel"><span class="idx mono">40</span><img src="media/thumbs/b40.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b40.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 41 — play the reel"><span class="idx mono">41</span><img src="media/thumbs/b41.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b41.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 42 — play the reel"><span class="idx mono">42</span><img src="media/thumbs/b42.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b42.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 43 — play the reel"><span class="idx mono">43</span><img src="media/thumbs/b43.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b43.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 44 — play the reel"><span class="idx mono">44</span><img src="media/thumbs/b44.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b44.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 45 — play the reel"><span class="idx mono">45</span><img src="media/thumbs/b45.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b45.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 46 — play the reel"><span class="idx mono">46</span><img src="media/thumbs/b46.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b46.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 47 — play the reel"><span class="idx mono">47</span><img src="media/thumbs/b47.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b47.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 48 — play the reel"><span class="idx mono">48</span><img src="media/thumbs/b48.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b48.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 49 — play the reel"><span class="idx mono">49</span><img src="media/thumbs/b49.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b49.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 50 — play the reel"><span class="idx mono">50</span><img src="media/thumbs/b50.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b50.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 51 — play the reel"><span class="idx mono">51</span><img src="media/thumbs/b51.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b51.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 52 — play the reel"><span class="idx mono">52</span><img src="media/thumbs/b52.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b52.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 53 — play the reel"><span class="idx mono">53</span><img src="media/thumbs/b53.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b53.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 54 — play the reel"><span class="idx mono">54</span><img src="media/thumbs/b54.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b54.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 55 — play the reel"><span class="idx mono">55</span><img src="media/thumbs/b55.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b55.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 56 — play the reel"><span class="idx mono">56</span><img src="media/thumbs/b56.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b56.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 57 — play the reel"><span class="idx mono">57</span><img src="media/thumbs/b57.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b57.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 58 — play the reel"><span class="idx mono">58</span><img src="media/thumbs/b58.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b58.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 59 — play the reel"><span class="idx mono">59</span><img src="media/thumbs/b59.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b59.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 60 — play the reel"><span class="idx mono">60</span><img src="media/thumbs/b60.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b60.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 61 — play the reel"><span class="idx mono">61</span><img src="media/thumbs/b61.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b61.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 62 — play the reel"><span class="idx mono">62</span><img src="media/thumbs/b62.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b62.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 63 — play the reel"><span class="idx mono">63</span><img src="media/thumbs/b63.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b63.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 64 — play the reel"><span class="idx mono">64</span><img src="media/thumbs/b64.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b64.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 65 — play the reel"><span class="idx mono">65</span><img src="media/thumbs/b65.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b65.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 66 — play the reel"><span class="idx mono">66</span><img src="media/thumbs/b66.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b66.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 67 — play the reel"><span class="idx mono">67</span><img src="media/thumbs/b67.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b67.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 68 — play the reel"><span class="idx mono">68</span><img src="media/thumbs/b68.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b68.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 69 — play the reel"><span class="idx mono">69</span><img src="media/thumbs/b69.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b69.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 70 — play the reel"><span class="idx mono">70</span><img src="media/thumbs/b70.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b70.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 71 — play the reel"><span class="idx mono">71</span><img src="media/thumbs/b71.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b71.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 72 — play the reel"><span class="idx mono">72</span><img src="media/thumbs/b72.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b72.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 73 — play the reel"><span class="idx mono">73</span><img src="media/thumbs/b73.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b73.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 74 — play the reel"><span class="idx mono">74</span><img src="media/thumbs/b74.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b74.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 75 — play the reel"><span class="idx mono">75</span><img src="media/thumbs/b75.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b75.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 76 — play the reel"><span class="idx mono">76</span><img src="media/thumbs/b76.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b76.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 77 — play the reel"><span class="idx mono">77</span><img src="media/thumbs/b77.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b77.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 78 — play the reel"><span class="idx mono">78</span><img src="media/thumbs/b78.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b78.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 79 — play the reel"><span class="idx mono">79</span><img src="media/thumbs/b79.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b79.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 80 — play the reel"><span class="idx mono">80</span><img src="media/thumbs/b80.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b80.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 81 — play the reel"><span class="idx mono">81</span><img src="media/thumbs/b81.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b81.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 82 — play the reel"><span class="idx mono">82</span><img src="media/thumbs/b82.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b82.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 83 — play the reel"><span class="idx mono">83</span><img src="media/thumbs/b83.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b83.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 84 — play the reel"><span class="idx mono">84</span><img src="media/thumbs/b84.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b84.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 85 — play the reel"><span class="idx mono">85</span><img src="media/thumbs/b85.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b85.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 86 — play the reel"><span class="idx mono">86</span><img src="media/thumbs/b86.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b86.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 87 — play the reel"><span class="idx mono">87</span><img src="media/thumbs/b87.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b87.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 88 — play the reel"><span class="idx mono">88</span><img src="media/thumbs/b88.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b88.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 89 — play the reel"><span class="idx mono">89</span><img src="media/thumbs/b89.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b89.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 90 — play the reel"><span class="idx mono">90</span><img src="media/thumbs/b90.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b90.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 91 — play the reel"><span class="idx mono">91</span><img src="media/thumbs/b91.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b91.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 92 — play the reel"><span class="idx mono">92</span><img src="media/thumbs/b92.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b92.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 93 — play the reel"><span class="idx mono">93</span><img src="media/thumbs/b93.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b93.mp4"></video></div>
-<div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD frame 94 — play the reel"><span class="idx mono">94</span><img src="media/thumbs/b94.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b94.mp4"></video></div>
+    <div class="tile big" tabindex="0" role="button" aria-label="Performer leaping across a mirrored salt flat at sunrise — play the reel"><span class="idx mono">01</span><img src="media/thumbs/rendido_r1_10s.webp" alt="Performer leaping across a mirrored salt flat at sunrise" width="720" height="405" loading="eager" decoding="async"><video muted loop playsinline preload="none" data-src="boom/rendido_r1_10s.mp4"></video><div class="cap"><div><b>Rendido</b><span class="mono">JHEX · Director</span></div></div></div>
+    <div class="tile" style="--z:1.446" tabindex="0" role="button" aria-label="Woman with braids aiming a rifle — play the reel"><span class="idx mono">02</span><img src="media/thumbs/b71.webp" alt="Woman with braids aiming a rifle" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b71.mp4"></video></div>
+    <div class="tile" style="--z:1.311" tabindex="0" role="button" aria-label="Dancer reaching up through pink light — play the reel"><span class="idx mono">03</span><img src="media/thumbs/b12.webp" alt="Dancer reaching up through pink light" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b12.mp4"></video></div>
+    <div class="tile" style="--z:1.528" tabindex="0" role="button" aria-label="Artist with his hand on his head in a crowded room — play the reel"><span class="idx mono">04</span><img src="media/thumbs/b76.webp" alt="Artist with his hand on his head in a crowded room" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b76.mp4"></video></div>
+    <div class="tile" style="--z:1.332" tabindex="0" role="button" aria-label="Artist in a silver headpiece reaching toward the camera — play the reel"><span class="idx mono">05</span><img src="media/thumbs/b30.webp" alt="Artist in a silver headpiece reaching toward the camera" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b30.mp4"></video></div>
+    <div class="tile" tabindex="0" role="button" aria-label="Monster truck firing a flamethrower in a shipping yard — play the reel"><span class="idx mono">06</span><img src="media/thumbs/b25.webp" alt="Monster truck firing a flamethrower in a shipping yard" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b25.mp4"></video></div>
+    <div class="tile" tabindex="0" role="button" aria-label="Face in clear glasses washed in violet light — play the reel"><span class="idx mono">07</span><img src="media/thumbs/b13.webp" alt="Face in clear glasses washed in violet light" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b13.mp4"></video></div>
+    <div class="tile" tabindex="0" role="button" aria-label="Artist in a white fur coat under blue and red light — play the reel"><span class="idx mono">08</span><img src="media/thumbs/b15.webp" alt="Artist in a white fur coat under blue and red light" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b15.mp4"></video></div>
+    <div class="tile" style="--z:1.274" tabindex="0" role="button" aria-label="Black-and-white shot of a man at the edge of the ocean — play the reel"><span class="idx mono">09</span><img src="media/thumbs/b93.webp" alt="Black-and-white shot of a man at the edge of the ocean" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b93.mp4"></video></div>
   </div>
 </section>
 
@@ -398,18 +308,18 @@ footer .bar{display:flex;flex-wrap:wrap;justify-content:space-between;align-item
     <span class="mono dim">Views on YouTube · 2008—2026</span>
   </div>
   <ol class="index">
-    <li class="row rv"><span class="mono dim">01</span><span class="t">BEBE</span><span class="a">6ix9ine ft. Anuel AA</span><span class="r mono dim">Producer · Director</span><span class="views">1.6B+</span></li>
-    <li class="row rv"><span class="mono dim">02</span><span class="t">105°F Remix</span><span class="a">Kevvo, Chencho Corleone, Farruko, Myke Towers, Arcángel, Ñengo Flow, Darell, Brytiago</span><span class="r mono dim">Producer · Director · DP · Editor</span><span class="views">750M+</span></li>
-    <li class="row rv"><span class="mono dim">03</span><span class="t">Passion Whine</span><span class="a">Farruko ft. Sean Paul</span><span class="r mono dim">Producer</span><span class="views">750M+</span></li>
-    <li class="row rv"><span class="mono dim">04</span><span class="t">Hard Drive</span><span class="a">Shenseea × Konshens × Rvssian</span><span class="r mono dim">Producer · Director · DP · Editor</span><span class="views">40M+</span></li>
+    <li class="row rv"><span class="mono dim">01</span><span class="t">105°F Remix</span><span class="a">Kevvo, Chencho Corleone, Farruko, Myke Towers, Arcángel, Ñengo Flow, Darell, Brytiago</span><span class="r mono dim">Producer · Director · DP · Editor</span><span class="views top">750M+</span></li>
+    <li class="row rv"><span class="mono dim">02</span><span class="t">Hard Drive</span><span class="a">Shenseea × Konshens × Rvssian</span><span class="r mono dim">Producer · Director · DP · Editor</span><span class="views">40M+</span></li>
+    <li class="row rv"><span class="mono dim">03</span><span class="t">Stay Schemin</span><span class="a">Rick Ross ft. Drake, French Montana</span><span class="r mono dim">Director of Photography</span><span class="views">25M+</span></li>
+    <li class="row rv"><span class="mono dim">04</span><span class="t">BEBE</span><span class="a">6ix9ine ft. Anuel AA</span><span class="r mono dim">Producer · Director</span><span class="views top">1.6B+</span></li>
     <li class="row rv"><span class="mono dim">05</span><span class="t">Power</span><span class="a">Kevvo ft. Myke Towers, Jhay Cortez, Darell</span><span class="r mono dim">Producer · Director · DP · Editor</span><span class="views">40M+</span></li>
-    <li class="row rv"><span class="mono dim">06</span><span class="t">Stay Schemin</span><span class="a">Rick Ross ft. Drake, French Montana</span><span class="r mono dim">Director of Photography</span><span class="views">25M+</span></li>
-    <li class="row rv"><span class="mono dim">07</span><span class="t">Nobody's Favorite</span><span class="a">Rick Ross ft. Gunplay</span><span class="r mono dim">Director of Photography</span><span class="views">19M+</span></li>
-    <li class="row rv"><span class="mono dim">08</span><span class="t">Mada</span><span class="a">Kalash · Universal France</span><span class="r mono dim">Producer · DP · Editor</span><span class="views">16M+</span></li>
-    <li class="row rv"><span class="mono dim">09</span><span class="t">Embalao</span><span class="a">Farruko, White Star, J. Cross</span><span class="r mono dim">Producer · Director · DP · Editor</span><span class="views">3.8M+</span></li>
+    <li class="row rv"><span class="mono dim">06</span><span class="t">Passion Whine</span><span class="a">Farruko ft. Sean Paul</span><span class="r mono dim">Producer</span><span class="views top">750M+</span></li>
+    <li class="row rv"><span class="mono dim">07</span><span class="t">Embalao</span><span class="a">Farruko, White Star, J. Cross</span><span class="r mono dim">Producer · Director · DP · Editor</span><span class="views">3.8M+</span></li>
+    <li class="row rv"><span class="mono dim">08</span><span class="t">Nobody's Favorite</span><span class="a">Rick Ross ft. Gunplay</span><span class="r mono dim">Director of Photography</span><span class="views">19M+</span></li>
+    <li class="row rv"><span class="mono dim">09</span><span class="t">Mada</span><span class="a">Kalash · Universal France</span><span class="r mono dim">Producer · DP · Editor</span><span class="views">16M+</span></li>
     <li class="row rv"><span class="mono dim">10</span><span class="t">Trapxficante</span><span class="a">Farruko world tour and album · Sony Music</span><span class="r mono dim">15 music videos · campaign · merch · album design</span><span class="views"></span></li>
     <li class="row rv"><span class="mono dim">11</span><span class="t">La 167</span><span class="a">Farruko world tour and album</span><span class="r mono dim">3 music videos · campaign · merch</span><span class="views"></span></li>
-    <li class="row rv"><span class="mono dim">12</span><span class="t">Merlin</span><span class="a">Feature film · 2025</span><span class="r mono dim">Creative Producer · Production Design</span><span class="views sm">People's Choice Award · Chandler Film Festival</span></li>
+    <li class="row rv"><span class="mono dim">12</span><span class="t">Merlin</span><span class="a">Feature film · 2025 · People's Choice Award, Chandler Film Festival</span><span class="r mono dim">Creative Producer · Production Design</span><span class="views"></span></li>
   </ol>
   <div class="clients rv">
     <span class="mono dim"><span class="jp">顧客</span> &nbsp;Labels &amp; brands</span>
@@ -430,7 +340,101 @@ footer .bar{display:flex;flex-wrap:wrap;justify-content:space-between;align-item
   </div>
 </section>
 
-
+<section class="sec" id="archive">
+  <details class="arch rv">
+    <summary><span><span class="jp acc" style="font-size:13px;letter-spacing:.4em;display:block;margin-bottom:10px">アーカイブ</span>Full archive <span class="mono dim">· 88 clips</span></span><span class="plus" aria-hidden="true">+</span></summary>
+    <div class="agrid">
+    <div class="tile" style="--z:1.332" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 01 — play the reel"><img src="media/thumbs/b01.webp" alt="FRAMEXGOD archive clip 01" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b01.mp4"></video></div>
+    <div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 02 — play the reel"><img src="media/thumbs/b02.webp" alt="FRAMEXGOD archive clip 02" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b02.mp4"></video></div>
+    <div class="tile" style="--z:1.328" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 03 — play the reel"><img src="media/thumbs/b03.webp" alt="FRAMEXGOD archive clip 03" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b03.mp4"></video></div>
+    <div class="tile" style="--z:1.893" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 04 — play the reel"><img src="media/thumbs/b04.webp" alt="FRAMEXGOD archive clip 04" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b04.mp4"></video></div>
+    <div class="tile" style="--z:1.083" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 05 — play the reel"><img src="media/thumbs/b05.webp" alt="FRAMEXGOD archive clip 05" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b05.mp4"></video></div>
+    <div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 06 — play the reel"><img src="media/thumbs/b06.webp" alt="FRAMEXGOD archive clip 06" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b06.mp4"></video></div>
+    <div class="tile" style="--z:1.319" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 07 — play the reel"><img src="media/thumbs/b07.webp" alt="FRAMEXGOD archive clip 07" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b07.mp4"></video></div>
+    <div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 08 — play the reel"><img src="media/thumbs/b08.webp" alt="FRAMEXGOD archive clip 08" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b08.mp4"></video></div>
+    <div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 09 — play the reel"><img src="media/thumbs/b09.webp" alt="FRAMEXGOD archive clip 09" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b09.mp4"></video></div>
+    <div class="tile" style="--z:1.063" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 10 — play the reel"><img src="media/thumbs/b10.webp" alt="FRAMEXGOD archive clip 10" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b10.mp4"></video></div>
+    <div class="tile" style="--z:1.063" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 11 — play the reel"><img src="media/thumbs/b11.webp" alt="FRAMEXGOD archive clip 11" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b11.mp4"></video></div>
+    <div class="tile" style="--z:1.534" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 12 — play the reel"><img src="media/thumbs/b14.webp" alt="FRAMEXGOD archive clip 12" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b14.mp4"></video></div>
+    <div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 13 — play the reel"><img src="media/thumbs/b16.webp" alt="FRAMEXGOD archive clip 13" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b16.mp4"></video></div>
+    <div class="tile" style="--z:1.511" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 14 — play the reel"><img src="media/thumbs/b17.webp" alt="FRAMEXGOD archive clip 14" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b17.mp4"></video></div>
+    <div class="tile" style="--z:1.337" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 15 — play the reel"><img src="media/thumbs/b18.webp" alt="FRAMEXGOD archive clip 15" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b18.mp4"></video></div>
+    <div class="tile" style="--z:1.319" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 16 — play the reel"><img src="media/thumbs/b19.webp" alt="FRAMEXGOD archive clip 16" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b19.mp4"></video></div>
+    <div class="tile" style="--z:1.328" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 17 — play the reel"><img src="media/thumbs/b20.webp" alt="FRAMEXGOD archive clip 17" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b20.mp4"></video></div>
+    <div class="tile" style="--z:1.066" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 18 — play the reel"><img src="media/thumbs/b21.webp" alt="FRAMEXGOD archive clip 18" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b21.mp4"></video></div>
+    <div class="tile" style="--z:1.328" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 19 — play the reel"><img src="media/thumbs/b22.webp" alt="FRAMEXGOD archive clip 19" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b22.mp4"></video></div>
+    <div class="tile" style="--z:1.319" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 20 — play the reel"><img src="media/thumbs/b23.webp" alt="FRAMEXGOD archive clip 20" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b23.mp4"></video></div>
+    <div class="tile" style="--z:1.324" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 21 — play the reel"><img src="media/thumbs/b24.webp" alt="FRAMEXGOD archive clip 21" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b24.mp4"></video></div>
+    <div class="tile" style="--z:2.328" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 22 — play the reel"><img src="media/thumbs/b26.webp" alt="FRAMEXGOD archive clip 22" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b26.mp4"></video></div>
+    <div class="tile" style="--z:1.328" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 23 — play the reel"><img src="media/thumbs/b27.webp" alt="FRAMEXGOD archive clip 23" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b27.mp4"></video></div>
+    <div class="tile" style="--z:1.154" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 24 — play the reel"><img src="media/thumbs/b28.webp" alt="FRAMEXGOD archive clip 24" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b28.mp4"></video></div>
+    <div class="tile" style="--z:1.332" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 25 — play the reel"><img src="media/thumbs/b29.webp" alt="FRAMEXGOD archive clip 25" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b29.mp4"></video></div>
+    <div class="tile" style="--z:1.254" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 26 — play the reel"><img src="media/thumbs/b31.webp" alt="FRAMEXGOD archive clip 26" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b31.mp4"></video></div>
+    <div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 27 — play the reel"><img src="media/thumbs/b32.webp" alt="FRAMEXGOD archive clip 27" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b32.mp4"></video></div>
+    <div class="tile" style="--z:1.66" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 28 — play the reel"><img src="media/thumbs/b33.webp" alt="FRAMEXGOD archive clip 28" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b33.mp4"></video></div>
+    <div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 29 — play the reel"><img src="media/thumbs/b34.webp" alt="FRAMEXGOD archive clip 29" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b34.mp4"></video></div>
+    <div class="tile" style="--z:1.332" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 30 — play the reel"><img src="media/thumbs/b35.webp" alt="FRAMEXGOD archive clip 30" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b35.mp4"></video></div>
+    <div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 31 — play the reel"><img src="media/thumbs/b36.webp" alt="FRAMEXGOD archive clip 31" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b36.mp4"></video></div>
+    <div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 32 — play the reel"><img src="media/thumbs/b37.webp" alt="FRAMEXGOD archive clip 32" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b37.mp4"></video></div>
+    <div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 33 — play the reel"><img src="media/thumbs/b38.webp" alt="FRAMEXGOD archive clip 33" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b38.mp4"></video></div>
+    <div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 34 — play the reel"><img src="media/thumbs/b39.webp" alt="FRAMEXGOD archive clip 34" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b39.mp4"></video></div>
+    <div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 35 — play the reel"><img src="media/thumbs/b40.webp" alt="FRAMEXGOD archive clip 35" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b40.mp4"></video></div>
+    <div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 36 — play the reel"><img src="media/thumbs/b41.webp" alt="FRAMEXGOD archive clip 36" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b41.mp4"></video></div>
+    <div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 37 — play the reel"><img src="media/thumbs/b42.webp" alt="FRAMEXGOD archive clip 37" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b42.mp4"></video></div>
+    <div class="tile" style="--z:1.528" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 38 — play the reel"><img src="media/thumbs/b43.webp" alt="FRAMEXGOD archive clip 38" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b43.mp4"></video></div>
+    <div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 39 — play the reel"><img src="media/thumbs/b44.webp" alt="FRAMEXGOD archive clip 39" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b44.mp4"></video></div>
+    <div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 40 — play the reel"><img src="media/thumbs/b45.webp" alt="FRAMEXGOD archive clip 40" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b45.mp4"></video></div>
+    <div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 41 — play the reel"><img src="media/thumbs/b46.webp" alt="FRAMEXGOD archive clip 41" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b46.mp4"></video></div>
+    <div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 42 — play the reel"><img src="media/thumbs/b47.webp" alt="FRAMEXGOD archive clip 42" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b47.mp4"></video></div>
+    <div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 43 — play the reel"><img src="media/thumbs/b48.webp" alt="FRAMEXGOD archive clip 43" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b48.mp4"></video></div>
+    <div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 44 — play the reel"><img src="media/thumbs/b49.webp" alt="FRAMEXGOD archive clip 44" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b49.mp4"></video></div>
+    <div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 45 — play the reel"><img src="media/thumbs/b50.webp" alt="FRAMEXGOD archive clip 45" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b50.mp4"></video></div>
+    <div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 46 — play the reel"><img src="media/thumbs/b51.webp" alt="FRAMEXGOD archive clip 46" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b51.mp4"></video></div>
+    <div class="tile" style="--z:1.523" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 47 — play the reel"><img src="media/thumbs/b52.webp" alt="FRAMEXGOD archive clip 47" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b52.mp4"></video></div>
+    <div class="tile" style="--z:1.332" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 48 — play the reel"><img src="media/thumbs/b53.webp" alt="FRAMEXGOD archive clip 48" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b53.mp4"></video></div>
+    <div class="tile" style="--z:1.62" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 49 — play the reel"><img src="media/thumbs/b54.webp" alt="FRAMEXGOD archive clip 49" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b54.mp4"></video></div>
+    <div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 50 — play the reel"><img src="media/thumbs/b55.webp" alt="FRAMEXGOD archive clip 50" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b55.mp4"></video></div>
+    <div class="tile" style="--z:1.523" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 51 — play the reel"><img src="media/thumbs/b56.webp" alt="FRAMEXGOD archive clip 51" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b56.mp4"></video></div>
+    <div class="tile" style="--z:1.576" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 52 — play the reel"><img src="media/thumbs/b57.webp" alt="FRAMEXGOD archive clip 52" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b57.mp4"></video></div>
+    <div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 53 — play the reel"><img src="media/thumbs/b58.webp" alt="FRAMEXGOD archive clip 53" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b58.mp4"></video></div>
+    <div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 54 — play the reel"><img src="media/thumbs/b59.webp" alt="FRAMEXGOD archive clip 54" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b59.mp4"></video></div>
+    <div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 55 — play the reel"><img src="media/thumbs/b60.webp" alt="FRAMEXGOD archive clip 55" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b60.mp4"></video></div>
+    <div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 56 — play the reel"><img src="media/thumbs/b61.webp" alt="FRAMEXGOD archive clip 56" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b61.mp4"></video></div>
+    <div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 57 — play the reel"><img src="media/thumbs/b62.webp" alt="FRAMEXGOD archive clip 57" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b62.mp4"></video></div>
+    <div class="tile" style="--z:1.311" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 58 — play the reel"><img src="media/thumbs/b63.webp" alt="FRAMEXGOD archive clip 58" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b63.mp4"></video></div>
+    <div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 59 — play the reel"><img src="media/thumbs/b64.webp" alt="FRAMEXGOD archive clip 59" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b64.mp4"></video></div>
+    <div class="tile" style="--z:1.324" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 60 — play the reel"><img src="media/thumbs/b65.webp" alt="FRAMEXGOD archive clip 60" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b65.mp4"></video></div>
+    <div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 61 — play the reel"><img src="media/thumbs/b66.webp" alt="FRAMEXGOD archive clip 61" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b66.mp4"></video></div>
+    <div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 62 — play the reel"><img src="media/thumbs/b67.webp" alt="FRAMEXGOD archive clip 62" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b67.mp4"></video></div>
+    <div class="tile" style="--z:1.319" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 63 — play the reel"><img src="media/thumbs/b68.webp" alt="FRAMEXGOD archive clip 63" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b68.mp4"></video></div>
+    <div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 64 — play the reel"><img src="media/thumbs/b69.webp" alt="FRAMEXGOD archive clip 64" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b69.mp4"></video></div>
+    <div class="tile" style="--z:1.62" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 65 — play the reel"><img src="media/thumbs/b70.webp" alt="FRAMEXGOD archive clip 65" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b70.mp4"></video></div>
+    <div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 66 — play the reel"><img src="media/thumbs/b72.webp" alt="FRAMEXGOD archive clip 66" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b72.mp4"></video></div>
+    <div class="tile" style="--z:4.175" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 67 — play the reel"><img src="media/thumbs/b73.webp" alt="FRAMEXGOD archive clip 67" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b73.mp4"></video></div>
+    <div class="tile" style="--z:1.319" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 68 — play the reel"><img src="media/thumbs/b74.webp" alt="FRAMEXGOD archive clip 68" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b74.mp4"></video></div>
+    <div class="tile" style="--z:1.416" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 69 — play the reel"><img src="media/thumbs/b75.webp" alt="FRAMEXGOD archive clip 69" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b75.mp4"></video></div>
+    <div class="tile" style="--z:1.426" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 70 — play the reel"><img src="media/thumbs/b77.webp" alt="FRAMEXGOD archive clip 70" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b77.mp4"></video></div>
+    <div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 71 — play the reel"><img src="media/thumbs/b78.webp" alt="FRAMEXGOD archive clip 71" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b78.mp4"></video></div>
+    <div class="tile" style="--z:1.421" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 72 — play the reel"><img src="media/thumbs/b79.webp" alt="FRAMEXGOD archive clip 72" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b79.mp4"></video></div>
+    <div class="tile" style="--z:1.092" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 73 — play the reel"><img src="media/thumbs/b80.webp" alt="FRAMEXGOD archive clip 73" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b80.mp4"></video></div>
+    <div class="tile" style="--z:1.517" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 74 — play the reel"><img src="media/thumbs/b81.webp" alt="FRAMEXGOD archive clip 74" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b81.mp4"></video></div>
+    <div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 75 — play the reel"><img src="media/thumbs/b82.webp" alt="FRAMEXGOD archive clip 75" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b82.mp4"></video></div>
+    <div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 76 — play the reel"><img src="media/thumbs/b83.webp" alt="FRAMEXGOD archive clip 76" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b83.mp4"></video></div>
+    <div class="tile" style="--z:1.517" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 77 — play the reel"><img src="media/thumbs/b84.webp" alt="FRAMEXGOD archive clip 77" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b84.mp4"></video></div>
+    <div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 78 — play the reel"><img src="media/thumbs/b85.webp" alt="FRAMEXGOD archive clip 78" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b85.mp4"></video></div>
+    <div class="tile" style="--z:1.523" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 79 — play the reel"><img src="media/thumbs/b86.webp" alt="FRAMEXGOD archive clip 79" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b86.mp4"></video></div>
+    <div class="tile" style="--z:1.633" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 80 — play the reel"><img src="media/thumbs/b87.webp" alt="FRAMEXGOD archive clip 80" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b87.mp4"></video></div>
+    <div class="tile" style="--z:1.092" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 81 — play the reel"><img src="media/thumbs/b88.webp" alt="FRAMEXGOD archive clip 81" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b88.mp4"></video></div>
+    <div class="tile" style="--z:1.332" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 82 — play the reel"><img src="media/thumbs/b89.webp" alt="FRAMEXGOD archive clip 82" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b89.mp4"></video></div>
+    <div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 83 — play the reel"><img src="media/thumbs/b90.webp" alt="FRAMEXGOD archive clip 83" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b90.mp4"></video></div>
+    <div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 84 — play the reel"><img src="media/thumbs/b91.webp" alt="FRAMEXGOD archive clip 84" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b91.mp4"></video></div>
+    <div class="tile" style="--z:1.066" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 85 — play the reel"><img src="media/thumbs/b92.webp" alt="FRAMEXGOD archive clip 85" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b92.mp4"></video></div>
+    <div class="tile" style="--z:1.278" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 86 — play the reel"><img src="media/thumbs/b94.webp" alt="FRAMEXGOD archive clip 86" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b94.mp4"></video></div>
+    <div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 87 — play the reel"><img src="media/thumbs/rendido_r2_10s.webp" alt="FRAMEXGOD archive clip 87" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/rendido_r2_10s.mp4"></video></div>
+    <div class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 88 — play the reel"><img src="media/thumbs/rendido_r3_10s.webp" alt="FRAMEXGOD archive clip 88" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/rendido_r3_10s.mp4"></video></div>
+    </div>
+  </details>
+</section>
 
 <section class="sec" id="contact">
   <div class="head rv">
@@ -454,7 +458,7 @@ footer .bar{display:flex;flex-wrap:wrap;justify-content:space-between;align-item
     <form id="bookform" class="rv" novalidate>
       <div class="f"><label for="name">Name</label><input id="name" name="name" type="text" autocomplete="name" required></div>
       <div class="f"><label for="brand">Artist or brand</label><input id="brand" name="brand" type="text" autocomplete="organization"></div>
-      <div class="f"><label for="pkg">Project</label><select id="pkg" name="pkg"><option>Music Video</option><option>Commercial</option><option>Content Day</option><option>Feature Film</option><option>Other</option></select></div>
+      <div class="f"><label for="pkg">Project</label><select id="pkg" name="pkg"><option>Music Video</option><option>Commercial</option><option>Content Day</option><option>Other</option></select></div>
       <div class="f"><label for="date">Shoot date</label><input id="date" name="date" type="date"></div>
       <div class="f"><label for="city">City</label><select id="city" name="city"><option>Miami</option><option>New York</option><option>Los Angeles</option><option>Other</option></select></div>
       <div class="f"><label for="budget">Budget</label><select id="budget" name="budget"><option>$1,500 to $3,000</option><option>$3,000 to $7,500</option><option>$7,500 to $15,000</option><option>$15,000 and up</option></select></div>
@@ -480,16 +484,11 @@ footer .bar{display:flex;flex-wrap:wrap;justify-content:space-between;align-item
   </div>
 </footer>
 
-<div class="lb" id="lb" role="dialog" aria-label="Reel"><button class="x mono" id="lbx" type="button">Close ✕</button><video id="lbvid" src="reel/framexgod-reel-2026.mp4" poster="reel/poster.jpg" controls playsinline preload="none"></video></div>
 <script>
-var lb=document.getElementById('lb'),lv=document.getElementById('lbvid');
-function openLB(){lb.classList.add('on');document.body.style.overflow='hidden';lv.currentTime=0;lv.muted=false;var p=lv.play();if(p&&p.catch)p.catch(function(){})}
-function closeLB(){lb.classList.remove('on');document.body.style.overflow='';lv.pause()}
-document.getElementById('lbx').addEventListener('click',closeLB);addEventListener('keydown',function(e){if(e.key==='Escape')closeLB()});
 (function(){
   var f=document.getElementById('bookform'), st=document.getElementById('status'), NUM='13057785526';
   function v(id){return (document.getElementById(id).value||'').trim();}
-  function msg(){return ['Booking request for FRAMEXGOD','Name: '+(v('name')||'-'),'Artist or brand: '+(v('brand')||'-'),'Project: '+v('pkg'),'Shoot date: '+(v('date')||'flexible'),'City: '+v('city'),'Budget: '+v('budget'),'Details: '+(v('notes')||'-')].join('\n');}
+  function msg(){return ['Booking request for FRAME X GOD','Name: '+(v('name')||'-'),'Artist or brand: '+(v('brand')||'-'),'Project: '+v('pkg'),'Shoot date: '+(v('date')||'flexible'),'City: '+v('city'),'Budget: '+v('budget'),'Details: '+(v('notes')||'-')].join('\n');}
   function say(t){st.textContent=t;}
   function fallback(t){var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');say('Copied.');}catch(e){say('Select the text and copy it.');}document.body.removeChild(ta);}
   function copyText(t,ok){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(function(){say(ok);},function(){fallback(t);});}else{fallback(t);}}
@@ -509,8 +508,8 @@ document.getElementById('lbx').addEventListener('click',closeLB);addEventListene
     v.addEventListener('playing',function(){t.classList.add('live');});
     t.addEventListener('mouseenter',function(){start(t);});t.addEventListener('mouseleave',function(){stop(t);});
     t.addEventListener('focus',function(){start(t);});t.addEventListener('blur',function(){stop(t);});
-    t.addEventListener('click',function(){openLB();});
-    t.addEventListener('keydown',function(e){if(e.key==='Enter'){openLB();}});});
+    t.addEventListener('click',function(){document.getElementById('reel').scrollIntoView({behavior:reduce?'auto':'smooth'});});
+    t.addEventListener('keydown',function(e){if(e.key==='Enter'){document.getElementById('reel').scrollIntoView();}});});
   if(window.matchMedia&&matchMedia('(hover: none)').matches&&!reduce&&'IntersectionObserver' in window){
     var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)start(e.target);else stop(e.target);});},{threshold:0.75});
     document.querySelectorAll('.work .tile').forEach(function(t){io.observe(t);});}
