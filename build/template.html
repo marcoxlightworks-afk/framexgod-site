@@ -510,7 +510,7 @@ footer .giant.vwrap svg{position:absolute;inset:0;width:100%;height:100%}
   var jv=document.getElementById('journey'), target=0, cur=0, dur=0;
   function ready(){dur=jv.duration||15;}
   jv.addEventListener('loadedmetadata',ready); if(jv.readyState>=1)ready();
-  function onS(){var max=document.documentElement.scrollHeight-innerHeight; target=max>0?Math.min(1,Math.max(0,scrollY/max)):0; var k=1-Math.min(1,scrollY/innerHeight); jv.style.transform='translateX('+(-24*k)+'%) scale('+(1+0.35*k)+')'; document.body.classList.toggle('scrolled',scrollY>innerHeight*0.9);} addEventListener('scroll',onS,{passive:true}); addEventListener('resize',onS); onS();
+  function onS(){var max=document.documentElement.scrollHeight-innerHeight; target=max>0?Math.min(1,Math.max(0,scrollY/max)):0; var k=1-Math.min(1,scrollY/innerHeight); jv.style.transform='scale('+(1+0.25*k)+')'; document.body.classList.toggle('scrolled',scrollY>innerHeight*0.9);} addEventListener('scroll',onS,{passive:true}); addEventListener('resize',onS); onS();
   function tick(){cur+=(target-cur)*0.08; var d=jv.duration; if(isFinite(d)&&d>0&&!jv.seeking&&Math.abs(jv.currentTime-cur*d)>0.02){try{jv.currentTime=cur*d;}catch(e){}} requestAnimationFrame(tick);} tick();
   /* scroll depth */
   if(innerWidth>760)document.querySelectorAll('[data-depth]').forEach(function(el){var d=+el.dataset.depth;
