@@ -1,18 +1,32 @@
 import os, re, urllib.parse
+from PIL import Image, ImageStat
+
+THUMB_SRC = os.environ.get('THUMB_SRC')
+
+def zoom(cid):
+    im = Image.open(os.path.join(ROOT_GUESS, 'media', 'thumbs', cid + '.webp')).convert('L')
+    w, h = im.size
+    rows = [ImageStat.Stat(im.crop((0, y, w, y + 1))).mean[0] for y in range(h)]
+    t = next((y for y in range(h) if rows[y] > 14), 0)
+    b = next((y for y in range(h - 1, -1, -1) if rows[y] > 14), h - 1)
+    z = h / max(1, b - t + 1)
+    return round(z, 3) if z > 1.04 else 1
+
+ROOT_GUESS = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 tpl = open(os.path.join(ROOT, 'build', 'template.html'), encoding='utf-8').read()
 
 FEATURED = [
     ('rendido_r1_10s', 'big', 'Rendido', 'JHEX · Director', 'Performer leaping across a mirrored salt flat at sunrise'),
-    ('b15', '', '', '', 'Artist in a white fur coat under blue and red light'),
-    ('b02', '', '', '', 'Black horse beside a red Ferrari with its doors open on a green field'),
-    ('b88', '', '', '', 'Upside-down close-up of an artist in round sunglasses and gold rings'),
-    ('b05', '', '', '', 'Aerial view of Miami at night'),
+    ('b71', '', '', '', 'Woman with braids aiming a rifle'),
+    ('b12', '', '', '', 'Dancer reaching up through pink light'),
+    ('b76', '', '', '', 'Artist with his hand on his head in a crowded room'),
+    ('b30', '', '', '', 'Artist in a silver headpiece reaching toward the camera'),
     ('b25', '', '', '', 'Monster truck firing a flamethrower in a shipping yard'),
-    ('b17', '', '', '', 'Race car number 33 in falling snow'),
+    ('b13', '', '', '', 'Face in clear glasses washed in violet light'),
+    ('b67', '', '', '', 'Woman on a yellow pool float at a lake party'),
     ('b93', '', '', '', 'Black-and-white shot of a man at the edge of the ocean'),
-    ('b80', '', '', '', 'Artist on a balcony above the Miami skyline'),
 ]
 
 all_clips = sorted(f[:-4] for f in os.listdir(os.path.join(ROOT, 'boom')) if f.endswith('.mp4'))
@@ -26,7 +40,9 @@ def tile(cid, cls, title, sub, alt, idx, eager=False):
         cap = f'<div class="cap"><div><b>{title}</b><span class="mono">{sub}</span></div></div>'
     load = 'eager' if eager else 'lazy'
     klass = ('tile ' + cls).strip()
-    return (f'    <div class="{klass}" tabindex="0" role="button" aria-label="{alt} — play the reel">'
+    z = zoom(cid)
+    zs = f' style="--z:{z}"' if z != 1 else ''
+    return (f'    <div class="{klass}"{zs} tabindex="0" role="button" aria-label="{alt} — play the reel">'
             f'<span class="idx mono">{idx:02d}</span>'
             f'<img src="media/thumbs/{cid}.webp" alt="{alt}" width="720" height="405" loading="{load}" decoding="async">'
             f'<video muted loop playsinline preload="none" data-src="boom/{cid}.mp4"></video>{cap}</div>')
@@ -40,7 +56,7 @@ arch_rows = []
 for i, c in enumerate(archive):
     alt = f'FRAMEXGOD archive clip {i + 1:02d}'
     arch_rows.append(
-        f'    <div class="tile" tabindex="0" role="button" aria-label="{alt} — play the reel">'
+        f'    <div class="tile"{(lambda z: f' style="--z:{z}"' if z != 1 else '')(zoom(c))} tabindex="0" role="button" aria-label="{alt} — play the reel">'
         f'<img src="media/thumbs/{c}.webp" alt="{alt}" width="720" height="405" loading="lazy" decoding="async">'
         f'<video muted loop playsinline preload="none" data-src="boom/{c}.mp4"></video></div>')
 
