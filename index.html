@@ -262,7 +262,7 @@ footer .giant.vwrap svg{position:absolute;inset:0;width:100%;height:100%}
 .open .o-logo .turn{position:relative;display:inline-block;width:clamp(220px,28vw,420px)}
 .open .o-logo .logo-chrome{width:100%;height:auto;display:block;filter:drop-shadow(0 50px 90px rgba(0,0,0,.95));transition:opacity .4s}
 .open .o-logo .turnvid{position:absolute;left:50.4%;top:50%;width:153.1%;max-width:none;height:auto;aspect-ratio:1/1;transform:translate(-50%,-50%);opacity:0;pointer-events:none;transition:opacity .4s}
-.open .o-logo .turnvid.blend{mix-blend-mode:screen}
+
 .open .o-logo .turn.on .logo-chrome{opacity:0}
 .open .o-logo .turn.on .turnvid{opacity:1}
 .open .o-lines{display:flex;flex-direction:column;gap:9px;max-width:70ch}
@@ -296,7 +296,7 @@ footer .giant.vwrap svg{position:absolute;inset:0;width:100%;height:100%}
 </nav>
 
 <section class="open" id="top" aria-label="FRAMEXGOD">
-  <div class="o-logo" data-depth="0.5"><span class="turn" id="turn"><img class="logo-chrome" src="media/logo-liquid.webp" alt="FRAME X GOD 神フレーム" width="1000" height="1345" fetchpriority="high"><video class="turnvid" muted loop playsinline preload="metadata" aria-hidden="true"><source src="media/logo-turn.webm" type="video/webm"><source src="media/logo-turn.mp4" type="video/mp4"></video></span></div>
+  <div class="o-logo" data-depth="0.5"><span class="turn" id="turn"><img class="logo-chrome" src="media/logo-liquid.webp" alt="FRAME X GOD 神フレーム" width="1000" height="1345" fetchpriority="high"><canvas class="turnvid" width="540" height="540" aria-hidden="true"></canvas><video class="turnsrc" muted loop playsinline preload="metadata" crossorigin="anonymous" style="display:none" aria-hidden="true"><source src="media/logo-turn.mp4" type="video/mp4"><source src="media/logo-turn.webm" type="video/webm"></video></span></div>
   <div class="o-lines" data-depth="0.25">
     <span class="mono">Lightworks Productions</span>
     <span class="mono dim">Feature Length Films · Music Videos · Commercials · Social Media Marketing · AI Creative Design</span>
@@ -620,10 +620,14 @@ footer .giant.vwrap svg{position:absolute;inset:0;width:100%;height:100%}
     (function mp(){mx+=(tx-mx)*.06; my+=(ty-my)*.06; planes.forEach(function(p){var d=+p.dataset.depth; p.style.setProperty('--px',(mx*40*d)+'px'); p.style.setProperty('--py',(my*30*d)+'px');}); requestAnimationFrame(mp);})();
     var style=document.createElement('style'); style.textContent='.open [data-depth]{translate:var(--px,0) var(--py,0)}'; document.head.appendChild(style);
   }
-  /* 3D turntable on hover */
-  var turn=document.getElementById('turn'), tv=turn&&turn.querySelector('video');
-  if(turn&&tv){if(!tv.canPlayType('video/webm; codecs="vp9"'))tv.classList.add('blend'); function on(){tv.currentTime=0;var p=tv.play();if(p&&p.catch)p.catch(function(){});turn.classList.add('on');}
-    function off(){turn.classList.remove('on');setTimeout(function(){tv.pause();},400);}
+  /* 3D turntable on hover: video drawn to a canvas with the black keyed to transparent */
+  var turn=document.getElementById('turn'), tv=turn&&turn.querySelector('.turnsrc'), tc=turn&&turn.querySelector('canvas.turnvid');
+  if(turn&&tv&&tc){var ctx=tc.getContext('2d',{willReadFrequently:true}), raf=0, W=tc.width, H=tc.height;
+    function draw(){ctx.clearRect(0,0,W,H);ctx.drawImage(tv,0,0,W,H);var img=ctx.getImageData(0,0,W,H),d=img.data;
+      for(var i=0;i<d.length;i+=4){var m=d[i]>d[i+1]?(d[i]>d[i+2]?d[i]:d[i+2]):(d[i+1]>d[i+2]?d[i+1]:d[i+2]);d[i+3]=m<18?0:(m<60?((m-18)*6):255);}
+      ctx.putImageData(img,0,0);raf=requestAnimationFrame(draw);}
+    function on(){tv.currentTime=0;var p=tv.play();if(p&&p.catch)p.catch(function(){});turn.classList.add('on');cancelAnimationFrame(raf);draw();}
+    function off(){turn.classList.remove('on');setTimeout(function(){tv.pause();cancelAnimationFrame(raf);},400);}
     turn.addEventListener('mouseenter',on);turn.addEventListener('mouseleave',off);
     turn.addEventListener('touchstart',function(){turn.classList.contains('on')?off():on();},{passive:true});}
   /* mercury loops: play when in view, faster on hover */
