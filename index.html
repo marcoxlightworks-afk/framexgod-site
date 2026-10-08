@@ -8,14 +8,14 @@
 <meta property="og:title" content="FRAMEXGOD">
 <meta property="og:description" content="Music videos, commercials and films. Miami · New York · Los Angeles.">
 <meta property="og:url" content="https://framexgod.com/">
-<meta property="og:image" content="https://framexgod.com/media/hero-a.jpg">
+<meta property="og:image" content="https://framexgod.com/media/band-mv.jpg">
 <meta name="theme-color" content="#0b0b0b">
 <link rel="canonical" href="https://framexgod.com/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;900&display=swap&text=%E3%82%A2%E3%82%A4%E3%82%AB%E3%82%AF%E3%82%B5%E3%82%B9%E3%82%BC%E3%83%8B%E3%83%95%E3%83%96%E3%83%9E%E3%83%9F%E3%83%A0%E3%83%A5%E3%83%A8%E3%83%AA%E3%83%AB%E3%83%AC%E3%83%AD%E3%83%B3%E3%83%BC%E4%BA%88%E4%BD%9C%E5%93%81%E5%AE%9F%E5%AE%A2%E6%96%99%E7%A5%9E%E7%B4%84%E7%B8%BE%E9%87%91%E9%A1%A7" rel="stylesheet">
-<link rel="preload" as="image" href="media/hero-a.jpg">
+<link rel="preload" as="image" href="media/band-film.jpg">
 <style>
 :root{
   --bg:#0b0b0b;--bg2:#121211;--fg:#edebe6;--dim:#8d8b86;--mute:#5d5b57;--line:#262523;
@@ -42,6 +42,7 @@ body::after{content:"";position:fixed;inset:-50%;z-index:100;pointer-events:none
   animation:grain 1.2s steps(6) infinite}
 @keyframes grain{0%{transform:translate(0,0)}20%{transform:translate(-3%,2%)}40%{transform:translate(2%,-3%)}60%{transform:translate(-2%,-1%)}80%{transform:translate(3%,3%)}100%{transform:translate(0,0)}}
 
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .mono{font:500 11px/1.4 var(--mono);letter-spacing:.08em;text-transform:uppercase;font-variant-numeric:tabular-nums}
 .jp{font-family:var(--jp);font-weight:500;letter-spacing:.12em}
 .dim{color:var(--dim)}
@@ -61,40 +62,52 @@ nav ul a:hover::after{transform:scaleX(1);transform-origin:left}
 nav .book{justify-self:end}
 @media (max-width:820px){nav{grid-template-columns:1fr auto}nav ul{display:none}}
 
-/* HERO — logo cell + three reel cuts, then the statement */
-.hero{position:relative;padding:calc(92px + env(safe-area-inset-top,0px)) var(--pad) clamp(36px,5vw,64px);display:flex;flex-direction:column;gap:clamp(28px,3.4vw,48px)}
-.strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
-.cell{position:relative;aspect-ratio:4/5;max-width:100%;overflow:hidden;background:var(--bg)}
-.cell video,.cell img.poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.cell video{opacity:0;transition:opacity .8s var(--out)}
-.cell.live video{opacity:1}
-.cell .tc{position:absolute;left:10px;bottom:10px;z-index:2;background:rgba(11,11,11,.6);padding:4px 7px;color:var(--fg)}
-.cell .tc b{color:var(--accent);font-weight:500}
-.cell.logo{display:grid;place-items:center;background:var(--bg2)}
-.cell.logo img{width:54%;height:auto}
-.cell.logo .corner{position:absolute;top:10px;left:10px;color:var(--dim)}
-.cell.logo .corner.r{left:auto;right:10px}
-.cell.logo .rec::before{content:"";display:inline-block;width:7px;height:7px;background:var(--accent);margin-right:8px;vertical-align:1px;animation:blink 1.6s steps(1) infinite}
+/* HERO — billing line, then three scope bands each named by one word */
+.hero{position:relative;padding:calc(84px + env(safe-area-inset-top,0px)) var(--pad) 0}
+.billing{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:28px;padding:14px 0 18px;border-bottom:1px solid var(--line)}
+.lockup{display:flex;align-items:center;gap:18px}
+.lockup img:first-child{height:62px;width:auto}
+.lockup .x{font:400 18px/1 var(--mono);color:var(--accent)}
+.lockup img:last-child{height:38px;width:auto}
+.billing .meta{display:flex;gap:26px;justify-content:center;color:var(--dim)}
+.billing .meta .rec::before{content:"";display:inline-block;width:7px;height:7px;background:var(--accent);margin-right:8px;vertical-align:1px;animation:blink 1.6s steps(1) infinite}
 @keyframes blink{50%{opacity:0}}
-.cell:not(.logo){opacity:0;animation:fade 1s var(--out) forwards}
-.cell:nth-child(2){animation-delay:.1s}.cell:nth-child(3){animation-delay:.2s}.cell:nth-child(4){animation-delay:.3s}
-.statement{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:end;gap:32px}
-.display{margin:0;font-weight:900;font-variation-settings:"wdth" 125;text-transform:uppercase;letter-spacing:-.035em;line-height:.86}
-.hero h1{font-size:clamp(40px,6.6vw,118px)}
-.hero h1 .ln{display:block;overflow:hidden}
-.hero h1 .ln span{display:block;transform:translateY(105%);animation:rise 1.1s var(--out) forwards}
-.hero h1 .ln:nth-child(2) span{animation-delay:.08s}
-.hero h1 .ln:nth-child(3) span{animation-delay:.16s;color:var(--accent)}
+.stage{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr)}
+.hrow{display:contents}
+.word,.band{border-bottom:1px solid var(--line)}
+.word{display:flex;flex-direction:column;justify-content:space-between;gap:16px;padding:16px 28px 18px 0;min-width:0}
+.word .mono{color:var(--dim)}
+.word .mono b{color:var(--accent);font-weight:500}
+.word h1,.word p{margin:0;font-weight:900;font-variation-settings:"wdth" 112;text-transform:uppercase;letter-spacing:-.035em;line-height:.86;font-size:clamp(34px,4.6vw,72px);white-space:nowrap}
+.word .ln{display:block;overflow:hidden}
+.word .ln span{display:block;transform:translateY(105%);animation:rise 1.1s var(--out) forwards}
+.hrow:nth-child(2) .ln span{animation-delay:.1s}
+.hrow:nth-child(3) .ln span{animation-delay:.2s;color:var(--accent)}
 @keyframes rise{to{transform:translateY(0)}}
-.hero .side{display:flex;flex-direction:column;align-items:flex-end;gap:18px;text-align:right;opacity:0;animation:fade 1s var(--out) .5s forwards}
-.hero .side .lw{width:clamp(150px,14vw,210px);height:auto}
-@keyframes fade{to{opacity:1}}
-.cta{white-space:nowrap;display:inline-flex;align-items:center;gap:14px;height:52px;padding:0 22px;background:var(--accent);color:var(--bg);font:800 12px/1 var(--sans);font-variation-settings:"wdth" 112;letter-spacing:.2em;text-transform:uppercase;transition:transform .5s var(--out),background .3s}
+.band{position:relative;aspect-ratio:32/9;max-width:100%;overflow:hidden;background:#000;margin:10px 0}
+.band img,.band video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.band video{opacity:0;transition:opacity .9s var(--out)}
+.band.live video{opacity:1}
+.band .tc{position:absolute;right:10px;bottom:10px;z-index:2;background:rgba(11,11,11,.6);padding:4px 7px}
+.band::after{content:"";position:absolute;inset:0;pointer-events:none;box-shadow:inset 0 0 0 1px rgba(237,235,230,.06)}
+.hero .cta-row{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 0 0}
+.cta{white-space:nowrap;display:inline-flex;align-items:center;gap:14px;height:52px;padding:0 22px;background:var(--accent);color:var(--bg);font:800 12px/1 var(--sans);font-variation-settings:"wdth" 112;letter-spacing:.2em;text-transform:uppercase;transition:transform .5s var(--out)}
 .cta:hover{transform:translateX(6px)}
 .cta i{font-style:normal;transition:transform .5s var(--out)}
 .cta:hover i{transform:translateX(4px)}
-@media (max-width:820px){.strip{grid-template-columns:repeat(2,minmax(0,1fr))}.statement{grid-template-columns:1fr}.hero .side{align-items:flex-start;text-align:left}}
-@media (max-width:700px){.hero h1{font-size:9.4vw}}
+@keyframes fade{to{opacity:1}}
+@media (max-width:900px){
+  .billing{grid-template-columns:1fr auto}.billing .meta{display:none}
+  .stage{grid-template-columns:1fr}
+  .hrow{display:grid;position:relative}
+  .word{position:absolute;inset:10px 0;z-index:2;padding:12px 14px;border:0;background:linear-gradient(0deg,rgba(11,11,11,.75),rgba(11,11,11,0) 60%);pointer-events:none}
+  .word h1,.word p{font-size:clamp(28px,9vw,64px)}
+  .band{aspect-ratio:16/7}
+  .band .tc{top:10px;bottom:auto}
+  .word .mono{display:none}
+  .word{justify-content:flex-end}
+}
+@media (max-width:480px){.lockup img:first-child{height:48px}.lockup img:last-child{height:30px}.billing .cta{display:none}}
 
 /* SECTION HEAD */
 .sec{padding:clamp(80px,12vw,180px) var(--pad) 0}
@@ -138,7 +151,7 @@ nav .book{justify-self:end}
 .row:hover{background:var(--bg2);padding-left:12px;padding-right:12px}
 .row .t{font:900 clamp(22px,2.6vw,40px)/.95 var(--sans);font-variation-settings:"wdth" 118;letter-spacing:-.025em;text-transform:uppercase}
 .row .a{color:#c9c6c0;font-size:15px}
-.row .views{font:900 clamp(28px,3.6vw,60px)/.9 var(--sans);font-variation-settings:"wdth" 125;letter-spacing:-.04em;text-align:right;font-variant-numeric:tabular-nums}
+.row .views{font:900 clamp(26px,3.2vw,52px)/.9 var(--sans);font-variation-settings:"wdth" 125;letter-spacing:-.04em;text-align:right;font-variant-numeric:tabular-nums}
 .row .views.top{color:var(--accent)}
 @media (max-width:900px){.row{grid-template-columns:40px 1fr auto;row-gap:6px}.row .a,.row .r{grid-column:2/4}.row .views{grid-column:3;grid-row:1}}
 
@@ -209,7 +222,7 @@ footer .bar{display:flex;flex-wrap:wrap;justify-content:space-between;align-item
 .rv{opacity:0;transform:translateY(28px);transition:opacity .9s var(--out),transform .9s var(--out);transition-delay:calc(var(--i,0) * 70ms)}
 .rv.in{opacity:1;transform:none}
 
-@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.hero h1 .ln span{transform:none}.hero .side,.rv,.cell{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.word .ln span{transform:none}.rv{opacity:1;transform:none}}
 </style>
 </head>
 <body>
@@ -226,21 +239,24 @@ footer .bar{display:flex;flex-wrap:wrap;justify-content:space-between;align-item
 </nav>
 
 <header class="hero" id="top">
-  <div class="strip">
-    <div class="cell logo">
-      <span class="corner mono rec">Rec</span><span class="corner r mono">Reel 2026</span>
-      <img src="media/framexgod-logo.png" alt="FRAME X GOD 神フレーム" width="722" height="985">
-    </div>
-    <div class="cell" data-hero><img class="poster" src="media/hero-a.jpg" alt="" width="640" height="800" fetchpriority="high"><video src="media/hero-a.mp4" muted loop playsinline autoplay preload="auto" aria-hidden="true"></video><span class="tc mono"><b>01</b> 00:00:01</span></div>
-    <div class="cell" data-hero><img class="poster" src="media/hero-b.jpg" alt="" width="640" height="800"><video src="media/hero-b.mp4" muted loop playsinline autoplay preload="auto" aria-hidden="true"></video><span class="tc mono"><b>02</b> 00:02:11</span></div>
-    <div class="cell" data-hero><img class="poster" src="media/hero-c.jpg" alt="" width="640" height="800"><video src="media/hero-c.mp4" muted loop playsinline autoplay preload="auto" aria-hidden="true"></video><span class="tc mono"><b>03</b> 00:03:48</span></div>
+  <div class="billing">
+    <div class="lockup"><img src="media/framexgod-logo.png" alt="FRAME X GOD 神フレーム" width="722" height="985"><span class="x" aria-hidden="true">×</span><img src="media/lightworks.png" alt="Lightworks Productions" width="592" height="245"></div>
+    <div class="meta mono"><span class="rec">Now booking</span><span>Miami · New York · Los Angeles</span><span>750M+ views on a single video</span></div>
+    <a class="cta" href="#contact">Book a date <i aria-hidden="true">→</i></a>
   </div>
-  <div class="statement">
-    <h1 class="display"><span class="ln"><span>Film.</span></span><span class="ln"><span>Music Video.</span></span><span class="ln"><span>Commercial.</span></span></h1>
-    <div class="side">
-      <img class="lw" src="media/lightworks.png" alt="Lightworks Productions" width="592" height="245">
-      <span class="mono dim">Miami · New York · Los Angeles<br>750M+ views on a single video</span>
-      <a class="cta" href="#contact">Book a date <i aria-hidden="true">→</i></a>
+  <h1 class="sr">FRAMEXGOD — Film, Music Video, Commercial</h1>
+  <div class="stage">
+    <div class="hrow">
+      <div class="word"><span class="mono"><b>01</b> &nbsp;Film · Narrative</span><p class="w"><span class="ln"><span>Film.</span></span></p></div>
+      <div class="band" data-hero><img src="media/band-film.jpg" alt="" width="1600" height="450" fetchpriority="high"><video src="media/band-film.mp4" muted loop playsinline autoplay preload="auto" aria-hidden="true"></video><span class="tc mono">Reel 2026 · 00:02:11</span></div>
+    </div>
+    <div class="hrow">
+      <div class="word"><span class="mono"><b>02</b> &nbsp;Music video · Performance</span><p class="w"><span class="ln"><span>Music Video.</span></span></p></div>
+      <div class="band" data-hero><img src="media/band-mv.jpg" alt="" width="1600" height="450"><video src="media/band-mv.mp4" muted loop playsinline autoplay preload="auto" aria-hidden="true"></video><span class="tc mono">Reel 2026 · 00:03:48</span></div>
+    </div>
+    <div class="hrow">
+      <div class="word"><span class="mono"><b>03</b> &nbsp;Commercial · Brand</span><p class="w"><span class="ln"><span>Commercial.</span></span></p></div>
+      <div class="band" data-hero><img src="media/band-com.jpg" alt="" width="1600" height="450"><video src="media/band-com.mp4" muted loop playsinline autoplay preload="auto" aria-hidden="true"></video><span class="tc mono">Reel 2026 · 00:02:40</span></div>
     </div>
   </div>
 </header>
