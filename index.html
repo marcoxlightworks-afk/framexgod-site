@@ -233,7 +233,7 @@ footer .bar{display:flex;flex-wrap:wrap;justify-content:space-between;align-item
 .bandfill{background:var(--tex) center/130% auto;-webkit-background-clip:text;background-clip:text;color:transparent}
 
 /* JOURNEY: scroll-scrubbed liquid chrome behind the whole page */
-#journey{position:fixed;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;opacity:.85;pointer-events:none;background:#000;will-change:opacity}
+#journey{position:fixed;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;opacity:.85;pointer-events:none;background:#000;will-change:opacity,transform;transform-origin:50% 50%}
 #journey-dim{position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(70% 60% at 30% 40%,rgba(0,0,0,.25),rgba(0,0,0,.75) 70%,#000 100%)}
 body.scrolled #journey{opacity:.35}
 /* depth planes */
@@ -260,7 +260,8 @@ footer .giant.vwrap svg{position:absolute;inset:0;width:100%;height:100%}
 .open{position:relative;min-height:100svh;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:clamp(18px,2.6vw,30px);padding:calc(90px + env(safe-area-inset-top,0px)) var(--pad) 70px;isolation:isolate}
 .open .o-logo .turn{position:relative;display:inline-block;width:clamp(220px,28vw,420px)}
 .open .o-logo .logo-chrome{width:100%;height:auto;display:block;filter:drop-shadow(0 50px 90px rgba(0,0,0,.95));transition:opacity .4s}
-.open .o-logo .turnvid{position:absolute;left:50%;top:50%;width:150%;height:auto;aspect-ratio:1/1;transform:translate(-50%,-50%);opacity:0;pointer-events:none;mix-blend-mode:screen;-webkit-mask:radial-gradient(circle at 50% 50%,#000 58%,transparent 70%);mask:radial-gradient(circle at 50% 50%,#000 58%,transparent 70%);transition:opacity .4s}
+.open .o-logo .turnvid{position:absolute;left:50%;top:50%;width:185%;height:auto;aspect-ratio:1/1;transform:translate(-50%,-50%);opacity:0;pointer-events:none;transition:opacity .4s}
+.open .o-logo .turnvid.blend{mix-blend-mode:screen}
 .open .o-logo .turn.on .logo-chrome{opacity:0}
 .open .o-logo .turn.on .turnvid{opacity:1}
 .open .o-lines{display:flex;flex-direction:column;gap:9px;max-width:70ch}
@@ -604,7 +605,7 @@ footer .giant.vwrap svg{position:absolute;inset:0;width:100%;height:100%}
   var jv=document.getElementById('journey'), target=0, cur=0, dur=0;
   function ready(){dur=jv.duration||15;}
   jv.addEventListener('loadedmetadata',ready); if(jv.readyState>=1)ready();
-  function onS(){var max=document.documentElement.scrollHeight-innerHeight; target=max>0?Math.min(1,Math.max(0,scrollY/max)):0; document.body.classList.toggle('scrolled',scrollY>innerHeight*0.9);} addEventListener('scroll',onS,{passive:true}); addEventListener('resize',onS); onS();
+  function onS(){var max=document.documentElement.scrollHeight-innerHeight; target=max>0?Math.min(1,Math.max(0,scrollY/max)):0; var k=1-Math.min(1,scrollY/innerHeight); jv.style.transform='translateX('+(-24*k)+'%) scale('+(1+0.35*k)+')'; document.body.classList.toggle('scrolled',scrollY>innerHeight*0.9);} addEventListener('scroll',onS,{passive:true}); addEventListener('resize',onS); onS();
   function tick(){cur+=(target-cur)*0.08; var d=jv.duration; if(isFinite(d)&&d>0&&!jv.seeking&&Math.abs(jv.currentTime-cur*d)>0.02){try{jv.currentTime=cur*d;}catch(e){}} requestAnimationFrame(tick);} tick();
   /* scroll depth */
   if(innerWidth>760)document.querySelectorAll('[data-depth]').forEach(function(el){var d=+el.dataset.depth;
@@ -620,7 +621,7 @@ footer .giant.vwrap svg{position:absolute;inset:0;width:100%;height:100%}
   }
   /* 3D turntable on hover */
   var turn=document.getElementById('turn'), tv=turn&&turn.querySelector('video');
-  if(turn&&tv){function on(){tv.currentTime=0;var p=tv.play();if(p&&p.catch)p.catch(function(){});turn.classList.add('on');}
+  if(turn&&tv){if(!tv.canPlayType('video/webm; codecs="vp9"'))tv.classList.add('blend'); function on(){tv.currentTime=0;var p=tv.play();if(p&&p.catch)p.catch(function(){});turn.classList.add('on');}
     function off(){turn.classList.remove('on');setTimeout(function(){tv.pause();},400);}
     turn.addEventListener('mouseenter',on);turn.addEventListener('mouseleave',off);
     turn.addEventListener('touchstart',function(){turn.classList.contains('on')?off():on();},{passive:true});}
