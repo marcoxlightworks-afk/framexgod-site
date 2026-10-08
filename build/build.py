@@ -19,32 +19,21 @@ tpl = open(os.path.join(ROOT, 'build', 'template.html'), encoding='utf-8').read(
 
 # 6-column grid, each row-pair tiles exactly: [big 2x2][std][std][big 2x2] / [std][std] ... pattern repeats
 FEATURED = [
-    # row-pair A (12 cells)
+    # row-pair A: big | std std | big | std std  (12 cells)
     ('rendido_r1_10s', 'big',  'Rendido', 'JHEX · Director', 'Performer leaping across a mirrored salt flat at sunrise'),
     ('b71',  '',     '', '', 'Frame'),
     ('b12',  '',     '', '', 'Frame'),
     ('b76',  'big',  '', '', 'Frame'),
     ('b30',  '',     '', '', 'Frame'),
     ('b25',  '',     '', '', 'Frame'),
-    # row B (6 cells)
+    # row B: wide | std std | wide (6 cells)
     ('b13',  'wide', '', '', 'Frame'),
     ('b15',  '',     '', '', 'Frame'),
     ('b93',  '',     '', '', 'Frame'),
     ('b02',  'wide', '', '', 'Frame'),
-    # row-pair C (12 cells)
-    ('b47',  '',     '', '', 'Frame'),
-    ('b78',  '',     '', '', 'Frame'),
-    ('b83',  'big',  '', '', 'Frame'),
-    ('b21',  '',     '', '', 'Frame'),
-    ('b16',  '',     '', '', 'Frame'),
-    ('b08',  '',     '', '', 'Frame'),
-    ('b61',  '',     '', '', 'Frame'),
-    ('b64',  '',     '', '', 'Frame'),
-    ('b33',  '',     '', '', 'Frame'),
-    # row D (6 cells)
-    ('b40',  'wide', '', '', 'Frame'),
-    ('b56',  'wide', '', '', 'Frame'),
-    ('b11',  'wide', '', '', 'Frame'),
+    # everything after: even 1x1 rows of six
+    ('b47',  '', '', '', 'Frame'), ('b78', '', '', '', 'Frame'), ('b83', '', '', '', 'Frame'), ('b21', '', '', '', 'Frame'), ('b16', '', '', '', 'Frame'), ('b08', '', '', '', 'Frame'),
+    ('b61',  '', '', '', 'Frame'), ('b64', '', '', '', 'Frame'), ('b33', '', '', '', 'Frame'), ('b40', '', '', '', 'Frame'), ('b56', '', '', '', 'Frame'), ('b11', '', '', '', 'Frame'),
 ]
 
 all_clips = sorted(f[:-4] for f in os.listdir(os.path.join(ROOT, 'boom')) if f.endswith('.mp4'))
@@ -58,8 +47,7 @@ def tile(cid, cls, title, sub, alt, idx, eager=False):
         cap = f'<div class="cap"><div><b>{title}</b><span class="mono">{sub}</span></div></div>'
     load = 'eager' if eager else 'lazy'
     klass = ('tile ' + cls).strip()
-    z = zoom(cid)
-    zs = f' style="--z:{z}"' if z != 1 else ''
+    zs = ''
     return (f'    <div class="{klass}"{zs} tabindex="0" role="button" aria-label="{alt} — play the reel">'
             f'<span class="idx mono">{idx:02d}</span>'
             f'<img src="media/thumbs/{cid}.webp" alt="{alt}" width="720" height="405" loading="{load}" decoding="async">'
@@ -73,7 +61,7 @@ feat_html = '\n'.join(
 arch_rows = []
 for i, c in enumerate(archive):
     alt = f'FRAMEXGOD archive clip {i + 1:02d}'
-    z = zoom(c); zs = f' style="--z:{z}"' if z != 1 else ''
+    zs = ''
     arch_rows.append(
         f'    <div class="tile"{zs} tabindex="0" role="button" aria-label="{alt} — play the reel">'
         f'<img src="media/thumbs/{c}.webp" alt="{alt}" width="720" height="405" loading="lazy" decoding="async">'
