@@ -145,7 +145,9 @@ nav .book{justify-self:end}
 .las .card video{opacity:0;transition:opacity .5s}
 .las .card.on video{opacity:1}
 .las .card .ui{position:absolute;inset:0;pointer-events:none;transform:translateZ(60px)}
-.las .card .ui .w{position:absolute;left:4%;bottom:12%;font:900 clamp(60px,15vw,260px)/.8 var(--sans);font-variation-settings:"wdth" 125;letter-spacing:-.04em;text-transform:uppercase;background:var(--tex) center/cover;-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 20px 40px rgba(0,0,0,.7))}
+.las .card .ui .w{position:absolute;left:4%;bottom:12%;}
+.las .card[data-las="land"] .ui .w{left:50%;transform:translateX(-50%);bottom:4%;}
+.las .card .ui .w{font:900 clamp(60px,15vw,260px)/.8 var(--sans);font-variation-settings:"wdth" 125;letter-spacing:-.04em;text-transform:uppercase;background:var(--tex) center/cover;-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 20px 40px rgba(0,0,0,.7))}
 .las .card .ui .c{position:absolute;right:4%;bottom:12%;text-align:right;font:900 clamp(16px,2.6vw,44px)/1 var(--sans);font-variation-settings:"wdth" 125;letter-spacing:-.01em}
 .las .card .ui .c small{display:block;margin-top:10px;font:500 10px/1.6 var(--mono);letter-spacing:.2em;color:var(--dim)}
 .las .card .ui .t{position:absolute;left:4%;top:5%;right:4%;display:flex;justify-content:space-between;font:500 10px/1.6 var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--dim)}
