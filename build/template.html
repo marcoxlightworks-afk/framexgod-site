@@ -72,7 +72,7 @@ nav .book{justify-self:end}
 @media (max-width:820px){nav{grid-template-columns:1fr auto}nav ul{display:none}}
 
 /* HERO — sticky statement left, three reel windows stacked right (beginning / middle / end). Normal flow, nothing overlaps. */
-.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--band) center/cover no-repeat;opacity:.22;-webkit-mask:linear-gradient(180deg,#000 0%,rgba(0,0,0,.6) 55%,transparent 100%),linear-gradient(90deg,#000 55%,transparent 100%);-webkit-mask-composite:source-in;mask:linear-gradient(180deg,#000 0%,rgba(0,0,0,.6) 55%,transparent 100%),linear-gradient(90deg,#000 55%,transparent 100%);mask-composite:intersect;pointer-events:none}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--band) center/cover no-repeat;opacity:.12;-webkit-mask:linear-gradient(180deg,#000 0%,rgba(0,0,0,.6) 55%,transparent 100%),linear-gradient(90deg,#000 55%,transparent 100%);-webkit-mask-composite:source-in;mask:linear-gradient(180deg,#000 0%,rgba(0,0,0,.6) 55%,transparent 100%),linear-gradient(90deg,#000 55%,transparent 100%);mask-composite:intersect;pointer-events:none}
 .hero{position:relative;isolation:isolate;padding:calc(96px + env(safe-area-inset-top,0px)) var(--pad) clamp(36px,5vw,64px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) auto;gap:clamp(20px,3vw,40px);align-items:start}
 .hero .lead{position:sticky;top:calc(92px + env(safe-area-inset-top,0px));display:flex;flex-direction:column;gap:clamp(28px,4vw,48px);min-width:0}
 .hero .meta{display:flex;flex-direction:column;gap:6px;padding-top:4px}
@@ -228,6 +228,30 @@ footer .giant{font:900 21vw/.78 var(--sans);font-variation-settings:"wdth" 125;l
 footer .bar{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px 28px}
 
 .bandfill{background:var(--tex) center/130% auto;-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* JOURNEY: scroll-scrubbed liquid chrome behind the whole page */
+#journey{position:fixed;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;opacity:.85;pointer-events:none;background:#000;will-change:opacity}
+#journey-dim{position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(70% 60% at 30% 40%,rgba(0,0,0,.25),rgba(0,0,0,.75) 70%,#000 100%)}
+body.scrolled #journey{opacity:.35}
+/* depth planes */
+[data-depth]{will-change:transform}
+.hero .lead,.hero .stack,.hero .vert{transform-style:preserve-3d}
+/* logo spin */
+.spin{display:inline-block;perspective:1200px}
+.spin .logo-chrome{transition:transform 1.4s cubic-bezier(.16,1,.3,1);transform-style:preserve-3d;backface-visibility:visible}
+.spin:hover .logo-chrome{transform:rotateY(360deg)}
+/* video-in-text */
+.vtxt{display:block;overflow:visible}
+.vtxt text{font-family:var(--sans);font-weight:900;font-variation-settings:"wdth" 125;letter-spacing:-.05em}
+.vtxt foreignObject{overflow:hidden}
+.vtxt .vfill{width:100%;height:100%;background:var(--tex) center/cover}
+.vtxt video{width:100%;height:100%;object-fit:cover;display:block}
+.head .no.vwrap{background:none;-webkit-text-fill-color:initial;color:transparent;animation:none;position:relative;line-height:.8}
+.head .no.vwrap svg{position:absolute;inset:0;width:100%;height:100%}
+footer .giant.vwrap{background:none;-webkit-text-fill-color:initial;color:transparent;opacity:1;position:relative}
+footer .giant.vwrap svg{position:absolute;inset:0;width:100%;height:100%}
+@media (prefers-reduced-motion:reduce){#journey,#journey-dim{display:none}.spin:hover .logo-chrome{transform:none}}
+
 /* REVEAL */
 .rv{opacity:0;transform:translateY(28px);transition:opacity .9s var(--out),transform .9s var(--out);transition-delay:calc(var(--i,0) * 70ms)}
 .rv.in{opacity:1;transform:none}
@@ -237,6 +261,7 @@ footer .bar{display:flex;flex-wrap:wrap;justify-content:space-between;align-item
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><filter id="liquid" x="-10%" y="-10%" width="120%" height="120%" color-interpolation-filters="sRGB"><feTurbulence type="fractalNoise" baseFrequency="0.008 0.02" numOctaves="2" seed="7" result="n"><animate attributeName="baseFrequency" dur="11s" values="0.008 0.02;0.012 0.016;0.006 0.024;0.008 0.02" repeatCount="indefinite"/></feTurbulence><feDisplacementMap in="SourceGraphic" in2="n" scale="7" xChannelSelector="R" yChannelSelector="G"/></filter></defs></svg>
+<video id="journey" poster="media/journey-poster.jpg" muted playsinline preload="auto" aria-hidden="true"><source src="media/journey.webm" type="video/webm"><source src="media/journey.mp4" type="video/mp4"></video><div id="journey-dim" aria-hidden="true"></div>
 
 <nav aria-label="Main">
   <a class="brand" href="#top"><img class="navlogo" src="media/logo-liquid-mark.webp" alt="" width="160" height="160" aria-hidden="true">Frame X God</a>
@@ -250,7 +275,7 @@ footer .bar{display:flex;flex-wrap:wrap;justify-content:space-between;align-item
 </nav>
 
 <header class="hero" id="top">
-  <div class="lead">
+  <div class="lead" data-depth="0.35">
     <div class="meta mono">
       <span class="rec">Lightworks Productions</span>
       <span class="dim">Miami · New York · Los Angeles</span>
@@ -262,19 +287,19 @@ footer .bar{display:flex;flex-wrap:wrap;justify-content:space-between;align-item
       <a class="cta" href="#contact">Book a date <i aria-hidden="true">→</i></a>
     </div>
   </div>
-  <div class="stack">
+  <div class="stack" data-depth="-0.25">
       <div><div class="win" data-hero><img class="poster" src="media/min-begin.jpg" alt="" width="1280" height="720" fetchpriority="high"><video muted loop playsinline preload="auto" aria-hidden="true"><source src="media/min-begin.mp4" type="video/mp4"><source src="media/min-begin.webm" type="video/webm"></video></div><div class="reelcap mono"><span><b>01</b> &nbsp;Reel · Beginning</span><span>00:00 – 01:00</span></div></div>
       <div><div class="win" data-hero><img class="poster" src="media/min-mid.jpg" alt="" width="1280" height="720" loading="lazy"><video muted loop playsinline preload="none" aria-hidden="true"><source src="media/min-mid.mp4" type="video/mp4"><source src="media/min-mid.webm" type="video/webm"></video></div><div class="reelcap mono"><span><b>02</b> &nbsp;Reel · Middle</span><span>01:30 – 02:30</span></div></div>
       <div><div class="win" data-hero><img class="poster" src="media/min-end.jpg" alt="" width="1280" height="720" loading="lazy"><video muted loop playsinline preload="none" aria-hidden="true"><source src="media/min-end.mp4" type="video/mp4"><source src="media/min-end.webm" type="video/webm"></video></div><div class="reelcap mono"><span><b>03</b> &nbsp;Reel · End</span><span>03:00 – 04:00</span></div></div>
   </div>
-  <div class="vert liquid" aria-hidden="true">神フレーム</div>
+  <div class="vert liquid" data-depth="0.6" aria-hidden="true">神フレーム</div>
 </header>
 
 <main>
 
 <section class="sec" id="work">
   <div class="head rv">
-    <span class="no" aria-hidden="true">01</span>
+    <span class="no vwrap" aria-hidden="true">01<svg class="vtxt" viewBox="0 0 200 100" preserveAspectRatio="none"><defs><clipPath id="cpn1"><text x="-6" y="92" font-size="118" textLength="212" lengthAdjust="spacingAndGlyphs">01</text></clipPath></defs><foreignObject x="0" y="0" width="200" height="100" clip-path="url(#cpn1)"><div xmlns="http://www.w3.org/1999/xhtml" class="vfill"><video class="vloop" muted loop playsinline preload="none" data-src="media/mercury-loop.mp4"></video></div></foreignObject></svg></span>
     <h2><span class="jp">作品</span>Selected Work</h2>
     <span class="mono dim">{{FEATURED_COUNT}} pieces · Hover to play</span>
   </div>
@@ -285,7 +310,7 @@ footer .bar{display:flex;flex-wrap:wrap;justify-content:space-between;align-item
 
 <section class="sec" id="reel">
   <div class="head rv">
-    <span class="no" aria-hidden="true">02</span>
+    <span class="no vwrap" aria-hidden="true">02<svg class="vtxt" viewBox="0 0 200 100" preserveAspectRatio="none"><defs><clipPath id="cpn2"><text x="-6" y="92" font-size="118" textLength="212" lengthAdjust="spacingAndGlyphs">02</text></clipPath></defs><foreignObject x="0" y="0" width="200" height="100" clip-path="url(#cpn2)"><div xmlns="http://www.w3.org/1999/xhtml" class="vfill"><video class="vloop" muted loop playsinline preload="none" data-src="media/mercury-loop.mp4"></video></div></foreignObject></svg></span>
     <h2><span class="jp">リール</span>Reel 2026</h2>
     <span class="mono dim">4:02 · Sound on</span>
   </div>
@@ -300,13 +325,13 @@ footer .bar{display:flex;flex-wrap:wrap;justify-content:space-between;align-item
 
 <section class="mark rv" aria-label="FRAMEXGOD">
   <div class="rule mono"><span>Frame X God</span></div>
-  <img class="logo-chrome" src="media/logo-liquid.webp" alt="FRAME X GOD 神フレーム" width="1000" height="1345" loading="lazy">
+  <span class="spin"><img class="logo-chrome" src="media/logo-liquid.webp" alt="FRAME X GOD 神フレーム" width="1000" height="1345" loading="lazy"></span>
   <span class="mono dim">Miami · New York · Los Angeles</span>
 </section>
 
 <section class="sec" id="credits">
   <div class="head rv">
-    <span class="no" aria-hidden="true">03</span>
+    <span class="no vwrap" aria-hidden="true">03<svg class="vtxt" viewBox="0 0 200 100" preserveAspectRatio="none"><defs><clipPath id="cpn3"><text x="-6" y="92" font-size="118" textLength="212" lengthAdjust="spacingAndGlyphs">03</text></clipPath></defs><foreignObject x="0" y="0" width="200" height="100" clip-path="url(#cpn3)"><div xmlns="http://www.w3.org/1999/xhtml" class="vfill"><video class="vloop" muted loop playsinline preload="none" data-src="media/mercury-loop.mp4"></video></div></foreignObject></svg></span>
     <h2><span class="jp">実績</span>Credits</h2>
     <span class="mono dim">Views on YouTube · 2008—2026</span>
   </div>
@@ -332,7 +357,7 @@ footer .bar{display:flex;flex-wrap:wrap;justify-content:space-between;align-item
 
 <section class="sec" id="services">
   <div class="head rv">
-    <span class="no" aria-hidden="true">04</span>
+    <span class="no vwrap" aria-hidden="true">04<svg class="vtxt" viewBox="0 0 200 100" preserveAspectRatio="none"><defs><clipPath id="cpn4"><text x="-6" y="92" font-size="118" textLength="212" lengthAdjust="spacingAndGlyphs">04</text></clipPath></defs><foreignObject x="0" y="0" width="200" height="100" clip-path="url(#cpn4)"><div xmlns="http://www.w3.org/1999/xhtml" class="vfill"><video class="vloop" muted loop playsinline preload="none" data-src="media/mercury-loop.mp4"></video></div></foreignObject></svg></span>
     <h2><span class="jp">料金</span>Services</h2>
     <span class="mono dim">Starting rates · USD</span>
   </div>
@@ -354,7 +379,7 @@ footer .bar{display:flex;flex-wrap:wrap;justify-content:space-between;align-item
 
 <section class="sec" id="contact">
   <div class="head rv">
-    <span class="no" aria-hidden="true">05</span>
+    <span class="no vwrap" aria-hidden="true">05<svg class="vtxt" viewBox="0 0 200 100" preserveAspectRatio="none"><defs><clipPath id="cpn5"><text x="-6" y="92" font-size="118" textLength="212" lengthAdjust="spacingAndGlyphs">05</text></clipPath></defs><foreignObject x="0" y="0" width="200" height="100" clip-path="url(#cpn5)"><div xmlns="http://www.w3.org/1999/xhtml" class="vfill"><video class="vloop" muted loop playsinline preload="none" data-src="media/mercury-loop.mp4"></video></div></foreignObject></svg></span>
     <h2><span class="jp">予約</span>Contact</h2>
     <span class="mono dim">Miami · New York · Los Angeles</span>
   </div>
@@ -391,7 +416,7 @@ footer .bar{display:flex;flex-wrap:wrap;justify-content:space-between;align-item
 </main>
 
 <footer>
-  <p class="giant" aria-hidden="true">Frame X God</p>
+  <p class="giant vwrap" aria-hidden="true">Frame X God<svg class="vtxt" viewBox="0 0 1000 160" preserveAspectRatio="none"><defs><clipPath id="cpf"><text x="0" y="150" font-size="190" textLength="1000" lengthAdjust="spacingAndGlyphs">FRAME X GOD</text></clipPath></defs><foreignObject x="0" y="0" width="1000" height="160" clip-path="url(#cpf)"><div xmlns="http://www.w3.org/1999/xhtml" class="vfill"><video class="vloop" muted loop playsinline preload="none" data-src="media/mercury-loop.mp4"></video></div></foreignObject></svg></p>
   <img class="lw" src="media/lightworks.png" alt="Lightworks Productions" width="592" height="245" loading="lazy">
   <div class="bar mono dim">
     <span><img src="media/logo-liquid-mark.webp" alt="" width="22" height="22" style="vertical-align:middle;margin-right:10px;display:inline-block" aria-hidden="true">FRAMEXGOD © 2026</span>
@@ -447,6 +472,37 @@ footer .bar{display:flex;flex-wrap:wrap;justify-content:space-between;align-item
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{rootMargin:'0px 0px -8% 0px'});
   els.forEach(function(e,i){io.observe(e);});
   document.querySelectorAll('.index .rv,.svcs .rv').forEach(function(e,i){e.style.setProperty('--i',i%6);});
+})();
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+(function(){
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches; if(reduce||!window.gsap)return;
+  gsap.registerPlugin(ScrollTrigger);
+  /* journey: scrub video with page scroll */
+  var jv=document.getElementById('journey'), target=0, cur=0, dur=0;
+  function ready(){dur=jv.duration||15;}
+  jv.addEventListener('loadedmetadata',ready); if(jv.readyState>=1)ready();
+  function onS(){var max=document.documentElement.scrollHeight-innerHeight; target=max>0?Math.min(1,Math.max(0,scrollY/max)):0; document.body.classList.toggle('scrolled',scrollY>innerHeight*0.6);} addEventListener('scroll',onS,{passive:true}); addEventListener('resize',onS); onS();
+  function tick(){cur+=(target-cur)*0.08; var d=jv.duration; if(isFinite(d)&&d>0&&!jv.seeking&&Math.abs(jv.currentTime-cur*d)>0.02){try{jv.currentTime=cur*d;}catch(e){}} requestAnimationFrame(tick);} tick();
+  /* scroll depth */
+  document.querySelectorAll('[data-depth]').forEach(function(el){var d=+el.dataset.depth;
+    gsap.to(el,{y:function(){return -innerHeight*d*0.6},ease:'none',scrollTrigger:{trigger:el.closest('.hero')||el,start:'top top',end:'bottom top',scrub:true}});});
+  document.querySelectorAll('.tile,.mark,.row,.svc').forEach(function(el,i){
+    gsap.fromTo(el,{y:30*(1+(i%3))},{y:-30*(1+(i%3)),ease:'none',scrollTrigger:{trigger:el,start:'top bottom',end:'bottom top',scrub:true}});});
+  /* mouse parallax on the hero planes */
+  var hero=document.querySelector('.hero'), planes=hero.querySelectorAll('[data-depth]'), mx=0,my=0,tx=0,ty=0;
+  if(matchMedia('(hover: hover)').matches){
+    addEventListener('mousemove',function(e){tx=(e.clientX/innerWidth-.5); ty=(e.clientY/innerHeight-.5);},{passive:true});
+    (function mp(){mx+=(tx-mx)*.06; my+=(ty-my)*.06; planes.forEach(function(p){var d=+p.dataset.depth; p.style.setProperty('--px',(mx*40*d)+'px'); p.style.setProperty('--py',(my*30*d)+'px');}); requestAnimationFrame(mp);})();
+    var style=document.createElement('style'); style.textContent='.hero [data-depth]{translate:var(--px,0) var(--py,0)}'; document.head.appendChild(style);
+  }
+  /* mercury loops: play when in view, faster on hover */
+  var loops=document.querySelectorAll('.vloop');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){var v=e.target; if(e.isIntersecting){if(!v.src){var mp4=v.canPlayType('video/mp4; codecs="avc1.42E01E"'); v.src=mp4?v.dataset.src:v.dataset.src.replace('.mp4','.webm');} var p=v.play(); if(p&&p.catch)p.catch(function(){});} else v.pause();});},{threshold:.1});
+  loops.forEach(function(v){io.observe(v); var host=v.closest('.vwrap'); if(host){host.addEventListener('mouseenter',function(){v.playbackRate=2.2;}); host.addEventListener('mouseleave',function(){v.playbackRate=1;});}});
 })();
 </script>
 </body>
