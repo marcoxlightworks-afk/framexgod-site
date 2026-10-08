@@ -17,16 +17,34 @@ ROOT_GUESS = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 tpl = open(os.path.join(ROOT, 'build', 'template.html'), encoding='utf-8').read()
 
+# 6-column grid, each row-pair tiles exactly: [big 2x2][std][std][big 2x2] / [std][std] ... pattern repeats
 FEATURED = [
-    ('rendido_r1_10s', 'big', 'Rendido', 'JHEX · Director', 'Performer leaping across a mirrored salt flat at sunrise'),
-    ('b71', '', '', '', 'Woman with braids aiming a rifle'),
-    ('b12', '', '', '', 'Dancer reaching up through pink light'),
-    ('b76', '', '', '', 'Artist with his hand on his head in a crowded room'),
-    ('b30', '', '', '', 'Artist in a silver headpiece reaching toward the camera'),
-    ('b25', '', '', '', 'Monster truck firing a flamethrower in a shipping yard'),
-    ('b13', '', '', '', 'Face in clear glasses washed in violet light'),
-    ('b15', '', '', '', 'Artist in a white fur coat under blue and red light'),
-    ('b93', '', '', '', 'Black-and-white shot of a man at the edge of the ocean'),
+    # row-pair A (12 cells)
+    ('rendido_r1_10s', 'big',  'Rendido', 'JHEX · Director', 'Performer leaping across a mirrored salt flat at sunrise'),
+    ('b71',  '',     '', '', 'Frame'),
+    ('b12',  '',     '', '', 'Frame'),
+    ('b76',  'big',  '', '', 'Frame'),
+    ('b30',  '',     '', '', 'Frame'),
+    ('b25',  '',     '', '', 'Frame'),
+    # row B (6 cells)
+    ('b13',  'wide', '', '', 'Frame'),
+    ('b15',  '',     '', '', 'Frame'),
+    ('b93',  '',     '', '', 'Frame'),
+    ('b02',  'wide', '', '', 'Frame'),
+    # row-pair C (12 cells)
+    ('b47',  '',     '', '', 'Frame'),
+    ('b78',  '',     '', '', 'Frame'),
+    ('b83',  'big',  '', '', 'Frame'),
+    ('b21',  '',     '', '', 'Frame'),
+    ('b16',  '',     '', '', 'Frame'),
+    ('b08',  '',     '', '', 'Frame'),
+    ('b61',  '',     '', '', 'Frame'),
+    ('b64',  '',     '', '', 'Frame'),
+    ('b33',  '',     '', '', 'Frame'),
+    # row D (6 cells)
+    ('b40',  'wide', '', '', 'Frame'),
+    ('b56',  'wide', '', '', 'Frame'),
+    ('b11',  'wide', '', '', 'Frame'),
 ]
 
 all_clips = sorted(f[:-4] for f in os.listdir(os.path.join(ROOT, 'boom')) if f.endswith('.mp4'))
