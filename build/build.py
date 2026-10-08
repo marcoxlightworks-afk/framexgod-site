@@ -1,0 +1,59 @@
+import os, re, urllib.parse
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+tpl = open(os.path.join(ROOT, 'build', 'template.html'), encoding='utf-8').read()
+
+FEATURED = [
+    ('rendido_r1_10s', 'big', 'Rendido', 'JHEX · Director', 'Performer leaping across a mirrored salt flat at sunrise'),
+    ('b15', '', '', '', 'Artist in a white fur coat under blue and red light'),
+    ('b02', '', '', '', 'Black horse beside a red Ferrari with its doors open on a green field'),
+    ('b88', '', '', '', 'Upside-down close-up of an artist in round sunglasses and gold rings'),
+    ('b05', '', '', '', 'Aerial view of Miami at night'),
+    ('b25', '', '', '', 'Monster truck firing a flamethrower in a shipping yard'),
+    ('b17', '', '', '', 'Race car number 33 in falling snow'),
+    ('b93', '', '', '', 'Black-and-white shot of a man at the edge of the ocean'),
+    ('b80', '', '', '', 'Artist on a balcony above the Miami skyline'),
+]
+
+all_clips = sorted(f[:-4] for f in os.listdir(os.path.join(ROOT, 'boom')) if f.endswith('.mp4'))
+featured_ids = {f[0] for f in FEATURED}
+archive = [c for c in all_clips if c not in featured_ids]
+
+
+def tile(cid, cls, title, sub, alt, idx, eager=False):
+    cap = ''
+    if title:
+        cap = f'<div class="cap"><div><b>{title}</b><span class="mono">{sub}</span></div></div>'
+    load = 'eager' if eager else 'lazy'
+    klass = ('tile ' + cls).strip()
+    return (f'    <div class="{klass}" tabindex="0" role="button" aria-label="{alt} — play the reel">'
+            f'<span class="idx mono">{idx:02d}</span>'
+            f'<img src="media/thumbs/{cid}.webp" alt="{alt}" width="720" height="405" loading="{load}" decoding="async">'
+            f'<video muted loop playsinline preload="none" data-src="boom/{cid}.mp4"></video>{cap}</div>')
+
+
+feat_html = '\n'.join(
+    tile(c, cls, t, s, a, i + 1, eager=(i == 0))
+    for i, (c, cls, t, s, a) in enumerate(FEATURED))
+
+arch_rows = []
+for i, c in enumerate(archive):
+    alt = f'FRAMEXGOD archive clip {i + 1:02d}'
+    arch_rows.append(
+        f'    <div class="tile" tabindex="0" role="button" aria-label="{alt} — play the reel">'
+        f'<img src="media/thumbs/{c}.webp" alt="{alt}" width="720" height="405" loading="lazy" decoding="async">'
+        f'<video muted loop playsinline preload="none" data-src="boom/{c}.mp4"></video></div>')
+
+jp_chars = ''.join(sorted(set(ch for ch in tpl if ord(ch) > 0x3000)))
+
+out = (tpl.replace('{{FEATURED}}', feat_html)
+          .replace('{{FEATURED_COUNT}}', str(len(FEATURED)))
+          .replace('{{ARCHIVE}}', '\n'.join(arch_rows))
+          .replace('{{ARCHIVE_COUNT}}', str(len(archive)))
+          .replace('{{JP}}', urllib.parse.quote(jp_chars)))
+
+assert '{{' not in out, 'unfilled placeholder'
+for c, *_ in FEATURED:
+    assert os.path.exists(os.path.join(ROOT, 'media', 'thumbs', c + '.webp')), c
+open(os.path.join(ROOT, 'index.html'), 'w', encoding='utf-8').write(out)
+print('featured', len(FEATURED), 'archive', len(archive), 'bytes', len(out.encode()), 'jp', jp_chars)
