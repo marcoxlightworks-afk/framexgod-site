@@ -8,14 +8,14 @@
 <meta property="og:title" content="FRAMEXGOD">
 <meta property="og:description" content="Music videos, commercials and films. Miami · New York · Los Angeles.">
 <meta property="og:url" content="https://framexgod.com/">
-<meta property="og:image" content="https://framexgod.com/media/reel-begin.jpg">
+<meta property="og:image" content="https://framexgod.com/media/min-begin.jpg">
 <meta name="theme-color" content="#0b0b0b">
 <link rel="canonical" href="https://framexgod.com/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;900&display=swap&text=%E3%82%A2%E3%82%A4%E3%82%AB%E3%82%AF%E3%82%B5%E3%82%B9%E3%82%BC%E3%83%8B%E3%83%95%E3%83%96%E3%83%9E%E3%83%9F%E3%83%A0%E3%83%A5%E3%83%A8%E3%83%AA%E3%83%AB%E3%83%AC%E3%83%AD%E3%83%B3%E3%83%BC%E4%BA%88%E4%BD%9C%E5%93%81%E5%AE%9F%E5%AE%A2%E6%96%99%E7%A5%9E%E7%B4%84%E7%B8%BE%E9%87%91%E9%A1%A7" rel="stylesheet">
-<link rel="preload" as="image" href="media/reel-begin.jpg">
+<link rel="preload" as="image" href="media/min-begin.jpg">
 <style>
 :root{
   --bg:#0b0b0b;--bg2:#121211;--fg:#edebe6;--dim:#8d8b86;--mute:#5d5b57;--line:#262523;
@@ -248,9 +248,9 @@ footer .bar{display:flex;flex-wrap:wrap;justify-content:space-between;align-item
     </div>
   </div>
   <div class="stack">
-      <div><div class="win" data-hero><img class="poster" src="media/reel-begin.jpg" alt="" width="1280" height="720" fetchpriority="high"><video src="media/reel-begin.mp4" muted loop playsinline autoplay preload="auto" aria-hidden="true"></video></div><div class="reelcap mono"><span><b>01</b> &nbsp;Reel · Beginning</span><span>00:01:03</span></div></div>
-      <div><div class="win" data-hero><img class="poster" src="media/reel-mid.jpg" alt="" width="1280" height="720" loading="lazy"><video src="media/reel-mid.mp4" muted loop playsinline autoplay preload="metadata" aria-hidden="true"></video></div><div class="reelcap mono"><span><b>02</b> &nbsp;Reel · Middle</span><span>00:01:38</span></div></div>
-      <div><div class="win" data-hero><img class="poster" src="media/reel-end.jpg" alt="" width="1280" height="720" loading="lazy"><video src="media/reel-end.mp4" muted loop playsinline autoplay preload="metadata" aria-hidden="true"></video></div><div class="reelcap mono"><span><b>03</b> &nbsp;Reel · End</span><span>00:03:48</span></div></div>
+      <div><div class="win" data-hero><img class="poster" src="media/min-begin.jpg" alt="" width="1280" height="720" fetchpriority="high"><video src="media/min-begin.mp4" muted loop playsinline preload="auto" aria-hidden="true"></video></div><div class="reelcap mono"><span><b>01</b> &nbsp;Reel · Beginning</span><span>00:00 – 01:00</span></div></div>
+      <div><div class="win" data-hero><img class="poster" src="media/min-mid.jpg" alt="" width="1280" height="720" loading="lazy"><video src="media/min-mid.mp4" muted loop playsinline preload="none" aria-hidden="true"></video></div><div class="reelcap mono"><span><b>02</b> &nbsp;Reel · Middle</span><span>01:30 – 02:30</span></div></div>
+      <div><div class="win" data-hero><img class="poster" src="media/min-end.jpg" alt="" width="1280" height="720" loading="lazy"><video src="media/min-end.mp4" muted loop playsinline preload="none" aria-hidden="true"></video></div><div class="reelcap mono"><span><b>03</b> &nbsp;Reel · End</span><span>03:00 – 04:00</span></div></div>
   </div>
   <div class="vert" aria-hidden="true">神フレーム</div>
 </header>
@@ -517,7 +517,7 @@ footer .bar{display:flex;flex-wrap:wrap;justify-content:space-between;align-item
   v.addEventListener('play',function(){b.classList.add('gone');});
 })();
 
-(function(){document.querySelectorAll('[data-hero]').forEach(function(c){var v=c.querySelector('video');if(!v)return;v.addEventListener('playing',function(){c.classList.add('live');});var p=v.play();if(p&&p.catch)p.catch(function(){});});})();
+(function(){var cs=[].slice.call(document.querySelectorAll('[data-hero]'));function go(c){var v=c.querySelector('video');if(!v)return;if(v.preload==='none')v.preload='auto';var p=v.play();if(p&&p.catch)p.catch(function(){});}function stop(c){var v=c.querySelector('video');if(v&&!v.paused)v.pause();}cs.forEach(function(c){var v=c.querySelector('video');if(v)v.addEventListener('playing',function(){c.classList.add('live');});});if(!('IntersectionObserver' in window)){cs.forEach(go);return;}var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)go(e.target);else stop(e.target);});},{threshold:0.25});cs.forEach(function(c){io.observe(c);});})();
 
 (function(){var n=document.querySelector('nav');function u(){n.classList.toggle('solid',window.scrollY>window.innerHeight*0.7);}u();window.addEventListener('scroll',u,{passive:true});})();
 
