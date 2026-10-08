@@ -3,496 +3,412 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>FRAMEXGOD — Production Company · Miami · New York · Los Angeles</title>
-<meta name="description" content="FRAMEXGOD Lightworks Productions. Director, Director of Photography, Filmmaker. Music videos, commercials and films for labels, studios and brands. Miami · New York · Los Angeles.">
+<title>FRAMEXGOD — Lightworks Productions</title>
+<meta name="description" content="FRAMEXGOD Lightworks Productions — feature films, music videos, commercials, social media marketing and AI creative design. Miami · New York · Los Angeles.">
 <meta property="og:title" content="FRAMEXGOD">
-<meta property="og:description" content="Director · Director of Photography · Filmmaker. Miami · New York · Los Angeles.">
+<meta property="og:description" content="Feature films, music videos, commercials. Miami · New York · Los Angeles.">
 <meta property="og:url" content="https://framexgod.com/">
-<meta property="og:image" content="https://framexgod.com/media/min-begin.jpg">
+<meta property="og:image" content="https://framexgod.com/reel/poster.jpg">
 <meta name="theme-color" content="#000000">
 <link rel="canonical" href="https://framexgod.com/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="media/min-begin.jpg" fetchpriority="high">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="media/logo-chrome.png">
 <style>
-/* FRAMEXGOD. Black base. White display, grey mono and hairlines, chrome wordmark and CTA. */
 :root{
-  --bg:#000;--fg:#fff;--grey:#8a8a8a;--grey2:#4a4a4a;--line:#1c1c1c;
-  --chrome:linear-gradient(180deg,#ffffff 0%,#d9d9d9 28%,#8f8f8f 50%,#f2f2f2 62%,#b0b0b0 84%,#e6e6e6 100%);
+  --bg:#000;--fg:#fff;--grey:#9a9a9a;--grey2:#5c5c5c;--line:rgba(255,255,255,.1);--panel:#0a0a0a;
+  --chrome:linear-gradient(180deg,#ffffff 0%,#d9d9d9 38%,#7d7d7d 50%,#e9e9e9 62%,#9c9c9c 100%);
   --sans:'Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;
   --mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
-  --pad:clamp(20px,4vw,64px);
+  --pad:clamp(18px,3vw,44px);
   --ease:cubic-bezier(.16,1,.3,1);
   color-scheme:dark;
 }
 *{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
-html.lenis{height:auto}
-.lenis.lenis-smooth{scroll-behavior:auto}
-body{margin:0;background:var(--bg);color:var(--fg);font:400 15px/1.5 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+[id]{scroll-margin-top:72px}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 14px/1.5 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{color:inherit;text-decoration:none}
 img,video{display:block;max-width:100%}
 ::selection{background:#fff;color:#000}
 :focus-visible{outline:1px solid #fff;outline-offset:3px}
-.mono{font:500 11px/1.4 var(--mono);letter-spacing:.1em;text-transform:uppercase;font-variant-numeric:tabular-nums;color:var(--grey)}
+.mono{font:500 10px/1.5 var(--mono);letter-spacing:.18em;text-transform:uppercase}
 .chrome{background:var(--chrome);-webkit-background-clip:text;background-clip:text;color:transparent}
-.hair{height:1px;background:var(--line)}
-.grid12{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(10px,1.2vw,20px)}
-.will{will-change:transform,opacity}
+
+/* grain */
+body::after{content:"";position:fixed;inset:-50%;z-index:90;pointer-events:none;opacity:.045;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");animation:grain 1.4s steps(6) infinite}
+@keyframes grain{0%{transform:translate(0,0)}25%{transform:translate(-3%,2%)}50%{transform:translate(2%,-3%)}75%{transform:translate(-2%,-1%)}100%{transform:translate(0,0)}}
 
 /* NAV */
-nav{position:fixed;inset:0 0 auto 0;z-index:60;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:calc(14px + env(safe-area-inset-top,0px)) var(--pad) 14px;mix-blend-mode:difference}
-nav .brand{font:900 13px/1 var(--sans);font-variation-settings:"wdth" 125;letter-spacing:.3em;text-transform:uppercase;color:#fff}
-nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0}
-nav ul a{position:relative;padding-bottom:4px}
+nav{position:fixed;inset:0 0 auto 0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:calc(18px + env(safe-area-inset-top,0px)) var(--pad) 16px;background:linear-gradient(180deg,rgba(0,0,0,.92),rgba(0,0,0,.6) 70%,transparent);transition:background .4s}
+nav.solid{background:rgba(0,0,0,.94);border-bottom:1px solid var(--line)}
+nav .brand{font:800 11px/1 var(--sans);letter-spacing:.34em;text-transform:uppercase;font-variation-settings:"wdth" 120}
+nav ul{display:flex;gap:30px;list-style:none;margin:0;padding:0;font:500 10px/1 var(--mono);letter-spacing:.2em;text-transform:uppercase;color:#cfcfcf}
+nav ul a{position:relative;padding:6px 0}
 nav ul a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:#fff;transform:scaleX(0);transform-origin:right;transition:transform .5s var(--ease)}
-nav ul a:hover::after,nav ul a[aria-current]::after{transform:scaleX(1);transform-origin:left}
-@media (max-width:760px){nav ul li.hide{display:none}nav ul{gap:18px}}
+nav ul a:hover::after{transform:scaleX(1);transform-origin:left}
+@media (max-width:760px){nav ul{gap:16px}nav li.hide{display:none}}
 
-/* HERO: 3D parallax planes */
-.hero{position:relative;height:100svh;min-height:560px;overflow:hidden;perspective:1200px;perspective-origin:50% 50%;background:#000}
-.hero .scene{position:absolute;inset:0;transform-style:preserve-3d;will-change:transform}
-.hero .plane{position:absolute;inset:-8%;transform-style:preserve-3d;will-change:transform}
-.hero .p-bg img{width:100%;height:100%;object-fit:cover;filter:saturate(.82) contrast(1.05)}
-.hero .p-mid{background:radial-gradient(120% 90% at 50% 70%,transparent 35%,rgba(0,0,0,.8) 100%),radial-gradient(60% 40% at 50% 58%,rgba(0,0,0,.55),transparent 70%)}
-.hero .p-haze{background:linear-gradient(0deg,#000 0%,rgba(0,0,0,.35) 30%,transparent 60%),radial-gradient(70% 60% at 50% 110%,rgba(255,255,255,.07),transparent 70%)}
-.hero .p-subject{display:grid;place-items:center;text-align:center;padding:0 var(--pad)}
-.hero .mark{font:900 clamp(38px,11.2vw,190px)/.86 var(--sans);font-variation-settings:"wdth" 112;letter-spacing:-.035em;text-transform:uppercase;margin:0}
-.hero .mark .x{font-weight:300;font-variation-settings:"wdth" 80;letter-spacing:0;margin:0 .04em}
-.hero .role{margin:clamp(14px,2vw,26px) 0 0;color:#e6e6e6;text-shadow:0 1px 18px rgba(0,0,0,.9),0 0 2px rgba(0,0,0,.9);font:400 clamp(12px,1.2vw,15px)/1.4 var(--sans);letter-spacing:.32em;text-transform:uppercase}
-.hero .cta-wrap{margin-top:clamp(26px,3.6vw,48px)}
-.hero .corner{position:absolute;z-index:3;font:500 11px/1.5 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--grey)}
-.hero .c-bl{left:var(--pad);bottom:calc(24px + env(safe-area-inset-bottom,0px))}
-.hero .c-br{right:var(--pad);bottom:calc(24px + env(safe-area-inset-bottom,0px));text-align:right}
-.hero .c-br a{color:#fff}
-.hero .vert{position:absolute;right:var(--pad);top:50%;transform:translateY(-50%);writing-mode:vertical-rl;font:500 10px/1 var(--mono);letter-spacing:.4em;text-transform:uppercase;color:var(--grey2);z-index:3}
-@media (max-width:760px){.hero .vert{display:none}.hero .c-br{display:none}.hero .role{letter-spacing:.18em;font-size:11px;max-width:300px;margin-left:auto;margin-right:auto}.hero .p-subject{inset:0}}
+/* INTRO */
+.intro{position:relative;min-height:100svh;padding:calc(96px + env(safe-area-inset-top,0px)) var(--pad) 90px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:0;overflow:hidden}
+.intro::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 45% at 50% 38%,rgba(255,255,255,.07),transparent 70%);pointer-events:none}
+.intro .mark{position:relative;width:min(300px,52vw,28svh);height:auto;filter:drop-shadow(0 30px 60px rgba(0,0,0,.8))}
+.intro .lines{position:relative;margin-top:clamp(28px,4vw,44px);display:flex;flex-direction:column;align-items:center;gap:14px}
+.intro .l1{font:800 clamp(13px,1.5vw,16px)/1 var(--sans);letter-spacing:.36em;text-transform:uppercase;font-variation-settings:"wdth" 118}
+.intro .l2{font:500 clamp(9px,1vw,11px)/1.9 var(--mono);letter-spacing:.22em;text-transform:uppercase;color:#d2d2d2;max-width:min(92vw,110ch)}
+@media (max-width:760px){.intro .l2{max-width:30ch}}
+.intro .l2 span{white-space:nowrap}
+.intro .l2 i{font-style:normal;color:var(--grey2);margin:0 .6em}
+.intro .l3{font:500 10px/1 var(--mono);letter-spacing:.3em;text-transform:uppercase;color:var(--grey)}
+.intro .cta{margin-top:clamp(26px,3.4vw,40px)}
+.intro .scroll{position:absolute;left:50%;bottom:calc(22px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:10px;color:var(--grey2)}
+.intro .scroll i{display:block;width:1px;height:38px;background:linear-gradient(180deg,#fff,transparent);animation:drop 2.2s var(--ease) infinite}
+@keyframes drop{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+.btn{display:inline-flex;align-items:center;gap:14px;height:50px;padding:0 30px;border:0;border-radius:0;background:var(--chrome);color:#000;font:800 11px/1 var(--sans);letter-spacing:.26em;text-transform:uppercase;cursor:pointer;position:relative;overflow:hidden;box-shadow:0 0 0 1px rgba(255,255,255,.25) inset,0 20px 50px rgba(0,0,0,.6);transition:transform .6s var(--ease),filter .4s}
+.btn::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.75) 50%,transparent 70%);transform:translateX(-120%);transition:transform 1.2s var(--ease)}
+.btn:hover{transform:translateY(-1px);filter:brightness(1.06)}
+.btn:hover::after{transform:translateX(120%)}
+.btn.ghost{background:transparent;color:#fff;box-shadow:0 0 0 1px rgba(255,255,255,.35) inset}
+.btn.ghost::after{display:none}
 
-/* CTA: chrome */
-.cta{position:relative;display:inline-flex;align-items:center;gap:14px;height:52px;padding:0 26px;background:var(--chrome);color:#000;font:800 12px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;border:0;border-radius:0;cursor:pointer;transition:transform .5s var(--ease),filter .5s var(--ease)}
-.cta::after{content:"→";font-weight:500;letter-spacing:0;transition:transform .5s var(--ease)}
-.cta:hover{transform:translateY(-1px);filter:brightness(1.08)}
-.cta:hover::after{transform:translateX(5px)}
+/* SECTION HEADS */
+.head{display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding:0 var(--pad) 14px;margin:clamp(64px,9vw,120px) 0 clamp(18px,2.4vw,32px);border-bottom:0}
+.head .in{display:flex;align-items:baseline;gap:18px}
+.head .no{font:400 clamp(26px,3.2vw,44px)/1 var(--sans);font-variation-settings:"wdth" 125;font-weight:900;letter-spacing:-.02em}
+.head h2{margin:0;font:800 clamp(22px,2.6vw,34px)/1 var(--sans);letter-spacing:-.02em;text-transform:uppercase;font-variation-settings:"wdth" 112}
+.head .mono{color:var(--grey)}
+.rule{height:1px;background:var(--line);margin:0 var(--pad)}
+@media (max-width:700px){.head .mono{display:none}}
 
-/* SECTIONS */
-.sec{padding:clamp(72px,10vw,150px) var(--pad)}
-.head{display:flex;align-items:baseline;justify-content:space-between;gap:20px;padding-bottom:18px;border-bottom:1px solid var(--line);margin-bottom:clamp(26px,3.4vw,48px)}
-.head h2{margin:0;flex:1;font:800 clamp(28px,4.4vw,64px)/.95 var(--sans);letter-spacing:-.03em;text-transform:uppercase;text-wrap:balance}
-.head .no{font:500 11px var(--mono);color:var(--grey2);letter-spacing:.2em}
-
-/* SCROLL-INTO-REEL */
-.reelwrap{position:relative;height:100vh;background:#000}
-.reelwrap .stage{position:absolute;inset:0;display:grid;place-items:center;overflow:hidden}
-.reelwrap .frame{position:relative;width:min(40vw,760px);aspect-ratio:16/9;border-radius:18px;overflow:hidden;clip-path:inset(0 round 18px);background:#000;will-change:transform,clip-path,border-radius;box-shadow:0 40px 120px rgba(0,0,0,.6)}
-.reelwrap .frame video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.reelwrap .txt{position:absolute;z-index:2;will-change:transform,opacity;pointer-events:none}
-.reelwrap .txt.l{left:var(--pad);top:50%;transform:translateY(-50%);max-width:24ch}
-.reelwrap .txt.r{right:var(--pad);top:50%;transform:translateY(-50%);text-align:right;max-width:22ch}
-.reelwrap .txt h2{margin:0 0 10px;font:800 clamp(26px,3.6vw,56px)/.95 var(--sans);letter-spacing:-.03em;text-transform:uppercase}
-.reelwrap .txt p{margin:0;color:var(--grey);font-size:14px;max-width:34ch}
-.reelwrap .snd{position:absolute;right:var(--pad);bottom:calc(28px + env(safe-area-inset-bottom,0px));z-index:3;height:40px;padding:0 16px;background:rgba(0,0,0,.55);border:1px solid rgba(255,255,255,.25);color:#fff;font:500 11px var(--mono);letter-spacing:.14em;text-transform:uppercase;backdrop-filter:blur(8px);cursor:pointer;opacity:0;transform:translateY(8px);transition:opacity .4s,transform .4s var(--ease);pointer-events:none}
-.reelwrap .snd.on{opacity:1;transform:none;pointer-events:auto}
-.reelwrap .prog{position:absolute;left:0;right:0;bottom:0;height:1px;background:rgba(255,255,255,.12);z-index:3}
-.reelwrap .prog i{display:block;height:100%;width:0;background:#fff}
-@media (max-width:900px){.reelwrap .frame{width:72vw}.reelwrap .txt{display:none}}
-
-/* CAPABILITY TRIPTYCH */
-.cats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(10px,1.2vw,20px)}
-.cat{position:relative;margin:0;aspect-ratio:16/10;overflow:hidden;background:#0a0a0a;cursor:pointer}
-.cat img,.cat video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.6s var(--ease),opacity .6s}
-.cat video{opacity:0}
-.cat.live video{opacity:1}
-.cat:hover img,.cat:hover video,.cat:focus-visible img{transform:scale(1.05)}
-.cat figcaption{position:absolute;left:0;right:0;bottom:0;padding:18px 20px;display:flex;flex-direction:column;gap:4px;background:linear-gradient(0deg,rgba(0,0,0,.8),transparent)}
-.cat figcaption b{font:800 clamp(18px,1.8vw,26px)/1 var(--sans);letter-spacing:-.02em;text-transform:uppercase}
-@media (max-width:760px){.cats{grid-template-columns:1fr}}
-
-/* SELECTED WORK: asymmetric editorial grid */
-.work{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));grid-auto-rows:minmax(0,auto);gap:clamp(10px,1.2vw,20px)}
-.tile{position:relative;margin:0;overflow:hidden;background:#0a0a0a;aspect-ratio:16/9;cursor:pointer;will-change:transform}
-.tile img,.tile video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.8s var(--ease),opacity .7s}
+/* WORK GRID */
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;padding:0 var(--pad)}
+@media (max-width:1100px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:760px){.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:4px}}
+.tile{position:relative;display:block;aspect-ratio:16/9;overflow:hidden;background:var(--panel);cursor:pointer;margin:0;padding:0;border:0;width:100%}
+.tile img,.tile video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.6s var(--ease),opacity .7s}
 .tile video{opacity:0}
 .tile.live video{opacity:1}
 .tile.live img,.tile:hover img,.tile:focus-visible img,.tile.live video{transform:scale(1.05)}
-.tile .idx{position:absolute;left:14px;top:12px;z-index:2;color:rgba(255,255,255,.7);mix-blend-mode:difference}
-.tile .cap{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:16px 18px;display:flex;flex-direction:column;gap:3px;background:linear-gradient(0deg,rgba(0,0,0,.75),transparent)}
-.tile .cap b{font:800 20px/1 var(--sans);letter-spacing:-.02em;text-transform:uppercase}
-.tile.a{grid-column:1/9;grid-row:span 2;aspect-ratio:16/10}
-.tile.b{grid-column:9/13}.tile.c{grid-column:9/13}
-.tile.d{grid-column:1/5}.tile.e{grid-column:5/9}.tile.f{grid-column:9/13}
-.tile.g{grid-column:1/6}.tile.h{grid-column:6/13;aspect-ratio:21/9}.tile.i{grid-column:1/13;aspect-ratio:21/8}
-@media (max-width:900px){.tile.a,.tile.b,.tile.c,.tile.d,.tile.e,.tile.f,.tile.g,.tile.h,.tile.i{grid-column:1/13;grid-row:auto;aspect-ratio:16/9}.tile.b,.tile.d,.tile.g{grid-column:1/7}.tile.c,.tile.e,.tile.f{grid-column:7/13}.tile.f{grid-column:1/13}}
+.tile .n{position:absolute;left:10px;top:8px;z-index:2;color:#fff;opacity:0;transition:opacity .4s;mix-blend-mode:difference}
+.tile:hover .n,.tile.live .n{opacity:.8}
+.tile::after{content:"";position:absolute;inset:0;box-shadow:0 0 0 1px rgba(255,255,255,0) inset;transition:box-shadow .4s;pointer-events:none}
+.tile:hover::after{box-shadow:0 0 0 1px rgba(255,255,255,.35) inset}
+
+/* REEL */
+.reelwrap{padding:0 var(--pad)}
+.reel{position:relative;aspect-ratio:16/9;background:#000;overflow:hidden;cursor:pointer}
+.reel video,.reel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.reel .play{position:absolute;inset:0;display:grid;place-items:center;background:linear-gradient(0deg,rgba(0,0,0,.6),transparent 50%);transition:opacity .5s}
+.reel .play span{display:inline-flex;align-items:center;gap:16px;font:800 clamp(16px,2.2vw,28px)/1 var(--sans);letter-spacing:.2em;text-transform:uppercase}
+.reel .play span::before{content:"";width:0;height:0;border-left:16px solid #fff;border-top:10px solid transparent;border-bottom:10px solid transparent}
+.reel.on .play{opacity:0;pointer-events:none}
+.reel .meta{position:absolute;left:18px;right:18px;bottom:16px;display:flex;justify-content:space-between;color:#cfcfcf;z-index:2}
 
 /* CREDITS */
-.credits{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
-.credits li{display:grid;grid-template-columns:minmax(0,2.2fr) minmax(0,3fr) minmax(0,2fr) minmax(0,1.2fr);gap:16px;align-items:baseline;padding:18px 0;border-bottom:1px solid var(--line)}
-.credits b{font:800 clamp(18px,2vw,28px)/1 var(--sans);letter-spacing:-.02em;text-transform:uppercase}
-.credits span{color:#cfcfcf;font-size:14px}
-.credits i,.credits em{font-style:normal;text-align:right}
-.credits em{color:#fff}
-@media (max-width:760px){.credits li{grid-template-columns:1fr 1fr}.credits span{grid-column:1/3}.credits i{text-align:left}}
+.credits{list-style:none;margin:0;padding:0 var(--pad)}
+.credits li{display:grid;grid-template-columns:40px minmax(0,1.3fr) minmax(0,1.6fr) minmax(0,1.2fr) auto;gap:20px;align-items:baseline;padding:20px 0;border-top:1px solid var(--line)}
+.credits li:last-child{border-bottom:1px solid var(--line)}
+.credits .i{color:var(--grey2)}
+.credits b{font:800 clamp(16px,1.6vw,22px)/1.05 var(--sans);letter-spacing:-.01em;text-transform:uppercase;font-variation-settings:"wdth" 108}
+.credits span{color:#c9c9c9;font-size:13px}
+.credits .r{color:var(--grey)}
+.credits em{font-style:normal;text-align:right;white-space:nowrap;font:900 clamp(16px,1.8vw,24px)/1 var(--sans);letter-spacing:-.01em;font-variation-settings:"wdth" 118}
+.credits em.sm{font:500 10px/1.5 var(--mono);letter-spacing:.14em;text-transform:uppercase;white-space:normal;max-width:22ch;color:#c9c9c9}
+@media (max-width:860px){.credits li{grid-template-columns:28px 1fr auto;grid-template-areas:"i t v" "i a v" "i r v";gap:4px 14px}.credits .i{grid-area:i}.credits b{grid-area:t}.credits span.a{grid-area:a}.credits .r{grid-area:r}.credits em{grid-area:v;align-self:center}}
 
-/* CLIENTS MARQUEE */
-.clients{padding:clamp(40px,6vw,80px) 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden}
-.marq{display:flex;width:max-content;animation:marq 42s linear infinite}
-.marq span{padding:0 clamp(28px,4vw,64px);font:800 clamp(22px,3.2vw,46px)/1 var(--sans);letter-spacing:-.02em;text-transform:uppercase;color:#d2d2d2;white-space:nowrap}
-.marq span::after{content:"/";margin-left:clamp(28px,4vw,64px);color:var(--grey2);font-weight:300}
+/* CLIENTS */
+.marq{overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:26px 0;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.marq .t{display:flex;gap:0;width:max-content;animation:marq 70s linear infinite}
+.marq .t span{font:800 clamp(18px,2.4vw,30px)/1 var(--sans);letter-spacing:.02em;text-transform:uppercase;white-space:nowrap;padding:0 34px;color:#e6e6e6;font-variation-settings:"wdth" 115}
+.marq .t span::after{content:"/";margin-left:68px;color:var(--grey2);font-weight:300}
 @keyframes marq{to{transform:translateX(-50%)}}
-.clients:hover .marq{animation-play-state:paused}
 
-/* ARCHIVE */
-.arch{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:6px}
-.arch .tile{aspect-ratio:16/9}
-@media (max-width:1100px){.arch{grid-template-columns:repeat(4,minmax(0,1fr))}}
-@media (max-width:640px){.arch{grid-template-columns:repeat(3,minmax(0,1fr))}}
-
-/* ABOUT */
-.about{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:20px}
-.about .lead{grid-column:1/8;margin:0;font:400 clamp(22px,2.8vw,40px)/1.25 var(--sans);letter-spacing:-.02em;text-wrap:balance}
-.about .meta{grid-column:9/13;display:grid;gap:14px;align-content:start}
-.about .meta div{display:grid;gap:4px;padding-top:12px;border-top:1px solid var(--line)}
-.about .meta b{font-weight:500;color:#fff}
-@media (max-width:900px){.about .lead,.about .meta{grid-column:1/13}.about .meta{margin-top:28px;grid-template-columns:1fr 1fr}}
+/* SERVICES */
+.services{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;padding:0 var(--pad)}
+@media (max-width:900px){.services{grid-template-columns:1fr}}
+.svc{background:var(--panel);padding:34px 28px 30px;display:flex;flex-direction:column;gap:14px;min-height:280px;position:relative;transition:background .4s}
+.svc:hover{background:#101010}
+.svc .k{color:var(--grey2)}
+.svc h3{margin:0;font:800 clamp(22px,2.2vw,30px)/1 var(--sans);letter-spacing:-.02em;text-transform:uppercase;font-variation-settings:"wdth" 110}
+.svc .from{color:var(--grey)}
+.svc p{margin:0;color:#c9c9c9;max-width:38ch;font-size:13px;line-height:1.6}
+.svc a{margin-top:auto;align-self:flex-start;color:#fff;border-bottom:1px solid #fff;padding-bottom:4px}
 
 /* CONTACT */
-.contact{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:20px;row-gap:28px;align-items:end}
-.contact h2{grid-column:1/9;margin:0;font:900 clamp(44px,8vw,140px)/.9 var(--sans);letter-spacing:-.04em;text-transform:uppercase}
-.contact .lines{grid-column:9/13;display:grid;gap:10px;font:500 clamp(16px,1.5vw,22px)/1.3 var(--sans);letter-spacing:-.01em}
-.contact .lines a{border-bottom:1px solid var(--grey2);padding-bottom:2px;width:max-content;max-width:100%}
-.contact .lines a:hover{border-color:#fff}
-.contact .go{grid-column:1/13;display:flex;flex-wrap:wrap;align-items:center;gap:24px;padding-top:28px;border-top:1px solid var(--line)}
-@media (max-width:900px){.contact h2,.contact .lines{grid-column:1/13}}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:56px;padding:clamp(70px,9vw,120px) var(--pad) 70px;margin-top:clamp(64px,9vw,120px);border-top:1px solid var(--line);position:relative;overflow:hidden}
+.contact::before{content:"FRAME";position:absolute;right:-.05em;bottom:-.28em;font:900 clamp(120px,24vw,360px)/1 var(--sans);letter-spacing:-.04em;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.07);pointer-events:none;font-variation-settings:"wdth" 125}
+@media (max-width:900px){.contact{grid-template-columns:1fr;gap:40px}}
+.contact h2{margin:0 0 22px;font:900 clamp(44px,7vw,104px)/.88 var(--sans);letter-spacing:-.03em;text-transform:uppercase;font-variation-settings:"wdth" 118}
+.contact .big{display:flex;flex-direction:column;gap:8px;font:600 clamp(20px,2.4vw,30px)/1.1 var(--sans);letter-spacing:-.01em}
+.contact .cities{margin-top:28px;color:var(--grey)}
+form{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:relative;z-index:1}
+@media (max-width:520px){form{grid-template-columns:1fr}}
+.f{display:flex;flex-direction:column;gap:7px;min-width:0}
+.f.full{grid-column:1/-1}
+label{font:500 9px/1 var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--grey)}
+input,select,textarea{width:100%;height:46px;padding:0 12px;background:#070707;border:1px solid rgba(255,255,255,.14);color:#fff;font:400 14px var(--sans);border-radius:0;transition:border-color .3s}
+select{appearance:none;-webkit-appearance:none;background-image:linear-gradient(45deg,transparent 50%,#888 50%),linear-gradient(135deg,#888 50%,transparent 50%);background-position:calc(100% - 18px) 20px,calc(100% - 13px) 20px;background-size:5px 5px;background-repeat:no-repeat}
+textarea{height:112px;padding:12px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:0;border-color:#fff}
+.actions{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:10px;margin-top:8px;align-items:center}
+.status{flex-basis:100%;color:var(--grey);font-size:12px;min-height:1.4em}
 
-footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 24px;padding:24px var(--pad) calc(24px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line)}
+footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 24px;padding:22px var(--pad) calc(22px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);color:var(--grey2)}
 
-/* grain */
-body::after{content:"";position:fixed;inset:-50%;z-index:90;pointer-events:none;opacity:.055;mix-blend-mode:screen;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  animation:grain 1.4s steps(6) infinite}
-@keyframes grain{0%{transform:translate(0,0)}25%{transform:translate(-3%,2%)}50%{transform:translate(2%,-3%)}75%{transform:translate(-2%,-1%)}100%{transform:translate(0,0)}}
+/* LIGHTBOX */
+.lb{position:fixed;inset:0;z-index:200;background:#000;display:none;align-items:center;justify-content:center}
+.lb.on{display:flex}
+.lb video{width:100%;height:100%;object-fit:contain}
+.lb .x{position:absolute;top:calc(18px + env(safe-area-inset-top,0px));right:var(--pad);z-index:2;background:none;border:0;color:#fff;cursor:pointer;padding:8px}
 
 /* reveal */
-.rv{opacity:0;transform:translateY(24px);transition:opacity 1s var(--ease),transform 1.2s var(--ease)}
+.rv{opacity:0;transform:translateY(18px);transition:opacity 1s var(--ease),transform 1.2s var(--ease)}
 .rv.in{opacity:1;transform:none}
-
 @media (prefers-reduced-motion:reduce){
-  body::after{animation:none}
-  .rv{opacity:1;transform:none;transition:none}
-  .marq{animation:none;flex-wrap:wrap;width:auto}
-  .reelwrap{height:auto;padding:var(--pad)}
-  .reelwrap .stage{position:static;display:block}
-  .reelwrap .frame{width:100%;border-radius:0;clip-path:none}
-  .reelwrap .txt{display:none}
-  .reelwrap .snd{opacity:1;transform:none;pointer-events:auto;position:static;margin-top:12px}
-  .tile img,.tile video,.cat img,.cat video{transition:none}
+  *{animation:none!important;transition:none!important;scroll-behavior:auto}
+  .rv{opacity:1;transform:none}
+  body::after{display:none}
 }
 </style>
 </head>
 <body>
 
-<nav aria-label="Primary">
-  <a class="brand" href="#top">FRAMEXGOD</a>
+<nav id="nav">
+  <a class="brand chrome" href="#top">FRAME X GOD</a>
   <ul>
-    <li><a href="#reel">Reel</a></li>
     <li><a href="#work">Work</a></li>
+    <li><a href="#reel">Reel</a></li>
     <li class="hide"><a href="#credits">Credits</a></li>
-    <li class="hide"><a href="#about">About</a></li>
-    <li><a href="#book">Book</a></li>
+    <li class="hide"><a href="#services">Services</a></li>
+    <li><a href="#contact">Book</a></li>
   </ul>
 </nav>
 
-<header class="hero" id="top">
-  <div class="scene" id="scene">
-    <div class="plane p-bg" data-z="-220" data-k=".35"><img src="media/min-begin.jpg" alt="" width="1280" height="720" fetchpriority="high" decoding="async"></div>
-    <div class="plane p-mid" data-z="-120" data-k=".55" aria-hidden="true"></div>
-    <div class="plane p-subject" data-z="40" data-k="1">
-      <div>
-        <h1 class="mark chrome">FRAME<span class="x">X</span>GOD</h1>
-        <p class="role">Director · Director of Photography · Filmmaker</p>
-        <div class="cta-wrap"><a class="cta" href="#book">Book FRAMEXGOD</a></div>
-      </div>
-    </div>
-    <div class="plane p-haze" data-z="140" data-k="1.5" aria-hidden="true"></div>
+<header class="intro" id="top">
+  <img class="mark" src="media/logo-chrome.png" alt="FRAME X GOD" width="900" height="1152" fetchpriority="high">
+  <div class="lines">
+    <p class="l1 chrome">Lightworks Productions</p>
+    <p class="l2"><span>Feature Length Films</span><i>|</i><span>Music Videos</span><i>|</i><span>Commercials</span><i>|</i><span>Social Media Marketing</span><i>|</i><span>AI Creative Design</span></p>
+    <p class="l3">Miami · New York · Los Angeles</p>
   </div>
-  <div class="corner c-bl">Lightworks Productions<br>Miami · New York · Los Angeles</div>
-  <div class="corner c-br"><a href="mailto:Info@framexgod.com">Info@framexgod.com</a><br>305 778 5526</div>
-  <div class="vert" aria-hidden="true">Reel 2026 · 24 fps · Scroll</div>
+  <div class="cta"><a class="btn" href="#contact">Book FRAMEXGOD <span aria-hidden="true">→</span></a></div>
+  <div class="scroll mono"><i></i>Scroll</div>
 </header>
 
-<main>
+<div class="head" id="work"><div class="in"><span class="no chrome">01</span><h2>Work</h2></div><span class="mono">94 frames · hover to play · click for the reel</span></div>
+<div class="grid" id="grid">
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 01 — play the reel"><span class="n mono">01</span><img src="media/thumbs/b01.webp" alt="" width="720" height="405" loading="eager" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b01.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 02 — play the reel"><span class="n mono">02</span><img src="media/thumbs/b02.webp" alt="" width="720" height="405" loading="eager" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b02.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 03 — play the reel"><span class="n mono">03</span><img src="media/thumbs/b03.webp" alt="" width="720" height="405" loading="eager" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b03.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 04 — play the reel"><span class="n mono">04</span><img src="media/thumbs/b04.webp" alt="" width="720" height="405" loading="eager" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b04.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 05 — play the reel"><span class="n mono">05</span><img src="media/thumbs/b05.webp" alt="" width="720" height="405" loading="eager" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b05.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 06 — play the reel"><span class="n mono">06</span><img src="media/thumbs/b06.webp" alt="" width="720" height="405" loading="eager" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b06.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 07 — play the reel"><span class="n mono">07</span><img src="media/thumbs/b07.webp" alt="" width="720" height="405" loading="eager" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b07.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 08 — play the reel"><span class="n mono">08</span><img src="media/thumbs/b08.webp" alt="" width="720" height="405" loading="eager" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b08.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 09 — play the reel"><span class="n mono">09</span><img src="media/thumbs/b09.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b09.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 10 — play the reel"><span class="n mono">10</span><img src="media/thumbs/b10.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b10.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 11 — play the reel"><span class="n mono">11</span><img src="media/thumbs/b11.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b11.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 12 — play the reel"><span class="n mono">12</span><img src="media/thumbs/b12.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b12.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 13 — play the reel"><span class="n mono">13</span><img src="media/thumbs/b13.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b13.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 14 — play the reel"><span class="n mono">14</span><img src="media/thumbs/b14.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b14.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 15 — play the reel"><span class="n mono">15</span><img src="media/thumbs/b15.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b15.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 16 — play the reel"><span class="n mono">16</span><img src="media/thumbs/b16.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b16.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 17 — play the reel"><span class="n mono">17</span><img src="media/thumbs/b17.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b17.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 18 — play the reel"><span class="n mono">18</span><img src="media/thumbs/b18.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b18.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 19 — play the reel"><span class="n mono">19</span><img src="media/thumbs/b19.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b19.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 20 — play the reel"><span class="n mono">20</span><img src="media/thumbs/b20.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b20.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 21 — play the reel"><span class="n mono">21</span><img src="media/thumbs/b21.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b21.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 22 — play the reel"><span class="n mono">22</span><img src="media/thumbs/b22.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b22.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 23 — play the reel"><span class="n mono">23</span><img src="media/thumbs/b23.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b23.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 24 — play the reel"><span class="n mono">24</span><img src="media/thumbs/b24.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b24.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 25 — play the reel"><span class="n mono">25</span><img src="media/thumbs/b25.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b25.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 26 — play the reel"><span class="n mono">26</span><img src="media/thumbs/b26.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b26.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 27 — play the reel"><span class="n mono">27</span><img src="media/thumbs/b27.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b27.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 28 — play the reel"><span class="n mono">28</span><img src="media/thumbs/b28.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b28.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 29 — play the reel"><span class="n mono">29</span><img src="media/thumbs/b29.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b29.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 30 — play the reel"><span class="n mono">30</span><img src="media/thumbs/b30.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b30.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 31 — play the reel"><span class="n mono">31</span><img src="media/thumbs/b31.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b31.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 32 — play the reel"><span class="n mono">32</span><img src="media/thumbs/b32.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b32.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 33 — play the reel"><span class="n mono">33</span><img src="media/thumbs/b33.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b33.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 34 — play the reel"><span class="n mono">34</span><img src="media/thumbs/b34.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b34.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 35 — play the reel"><span class="n mono">35</span><img src="media/thumbs/b35.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b35.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 36 — play the reel"><span class="n mono">36</span><img src="media/thumbs/b36.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b36.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 37 — play the reel"><span class="n mono">37</span><img src="media/thumbs/b37.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b37.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 38 — play the reel"><span class="n mono">38</span><img src="media/thumbs/b38.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b38.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 39 — play the reel"><span class="n mono">39</span><img src="media/thumbs/b39.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b39.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 40 — play the reel"><span class="n mono">40</span><img src="media/thumbs/b40.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b40.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 41 — play the reel"><span class="n mono">41</span><img src="media/thumbs/b41.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b41.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 42 — play the reel"><span class="n mono">42</span><img src="media/thumbs/b42.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b42.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 43 — play the reel"><span class="n mono">43</span><img src="media/thumbs/b43.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b43.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 44 — play the reel"><span class="n mono">44</span><img src="media/thumbs/b44.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b44.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 45 — play the reel"><span class="n mono">45</span><img src="media/thumbs/b45.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b45.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 46 — play the reel"><span class="n mono">46</span><img src="media/thumbs/b46.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b46.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 47 — play the reel"><span class="n mono">47</span><img src="media/thumbs/b47.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b47.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 48 — play the reel"><span class="n mono">48</span><img src="media/thumbs/b48.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b48.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 49 — play the reel"><span class="n mono">49</span><img src="media/thumbs/b49.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b49.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 50 — play the reel"><span class="n mono">50</span><img src="media/thumbs/b50.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b50.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 51 — play the reel"><span class="n mono">51</span><img src="media/thumbs/b51.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b51.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 52 — play the reel"><span class="n mono">52</span><img src="media/thumbs/b52.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b52.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 53 — play the reel"><span class="n mono">53</span><img src="media/thumbs/b53.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b53.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 54 — play the reel"><span class="n mono">54</span><img src="media/thumbs/b54.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b54.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 55 — play the reel"><span class="n mono">55</span><img src="media/thumbs/b55.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b55.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 56 — play the reel"><span class="n mono">56</span><img src="media/thumbs/b56.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b56.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 57 — play the reel"><span class="n mono">57</span><img src="media/thumbs/b57.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b57.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 58 — play the reel"><span class="n mono">58</span><img src="media/thumbs/b58.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b58.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 59 — play the reel"><span class="n mono">59</span><img src="media/thumbs/b59.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b59.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 60 — play the reel"><span class="n mono">60</span><img src="media/thumbs/b60.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b60.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 61 — play the reel"><span class="n mono">61</span><img src="media/thumbs/b61.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b61.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 62 — play the reel"><span class="n mono">62</span><img src="media/thumbs/b62.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b62.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 63 — play the reel"><span class="n mono">63</span><img src="media/thumbs/b63.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b63.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 64 — play the reel"><span class="n mono">64</span><img src="media/thumbs/b64.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b64.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 65 — play the reel"><span class="n mono">65</span><img src="media/thumbs/b65.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b65.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 66 — play the reel"><span class="n mono">66</span><img src="media/thumbs/b66.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b66.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 67 — play the reel"><span class="n mono">67</span><img src="media/thumbs/b67.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b67.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 68 — play the reel"><span class="n mono">68</span><img src="media/thumbs/b68.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b68.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 69 — play the reel"><span class="n mono">69</span><img src="media/thumbs/b69.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b69.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 70 — play the reel"><span class="n mono">70</span><img src="media/thumbs/b70.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b70.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 71 — play the reel"><span class="n mono">71</span><img src="media/thumbs/b71.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b71.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 72 — play the reel"><span class="n mono">72</span><img src="media/thumbs/b72.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b72.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 73 — play the reel"><span class="n mono">73</span><img src="media/thumbs/b73.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b73.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 74 — play the reel"><span class="n mono">74</span><img src="media/thumbs/b74.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b74.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 75 — play the reel"><span class="n mono">75</span><img src="media/thumbs/b75.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b75.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 76 — play the reel"><span class="n mono">76</span><img src="media/thumbs/b76.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b76.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 77 — play the reel"><span class="n mono">77</span><img src="media/thumbs/b77.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b77.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 78 — play the reel"><span class="n mono">78</span><img src="media/thumbs/b78.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b78.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 79 — play the reel"><span class="n mono">79</span><img src="media/thumbs/b79.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b79.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 80 — play the reel"><span class="n mono">80</span><img src="media/thumbs/b80.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b80.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 81 — play the reel"><span class="n mono">81</span><img src="media/thumbs/b81.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b81.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 82 — play the reel"><span class="n mono">82</span><img src="media/thumbs/b82.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b82.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 83 — play the reel"><span class="n mono">83</span><img src="media/thumbs/b83.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b83.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 84 — play the reel"><span class="n mono">84</span><img src="media/thumbs/b84.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b84.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 85 — play the reel"><span class="n mono">85</span><img src="media/thumbs/b85.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b85.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 86 — play the reel"><span class="n mono">86</span><img src="media/thumbs/b86.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b86.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 87 — play the reel"><span class="n mono">87</span><img src="media/thumbs/b87.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b87.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 88 — play the reel"><span class="n mono">88</span><img src="media/thumbs/b88.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b88.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 89 — play the reel"><span class="n mono">89</span><img src="media/thumbs/b89.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b89.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 90 — play the reel"><span class="n mono">90</span><img src="media/thumbs/b90.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b90.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 91 — play the reel"><span class="n mono">91</span><img src="media/thumbs/b91.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b91.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 92 — play the reel"><span class="n mono">92</span><img src="media/thumbs/b92.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b92.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 93 — play the reel"><span class="n mono">93</span><img src="media/thumbs/b93.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b93.mp4"></video></button>
+<button class="tile" type="button" aria-label="FRAMEXGOD frame 94 — play the reel"><span class="n mono">94</span><img src="media/thumbs/b94.webp" alt="" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b94.mp4"></video></button>
+</div>
 
-<section class="reelwrap" id="reel" aria-label="Reel 2026">
-  <div class="stage">
-    <div class="txt l"><h2>Reel<br>2026</h2><p>Four minutes. Directed, shot, cut and graded by FRAMEXGOD.</p></div>
-    <div class="txt r"><p class="mono">Scroll to enter the frame</p></div>
-    <div class="frame" id="frame">
-      <video id="reelvid" poster="reel/poster.jpg" preload="metadata" muted autoplay loop playsinline title="FRAMEXGOD reel 2026">
-        <source src="reel/framexgod-reel-2026.mp4" type="video/mp4">
-      </video>
+<div class="head" id="reel"><div class="in"><span class="no chrome">02</span><h2>Reel 2026</h2></div><span class="mono">Directed · Shot · Cut · Graded by FRAMEXGOD</span></div>
+<div class="reelwrap">
+  <div class="reel rv" id="reelbox">
+    <video id="reelvid" poster="reel/poster.jpg" preload="metadata" playsinline controls style="display:none"></video>
+    <img src="reel/poster.jpg" alt="FRAMEXGOD reel 2026" width="1920" height="1080" loading="lazy" id="reelposter">
+    <div class="play"><span>Play Reel</span></div>
+    <div class="meta mono"><span>FRAMEXGOD · REEL 2026</span><span>Sound on</span></div>
+  </div>
+</div>
+
+<div class="head" id="credits"><div class="in"><span class="no chrome">03</span><h2>Credits</h2></div><span class="mono">Views on YouTube</span></div>
+<ol class="credits">
+<li><span class="i mono">01</span><b>BEBE</b><span class="a">6ix9ine ft. Anuel AA</span><span class="r mono">Producer · Director</span><em class="chrome">1.6B+</em></li>
+<li><span class="i mono">02</span><b>105°F Remix</b><span class="a">Kevvo, Chencho Corleone, Farruko, Myke Towers, Arcángel, Ñengo Flow, Darell, Brytiago</span><span class="r mono">Producer · Director · DP · Editor</span><em class="chrome">750M+</em></li>
+<li><span class="i mono">03</span><b>Passion Whine</b><span class="a">Farruko ft. Sean Paul</span><span class="r mono">Producer</span><em class="chrome">750M+</em></li>
+<li><span class="i mono">04</span><b>Hard Drive</b><span class="a">Shenseea × Konshens × Rvssian</span><span class="r mono">Producer · Director · DP · Editor</span><em class="chrome">40M+</em></li>
+<li><span class="i mono">05</span><b>Power</b><span class="a">Kevvo ft. Myke Towers, Jhay Cortez, Darell</span><span class="r mono">Producer · Director · DP · Editor</span><em class="chrome">40M+</em></li>
+<li><span class="i mono">06</span><b>Stay Schemin</b><span class="a">Rick Ross ft. Drake, French Montana</span><span class="r mono">Director of Photography</span><em class="chrome">25M+</em></li>
+<li><span class="i mono">07</span><b>Nobody&#x27;s Favorite</b><span class="a">Rick Ross ft. Gunplay</span><span class="r mono">Director of Photography</span><em class="chrome">19M+</em></li>
+<li><span class="i mono">08</span><b>Mada</b><span class="a">Kalash · Universal France</span><span class="r mono">Producer · DP · Editor</span><em class="chrome">16M+</em></li>
+<li><span class="i mono">09</span><b>Embalao</b><span class="a">Farruko, White Star, J. Cross</span><span class="r mono">Producer · Director · DP · Editor</span><em class="chrome">3.8M+</em></li>
+<li><span class="i mono">10</span><b>Trapxficante</b><span class="a">Farruko world tour and album · Sony Music</span><span class="r mono">15 music videos · campaign · merch · album design</span><em></em></li>
+<li><span class="i mono">11</span><b>La 167</b><span class="a">Farruko world tour and album</span><span class="r mono">3 music videos · campaign · merch</span><em></em></li>
+<li><span class="i mono">12</span><b>Merlin</b><span class="a">Feature film · 2025</span><span class="r mono">Creative Producer · Production Design</span><em class="sm">People&#x27;s Choice Award · Chandler Film Festival</em></li>
+</ol>
+
+<div class="head" id="clients"><div class="in"><span class="no chrome">04</span><h2>Labels &amp; Brands</h2></div><span class="mono">Selected</span></div>
+<div class="marq" aria-label="Clients"><div class="t"><span>Sony Music</span><span>Universal Music</span><span>Universal France</span><span>Interscope</span><span>Epic Records</span><span>Cash Money</span><span>CMG</span><span>Maybach Music Group</span><span>Carbon Fiber Music</span><span>Remas Records</span><span>Rebelión</span><span>Una Visión Quintana</span><span>Carnival Cruise Lines</span><span>Baptist Health</span><span>General Motors</span><span>Sony Music</span><span>Universal Music</span><span>Universal France</span><span>Interscope</span><span>Epic Records</span><span>Cash Money</span><span>CMG</span><span>Maybach Music Group</span><span>Carbon Fiber Music</span><span>Remas Records</span><span>Rebelión</span><span>Una Visión Quintana</span><span>Carnival Cruise Lines</span><span>Baptist Health</span><span>General Motors</span></div></div>
+
+<div class="head" id="services"><div class="in"><span class="no chrome">05</span><h2>Services</h2></div><span class="mono">Starting rates · USD</span></div>
+<div class="services">
+  <div class="svc rv"><span class="k mono">01</span><h3>Music Video</h3><div class="from mono">From $3,500 · One-day shoot</div><p>Concept, direction, cinematography, edit and color. Master plus three vertical cuts. One round of revisions.</p><a class="mono" href="#contact" data-pkg="Music Video">Book</a></div>
+  <div class="svc rv"><span class="k mono">02</span><h3>Commercial</h3><div class="from mono">From $7,500 · Full production</div><p>Treatment, crew, casting, locations, licensed music. 60, 30, 15 and 6-second cuts, ad-ready exports.</p><a class="mono" href="#contact" data-pkg="Commercial">Book</a></div>
+  <div class="svc rv"><span class="k mono">03</span><h3>Content Day</h3><div class="from mono">From $1,500 · Half day</div><p>Eight to ten vertical pieces, cut and graded, hooks and captions included. Delivered in 48 hours.</p><a class="mono" href="#contact" data-pkg="Content Day">Book</a></div>
+</div>
+
+<section class="contact" id="contact">
+  <div>
+    <h2>Book<br><span class="chrome">a date</span></h2>
+    <div class="big"><a href="tel:+13057785526">305 778 5526</a><a href="mailto:Info@framexgod.com">Info@FramexGod.com</a></div>
+    <div class="cities mono">Miami · New York · Los Angeles · Worldwide</div>
+  </div>
+  <form id="bookform" novalidate>
+    <div class="f"><label for="name">Name</label><input id="name" name="name" type="text" autocomplete="name" required></div>
+    <div class="f"><label for="brand">Artist or brand</label><input id="brand" name="brand" type="text" autocomplete="organization"></div>
+    <div class="f"><label for="pkg">Project</label><select id="pkg" name="pkg"><option>Music Video</option><option>Commercial</option><option>Content Day</option><option>Feature Film</option><option>Other</option></select></div>
+    <div class="f"><label for="date">Shoot date</label><input id="date" name="date" type="date"></div>
+    <div class="f"><label for="city">City</label><select id="city" name="city"><option>Miami</option><option>New York</option><option>Los Angeles</option><option>Other</option></select></div>
+    <div class="f"><label for="budget">Budget</label><select id="budget" name="budget"><option>$1,500 to $3,000</option><option>$3,000 to $7,500</option><option>$7,500 to $15,000</option><option>$15,000 and up</option></select></div>
+    <div class="f full"><label for="notes">Details</label><textarea id="notes" name="notes" placeholder="Song, product, references."></textarea></div>
+    <div class="actions">
+      <button class="btn" type="submit" id="send">Send on WhatsApp</button>
+      <button class="btn ghost" type="button" id="copy">Copy the message</button>
+      <span class="status" id="status" aria-live="polite"></span>
     </div>
-    <button type="button" class="snd" id="snd" aria-pressed="false">Sound on</button>
-    <div class="prog" aria-hidden="true"><i id="prog"></i></div>
-  </div>
+  </form>
 </section>
 
-<section class="sec" id="capabilities">
-  <div class="head rv"><h2>What we make</h2><span class="mono">Hover to play</span></div>
-  <div class="cats rv">
-<figure class="cat" tabindex="0" role="button" aria-label="Music Video — play the reel"><img src="media/thumbs/b12.webp" alt="Music Video" width="1280" height="720" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b12.mp4"></video><figcaption><b>Music Video</b><span class="mono">Performance, narrative, world-building</span></figcaption></figure>
-<figure class="cat" tabindex="0" role="button" aria-label="Narrative / Feature — play the reel"><img src="media/thumbs/b93.webp" alt="Narrative / Feature" width="1280" height="720" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b93.mp4"></video><figcaption><b>Narrative / Feature</b><span class="mono">Features, series, branded story</span></figcaption></figure>
-<figure class="cat" tabindex="0" role="button" aria-label="Commercial / Editorial — play the reel"><img src="media/thumbs/b71.webp" alt="Commercial / Editorial" width="1280" height="720" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b71.mp4"></video><figcaption><b>Commercial / Editorial</b><span class="mono">Spots, campaigns, fashion and product</span></figcaption></figure>
-  </div>
-</section>
+<footer class="mono"><span>FRAME X GOD © 2026</span><span>Lightworks Productions</span><span>@FramexGod</span></footer>
 
-<section class="sec" id="work">
-  <div class="head rv"><span class="no">01</span><h2>Selected Work</h2><span class="mono">Hover to play · Click for the reel</span></div>
-  <div class="work">
-<figure class="tile a" data-speed="0" tabindex="0" role="button" aria-label="Performer leaping across a mirrored salt flat at sunrise — play the reel"><span class="idx mono">01</span><img src="media/thumbs/rendido_r1_10s.webp" alt="Performer leaping across a mirrored salt flat at sunrise" width="720" height="405" loading="eager" decoding="async"><video muted loop playsinline preload="none" data-src="boom/rendido_r1_10s.mp4"></video><div class="cap"><b>Rendido</b><span class="mono">JHEX · Director</span></div></figure>
-<figure class="tile b" data-speed="0.08" tabindex="0" role="button" aria-label="Woman with braids aiming a rifle — play the reel"><span class="idx mono">02</span><img src="media/thumbs/b71.webp" alt="Woman with braids aiming a rifle" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b71.mp4"></video></figure>
-<figure class="tile c" data-speed="-0.06" tabindex="0" role="button" aria-label="Dancer reaching up through pink light — play the reel"><span class="idx mono">03</span><img src="media/thumbs/b12.webp" alt="Dancer reaching up through pink light" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b12.mp4"></video></figure>
-<figure class="tile d" data-speed="0.05" tabindex="0" role="button" aria-label="Artist with his hand on his head in a crowded room — play the reel"><span class="idx mono">04</span><img src="media/thumbs/b76.webp" alt="Artist with his hand on his head in a crowded room" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b76.mp4"></video></figure>
-<figure class="tile e" data-speed="-0.09" tabindex="0" role="button" aria-label="Artist in a silver headpiece reaching toward the camera — play the reel"><span class="idx mono">05</span><img src="media/thumbs/b30.webp" alt="Artist in a silver headpiece reaching toward the camera" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b30.mp4"></video></figure>
-<figure class="tile f" data-speed="0.04" tabindex="0" role="button" aria-label="Monster truck firing a flamethrower in a shipping yard — play the reel"><span class="idx mono">06</span><img src="media/thumbs/b25.webp" alt="Monster truck firing a flamethrower in a shipping yard" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b25.mp4"></video></figure>
-<figure class="tile g" data-speed="-0.05" tabindex="0" role="button" aria-label="Face in clear glasses washed in violet light — play the reel"><span class="idx mono">07</span><img src="media/thumbs/b13.webp" alt="Face in clear glasses washed in violet light" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b13.mp4"></video></figure>
-<figure class="tile h" data-speed="0.07" tabindex="0" role="button" aria-label="Artist in a white fur coat under blue and red light — play the reel"><span class="idx mono">08</span><img src="media/thumbs/b15.webp" alt="Artist in a white fur coat under blue and red light" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b15.mp4"></video></figure>
-<figure class="tile i" data-speed="-0.04" tabindex="0" role="button" aria-label="Black-and-white shot of a man at the edge of the ocean — play the reel"><span class="idx mono">09</span><img src="media/thumbs/b93.webp" alt="Black-and-white shot of a man at the edge of the ocean" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b93.mp4"></video></figure>
-  </div>
-</section>
+<div class="lb" id="lb" role="dialog" aria-label="Reel">
+  <button class="x mono" id="lbx" type="button">Close ✕</button>
+  <video id="lbvid" src="reel/framexgod-reel-2026.mp4" poster="reel/poster.jpg" controls playsinline preload="none"></video>
+</div>
 
-<section class="sec" id="credits">
-  <div class="head rv"><span class="no">02</span><h2>Credits</h2><span class="mono">Views on YouTube</span></div>
-  <ul class="credits rv">
-<li><b>BEBE</b><span>6ix9ine ft. Anuel AA</span><i class="mono">Producer · Director</i><em class="mono">1.6B+ views</em></li>
-<li><b>105°F Remix</b><span>Kevvo, Chencho Corleone, Farruko, Myke Towers, Arcángel, Ñengo Flow, Darell, Brytiago</span><i class="mono">Producer · Director · DP · Editor</i><em class="mono">750M+ views</em></li>
-<li><b>Passion Whine</b><span>Farruko ft. Sean Paul</span><i class="mono">Producer</i><em class="mono">750M+ views</em></li>
-<li><b>Hard Drive</b><span>Shenseea × Konshens × Rvssian</span><i class="mono">Producer · Director · DP · Editor</i><em class="mono">40M+ views</em></li>
-<li><b>Power</b><span>Kevvo ft. Myke Towers, Jhay Cortez, Darell</span><i class="mono">Producer · Director · DP · Editor</i><em class="mono">40M+ views</em></li>
-<li><b>Stay Schemin</b><span>Rick Ross ft. Drake, French Montana</span><i class="mono">Director of Photography</i><em class="mono">25M+ views</em></li>
-<li><b>Nobody&#x27;s Favorite</b><span>Rick Ross ft. Gunplay</span><i class="mono">Director of Photography</i><em class="mono">19M+ views</em></li>
-<li><b>Mada</b><span>Kalash · Universal France</span><i class="mono">Producer · DP · Editor</i><em class="mono">16M+ views</em></li>
-<li><b>Merlin</b><span>Feature film · 2025</span><i class="mono">Creative Producer · Production Design</i><em class="mono">People&#x27;s Choice Award, Chandler Film Festival</em></li>
-  </ul>
-</section>
-
-<section class="clients" aria-label="Clients">
-  <div class="marq" aria-hidden="true">
-    <span>Sony Music</span><span>Carbon Fiber Music</span><span>CMG</span><span>Epic Records</span><span>Interscope</span><span>Maybach Music Group</span><span>Universal France</span><span>Carnival Cruise Lines</span><span>Baptist Health</span><span>General Motors</span>
-    <span>Sony Music</span><span>Carbon Fiber Music</span><span>CMG</span><span>Epic Records</span><span>Interscope</span><span>Maybach Music Group</span><span>Universal France</span><span>Carnival Cruise Lines</span><span>Baptist Health</span><span>General Motors</span>
-  </div>
-  <p class="mono" style="padding:18px var(--pad) 0;margin:0">Sony Music / Carbon Fiber Music · CMG / Epic / Interscope · Maybach Music Group · Universal France</p>
-</section>
-
-<section class="sec" id="archive">
-  <div class="head rv"><span class="no">03</span><h2>Archive</h2><span class="mono">86 frames from the reel</span></div>
-  <div class="arch">
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 01 — play the reel"><img src="media/thumbs/b01.webp" alt="FRAMEXGOD archive clip 01" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b01.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 02 — play the reel"><img src="media/thumbs/b02.webp" alt="FRAMEXGOD archive clip 02" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b02.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 03 — play the reel"><img src="media/thumbs/b03.webp" alt="FRAMEXGOD archive clip 03" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b03.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 04 — play the reel"><img src="media/thumbs/b04.webp" alt="FRAMEXGOD archive clip 04" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b04.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 05 — play the reel"><img src="media/thumbs/b05.webp" alt="FRAMEXGOD archive clip 05" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b05.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 06 — play the reel"><img src="media/thumbs/b06.webp" alt="FRAMEXGOD archive clip 06" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b06.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 07 — play the reel"><img src="media/thumbs/b07.webp" alt="FRAMEXGOD archive clip 07" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b07.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 08 — play the reel"><img src="media/thumbs/b08.webp" alt="FRAMEXGOD archive clip 08" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b08.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 09 — play the reel"><img src="media/thumbs/b09.webp" alt="FRAMEXGOD archive clip 09" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b09.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 10 — play the reel"><img src="media/thumbs/b10.webp" alt="FRAMEXGOD archive clip 10" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b10.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 11 — play the reel"><img src="media/thumbs/b11.webp" alt="FRAMEXGOD archive clip 11" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b11.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 12 — play the reel"><img src="media/thumbs/b14.webp" alt="FRAMEXGOD archive clip 12" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b14.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 13 — play the reel"><img src="media/thumbs/b16.webp" alt="FRAMEXGOD archive clip 13" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b16.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 14 — play the reel"><img src="media/thumbs/b17.webp" alt="FRAMEXGOD archive clip 14" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b17.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 15 — play the reel"><img src="media/thumbs/b18.webp" alt="FRAMEXGOD archive clip 15" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b18.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 16 — play the reel"><img src="media/thumbs/b19.webp" alt="FRAMEXGOD archive clip 16" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b19.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 17 — play the reel"><img src="media/thumbs/b20.webp" alt="FRAMEXGOD archive clip 17" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b20.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 18 — play the reel"><img src="media/thumbs/b21.webp" alt="FRAMEXGOD archive clip 18" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b21.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 19 — play the reel"><img src="media/thumbs/b22.webp" alt="FRAMEXGOD archive clip 19" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b22.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 20 — play the reel"><img src="media/thumbs/b23.webp" alt="FRAMEXGOD archive clip 20" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b23.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 21 — play the reel"><img src="media/thumbs/b24.webp" alt="FRAMEXGOD archive clip 21" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b24.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 22 — play the reel"><img src="media/thumbs/b26.webp" alt="FRAMEXGOD archive clip 22" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b26.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 23 — play the reel"><img src="media/thumbs/b27.webp" alt="FRAMEXGOD archive clip 23" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b27.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 24 — play the reel"><img src="media/thumbs/b28.webp" alt="FRAMEXGOD archive clip 24" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b28.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 25 — play the reel"><img src="media/thumbs/b29.webp" alt="FRAMEXGOD archive clip 25" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b29.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 26 — play the reel"><img src="media/thumbs/b31.webp" alt="FRAMEXGOD archive clip 26" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b31.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 27 — play the reel"><img src="media/thumbs/b32.webp" alt="FRAMEXGOD archive clip 27" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b32.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 28 — play the reel"><img src="media/thumbs/b33.webp" alt="FRAMEXGOD archive clip 28" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b33.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 29 — play the reel"><img src="media/thumbs/b34.webp" alt="FRAMEXGOD archive clip 29" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b34.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 30 — play the reel"><img src="media/thumbs/b35.webp" alt="FRAMEXGOD archive clip 30" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b35.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 31 — play the reel"><img src="media/thumbs/b36.webp" alt="FRAMEXGOD archive clip 31" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b36.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 32 — play the reel"><img src="media/thumbs/b37.webp" alt="FRAMEXGOD archive clip 32" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b37.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 33 — play the reel"><img src="media/thumbs/b38.webp" alt="FRAMEXGOD archive clip 33" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b38.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 34 — play the reel"><img src="media/thumbs/b39.webp" alt="FRAMEXGOD archive clip 34" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b39.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 35 — play the reel"><img src="media/thumbs/b40.webp" alt="FRAMEXGOD archive clip 35" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b40.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 36 — play the reel"><img src="media/thumbs/b41.webp" alt="FRAMEXGOD archive clip 36" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b41.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 37 — play the reel"><img src="media/thumbs/b42.webp" alt="FRAMEXGOD archive clip 37" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b42.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 38 — play the reel"><img src="media/thumbs/b43.webp" alt="FRAMEXGOD archive clip 38" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b43.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 39 — play the reel"><img src="media/thumbs/b44.webp" alt="FRAMEXGOD archive clip 39" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b44.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 40 — play the reel"><img src="media/thumbs/b45.webp" alt="FRAMEXGOD archive clip 40" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b45.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 41 — play the reel"><img src="media/thumbs/b46.webp" alt="FRAMEXGOD archive clip 41" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b46.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 42 — play the reel"><img src="media/thumbs/b47.webp" alt="FRAMEXGOD archive clip 42" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b47.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 43 — play the reel"><img src="media/thumbs/b48.webp" alt="FRAMEXGOD archive clip 43" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b48.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 44 — play the reel"><img src="media/thumbs/b49.webp" alt="FRAMEXGOD archive clip 44" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b49.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 45 — play the reel"><img src="media/thumbs/b50.webp" alt="FRAMEXGOD archive clip 45" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b50.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 46 — play the reel"><img src="media/thumbs/b51.webp" alt="FRAMEXGOD archive clip 46" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b51.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 47 — play the reel"><img src="media/thumbs/b52.webp" alt="FRAMEXGOD archive clip 47" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b52.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 48 — play the reel"><img src="media/thumbs/b53.webp" alt="FRAMEXGOD archive clip 48" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b53.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 49 — play the reel"><img src="media/thumbs/b54.webp" alt="FRAMEXGOD archive clip 49" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b54.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 50 — play the reel"><img src="media/thumbs/b55.webp" alt="FRAMEXGOD archive clip 50" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b55.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 51 — play the reel"><img src="media/thumbs/b56.webp" alt="FRAMEXGOD archive clip 51" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b56.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 52 — play the reel"><img src="media/thumbs/b57.webp" alt="FRAMEXGOD archive clip 52" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b57.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 53 — play the reel"><img src="media/thumbs/b58.webp" alt="FRAMEXGOD archive clip 53" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b58.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 54 — play the reel"><img src="media/thumbs/b59.webp" alt="FRAMEXGOD archive clip 54" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b59.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 55 — play the reel"><img src="media/thumbs/b60.webp" alt="FRAMEXGOD archive clip 55" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b60.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 56 — play the reel"><img src="media/thumbs/b61.webp" alt="FRAMEXGOD archive clip 56" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b61.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 57 — play the reel"><img src="media/thumbs/b62.webp" alt="FRAMEXGOD archive clip 57" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b62.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 58 — play the reel"><img src="media/thumbs/b63.webp" alt="FRAMEXGOD archive clip 58" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b63.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 59 — play the reel"><img src="media/thumbs/b64.webp" alt="FRAMEXGOD archive clip 59" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b64.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 60 — play the reel"><img src="media/thumbs/b65.webp" alt="FRAMEXGOD archive clip 60" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b65.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 61 — play the reel"><img src="media/thumbs/b66.webp" alt="FRAMEXGOD archive clip 61" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b66.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 62 — play the reel"><img src="media/thumbs/b67.webp" alt="FRAMEXGOD archive clip 62" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b67.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 63 — play the reel"><img src="media/thumbs/b68.webp" alt="FRAMEXGOD archive clip 63" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b68.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 64 — play the reel"><img src="media/thumbs/b69.webp" alt="FRAMEXGOD archive clip 64" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b69.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 65 — play the reel"><img src="media/thumbs/b70.webp" alt="FRAMEXGOD archive clip 65" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b70.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 66 — play the reel"><img src="media/thumbs/b72.webp" alt="FRAMEXGOD archive clip 66" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b72.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 67 — play the reel"><img src="media/thumbs/b73.webp" alt="FRAMEXGOD archive clip 67" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b73.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 68 — play the reel"><img src="media/thumbs/b74.webp" alt="FRAMEXGOD archive clip 68" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b74.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 69 — play the reel"><img src="media/thumbs/b75.webp" alt="FRAMEXGOD archive clip 69" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b75.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 70 — play the reel"><img src="media/thumbs/b77.webp" alt="FRAMEXGOD archive clip 70" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b77.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 71 — play the reel"><img src="media/thumbs/b78.webp" alt="FRAMEXGOD archive clip 71" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b78.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 72 — play the reel"><img src="media/thumbs/b79.webp" alt="FRAMEXGOD archive clip 72" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b79.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 73 — play the reel"><img src="media/thumbs/b80.webp" alt="FRAMEXGOD archive clip 73" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b80.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 74 — play the reel"><img src="media/thumbs/b81.webp" alt="FRAMEXGOD archive clip 74" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b81.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 75 — play the reel"><img src="media/thumbs/b82.webp" alt="FRAMEXGOD archive clip 75" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b82.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 76 — play the reel"><img src="media/thumbs/b83.webp" alt="FRAMEXGOD archive clip 76" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b83.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 77 — play the reel"><img src="media/thumbs/b84.webp" alt="FRAMEXGOD archive clip 77" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b84.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 78 — play the reel"><img src="media/thumbs/b85.webp" alt="FRAMEXGOD archive clip 78" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b85.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 79 — play the reel"><img src="media/thumbs/b86.webp" alt="FRAMEXGOD archive clip 79" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b86.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 80 — play the reel"><img src="media/thumbs/b87.webp" alt="FRAMEXGOD archive clip 80" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b87.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 81 — play the reel"><img src="media/thumbs/b88.webp" alt="FRAMEXGOD archive clip 81" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b88.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 82 — play the reel"><img src="media/thumbs/b89.webp" alt="FRAMEXGOD archive clip 82" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b89.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 83 — play the reel"><img src="media/thumbs/b90.webp" alt="FRAMEXGOD archive clip 83" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b90.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 84 — play the reel"><img src="media/thumbs/b91.webp" alt="FRAMEXGOD archive clip 84" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b91.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 85 — play the reel"><img src="media/thumbs/b92.webp" alt="FRAMEXGOD archive clip 85" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b92.mp4"></video></figure>
-<figure class="tile" tabindex="0" role="button" aria-label="FRAMEXGOD archive clip 86 — play the reel"><img src="media/thumbs/b94.webp" alt="FRAMEXGOD archive clip 86" width="720" height="405" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="boom/b94.mp4"></video></figure>
-  </div>
-</section>
-
-<section class="sec" id="about">
-  <div class="head rv"><span class="no">04</span><h2>About</h2><span class="mono">FRAMEXGOD</span></div>
-  <div class="about rv">
-    <p class="lead">Twelve years directing and shooting for labels, studios and brands across Miami, New York and Los Angeles. One video past 1.6 billion views. Work that feels expensive because it is made that way.</p>
-    <div class="meta mono">
-      <div><b>Education</b>Full Sail University · BS Film</div>
-      <div><b>Cameras</b>ARRI Alexa 35 · Mini LF · RED · Sony Venice</div>
-      <div><b>Lighting</b>ARRI SkyPanel · Orbiter · M-Series HMI</div>
-      <div><b>Markets</b>Miami · New York · Los Angeles</div>
-    </div>
-  </div>
-</section>
-
-<section class="sec" id="book">
-  <div class="contact rv">
-    <h2>Book<br>FRAMEXGOD</h2>
-    <div class="lines">
-      <a href="mailto:Info@framexgod.com">Info@framexgod.com</a>
-      <a href="tel:+13057785526">305 778 5526</a>
-      <a href="https://instagram.com/FramexGod" target="_blank" rel="noopener">@FramexGod</a>
-    </div>
-    <div class="go">
-      <a class="cta" href="mailto:Info@framexgod.com?subject=Booking%20FRAMEXGOD">Book FRAMEXGOD</a>
-      <span class="mono">Commercials · Music videos · Features · Content days</span>
-    </div>
-  </div>
-</section>
-
-</main>
-
-<footer class="mono">
-  <span>© <span id="yr"></span> FRAMEXGOD · Lightworks Productions</span>
-  <span>Miami · New York · Los Angeles</span>
-</footer>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
 <script>
 (function(){
-  document.getElementById('yr').textContent=new Date().getFullYear();
-  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var mobile=matchMedia('(max-width: 900px)').matches;
-  var hasGsap=typeof gsap!=='undefined'&&typeof ScrollTrigger!=='undefined';
+  var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var nav=document.getElementById('nav');
+  addEventListener('scroll',function(){nav.classList.toggle('solid',scrollY>40)},{passive:true});
 
-  // reveal
+  /* reveal */
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
   document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
 
-  // smooth scroll
-  var lenis=null;
-  if(!reduce&&typeof Lenis!=='undefined'){
-    lenis=new Lenis({lerp:.09,wheelMultiplier:1,smoothWheel:true});
-    if(hasGsap){lenis.on('scroll',ScrollTrigger.update);gsap.ticker.add(function(t){lenis.raf(t*1000)});gsap.ticker.lagSmoothing(0)}
-    else{(function raf(t){lenis.raf(t);requestAnimationFrame(raf)})(0)}
-    document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var id=a.getAttribute('href');if(id.length>1&&document.querySelector(id)){e.preventDefault();lenis.scrollTo(id,{offset:0,duration:1.4})}})});
+  /* hover loops */
+  var hoverable=matchMedia('(hover: hover)').matches;
+  function arm(t){var v=t.querySelector('video');if(!v)return;
+    function on(){if(rm)return;if(!v.src){v.src=v.dataset.src}t.classList.add('live');var p=v.play();if(p&&p.catch)p.catch(function(){})}
+    function off(){t.classList.remove('live');v.pause()}
+    if(hoverable){t.addEventListener('mouseenter',on);t.addEventListener('mouseleave',off)}
+    t.addEventListener('focus',on);t.addEventListener('blur',off);
+  }
+  document.querySelectorAll('.tile').forEach(arm);
+  if(!hoverable&&!rm){ /* touch: play the tile in view */
+    var vio=new IntersectionObserver(function(es){es.forEach(function(e){var t=e.target,v=t.querySelector('video');
+      if(e.intersectionRatio>.75){if(!v.src){v.src=v.dataset.src}t.classList.add('live');var p=v.play();if(p&&p.catch)p.catch(function(){})}
+      else{t.classList.remove('live');v.pause()}})},{threshold:[0,.75]});
+    document.querySelectorAll('.tile').forEach(function(t){vio.observe(t)});
   }
 
-  // hero parallax planes
-  var scene=document.getElementById('scene');
-  var planes=[].slice.call(scene.querySelectorAll('.plane'));
-  planes.forEach(function(p){p.style.transform='translateZ('+p.dataset.z+'px)'});
-  if(!reduce){
-    var tx=0,ty=0,cx=0,cy=0,raf=null;
-    function apply(){
-      cx+=(tx-cx)*.06;cy+=(ty-cy)*.06;
-      planes.forEach(function(p){var k=+p.dataset.k;p.style.transform='translateZ('+p.dataset.z+'px) translate3d('+(cx*18*k)+'px,'+(cy*12*k)+'px,0)'});
-      scene.style.transform='rotateY('+(cx*3)+'deg) rotateX('+(-cy*2)+'deg)';
-      raf=requestAnimationFrame(apply);
-    }
-    if(!mobile){
-      addEventListener('mousemove',function(e){tx=(e.clientX/innerWidth-.5)*2;ty=(e.clientY/innerHeight-.5)*2},{passive:true});
-      raf=requestAnimationFrame(apply);
-    }else if(window.DeviceOrientationEvent){
-      var start=function(){addEventListener('deviceorientation',function(e){if(e.gamma==null)return;tx=Math.max(-1,Math.min(1,e.gamma/25));ty=Math.max(-1,Math.min(1,(e.beta-45)/25))},{passive:true});raf=requestAnimationFrame(apply)};
-      if(typeof DeviceOrientationEvent.requestPermission==='function'){document.body.addEventListener('touchend',function once(){DeviceOrientationEvent.requestPermission().then(function(s){if(s==='granted')start()}).catch(function(){});document.body.removeEventListener('touchend',once)},{once:true})}
-      else start();
-    }
-  }
+  /* lightbox */
+  var lb=document.getElementById('lb'),lv=document.getElementById('lbvid');
+  function open(){lb.classList.add('on');document.body.style.overflow='hidden';lv.currentTime=0;var p=lv.play();if(p&&p.catch)p.catch(function(){})}
+  function close(){lb.classList.remove('on');document.body.style.overflow='';lv.pause()}
+  document.querySelectorAll('.tile').forEach(function(t){t.addEventListener('click',open)});
+  document.getElementById('lbx').addEventListener('click',close);
+  addEventListener('keydown',function(e){if(e.key==='Escape')close()});
 
-  // scroll-into-reel
-  var vid=document.getElementById('reelvid'),frame=document.getElementById('frame'),snd=document.getElementById('snd'),prog=document.getElementById('prog');
-  var tryPlay=function(){var p=vid.play();if(p&&p.catch)p.catch(function(){})};
-  tryPlay();
-  if(hasGsap&&!reduce){
-    gsap.registerPlugin(ScrollTrigger);
-    var startW=mobile?72:40;
-    var tl=gsap.timeline({scrollTrigger:{trigger:'#reel',start:'top top',end:mobile?'+=90%':'+=140%',pin:true,scrub:.6,anticipatePin:1,
-      onUpdate:function(st){prog.style.width=(st.progress*100)+'%';snd.classList.toggle('on',st.progress>.92)}}});
-    tl.fromTo(frame,{width:startW+'vw',borderRadius:'18px',clipPath:'inset(0% round 18px)'},{width:'100vw',height:'100vh',borderRadius:'0px',clipPath:'inset(0% round 0px)',ease:'power2.inOut'},0)
-      .to('.reelwrap .txt.l',{x:-120,opacity:0,ease:'power2.in'},0)
-      .to('.reelwrap .txt.r',{x:120,opacity:0,ease:'power2.in'},0);
-    // work grid depth
-    document.querySelectorAll('.tile[data-speed]').forEach(function(t){var s=+t.dataset.speed;if(!s||mobile)return;
-      gsap.fromTo(t,{y:s*-160},{y:s*160,ease:'none',scrollTrigger:{trigger:t,start:'top bottom',end:'bottom top',scrub:true}})});
-  }else{
-    snd.classList.add('on');
-  }
-  snd.addEventListener('click',function(){vid.muted=!vid.muted;snd.textContent=vid.muted?'Sound on':'Sound off';snd.setAttribute('aria-pressed',String(!vid.muted));tryPlay()});
+  /* inline reel */
+  var rb=document.getElementById('reelbox'),rv=document.getElementById('reelvid'),rp=document.getElementById('reelposter');
+  rb.addEventListener('click',function(){if(rb.classList.contains('on'))return;rb.classList.add('on');rv.src='reel/framexgod-reel-2026.mp4';rv.style.display='block';rp.style.display='none';var p=rv.play();if(p&&p.catch)p.catch(function(){})});
 
-  // hover loops
-  function arm(el){
-    var v=el.querySelector('video');if(!v)return;
-    var on=function(){if(!v.src){v.src=v.dataset.src;v.load()}el.classList.add('live');var p=v.play();if(p&&p.catch)p.catch(function(){})};
-    var off=function(){el.classList.remove('live');v.pause()};
-    el.addEventListener('mouseenter',on);el.addEventListener('mouseleave',off);
-    el.addEventListener('focus',on);el.addEventListener('blur',off);
-    el.addEventListener('click',function(){if(lenis)lenis.scrollTo('#reel',{duration:1.2});else document.getElementById('reel').scrollIntoView({behavior:'smooth'})});
-    el.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();el.click()}});
-  }
-  document.querySelectorAll('.tile,.cat').forEach(arm);
-  // mobile: play loops as they pass through view
-  if(matchMedia('(hover: none)').matches){
-    var vio=new IntersectionObserver(function(es){es.forEach(function(e){var el=e.target,v=el.querySelector('video');if(!v)return;
-      if(e.isIntersecting&&e.intersectionRatio>.6){if(!v.src){v.src=v.dataset.src;v.load()}el.classList.add('live');var p=v.play();if(p&&p.catch)p.catch(function(){})}
-      else{el.classList.remove('live');v.pause()}})},{threshold:[0,.6]});
-    document.querySelectorAll('.tile,.cat').forEach(function(el){vio.observe(el)});
-  }
+  /* booking form → WhatsApp */
+  var f=document.getElementById('bookform'),st=document.getElementById('status'),NUM='13057785526';
+  function v(id){return (document.getElementById(id).value||'').trim()}
+  function msg(){return ['Booking request for FRAMEXGOD','Name: '+(v('name')||'-'),'Artist or brand: '+(v('brand')||'-'),'Project: '+v('pkg'),'Shoot date: '+(v('date')||'flexible'),'City: '+v('city'),'Budget: '+v('budget'),'Details: '+(v('notes')||'-')].join('\n')}
+  function say(t){st.textContent=t}
+  function fallback(t){var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');say('Copied.')}catch(e){say('Select the text and copy it.')}document.body.removeChild(ta)}
+  function copyText(t,ok){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(function(){say(ok)},function(){fallback(t)})}else{fallback(t)}}
+  f.addEventListener('submit',function(e){e.preventDefault();if(!v('name')){say('Add your name so we know who to call back.');document.getElementById('name').focus();return}
+    var a=document.createElement('a');a.href='https://wa.me/'+NUM+'?text='+encodeURIComponent(msg());a.target='_blank';a.rel='noopener';document.body.appendChild(a);a.click();document.body.removeChild(a);say('WhatsApp opened with your details. Hit send there.')});
+  document.getElementById('copy').addEventListener('click',function(){copyText(msg(),'Copied. Text it to 305 778 5526.')});
+  document.querySelectorAll('[data-pkg]').forEach(function(b){b.addEventListener('click',function(){document.getElementById('pkg').value=b.getAttribute('data-pkg')})});
 })();
 </script>
 </body>
