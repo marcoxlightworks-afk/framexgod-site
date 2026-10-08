@@ -138,7 +138,8 @@ nav .book{justify-self:end}
 
 
 /* LAND / AIR / SEA — hover-scrub posters */
-.las{display:grid;gap:14px}
+.las{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+@media (max-width:900px){.las{grid-template-columns:1fr}}
 .las .card{position:relative;aspect-ratio:16/9;overflow:hidden;background:#000;perspective:1400px;cursor:crosshair}
 .las .card .plane{position:absolute;inset:0;transform-style:preserve-3d;transition:transform .9s var(--out);will-change:transform}
 .las .card img,.las .card video{position:absolute;inset:-3%;width:106%;height:106%;object-fit:cover;filter:grayscale(1) contrast(1.25) brightness(.78)}
@@ -147,13 +148,13 @@ nav .book{justify-self:end}
 .las .card .ui{position:absolute;inset:0;pointer-events:none;transform:translateZ(60px)}
 .las .card .ui .w{position:absolute;left:4%;bottom:12%;}
 .las .card[data-las="land"] .ui .w{left:50%;transform:translateX(-50%);bottom:4%;}
-.las .card .ui .w{font:900 clamp(60px,15vw,260px)/.8 var(--sans);font-variation-settings:"wdth" 125;letter-spacing:-.04em;text-transform:uppercase;background:var(--tex) center/cover;-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 20px 40px rgba(0,0,0,.7))}
-.las .card .ui .c{position:absolute;right:4%;bottom:12%;text-align:right;font:900 clamp(16px,2.6vw,44px)/1 var(--sans);font-variation-settings:"wdth" 125;letter-spacing:-.01em}
-.las .card .ui .c small{display:block;margin-top:10px;font:500 10px/1.6 var(--mono);letter-spacing:.2em;color:var(--dim)}
-.las .card .ui .t{position:absolute;left:4%;top:5%;right:4%;display:flex;justify-content:space-between;font:500 10px/1.6 var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--dim)}
-.las .card .ui .b{position:absolute;left:4%;right:4%;bottom:4%;display:flex;justify-content:space-between;font:500 10px/1.6 var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--dim);border-top:1px solid rgba(255,255,255,.18);padding-top:10px}
+.las .card .ui .w{font:900 clamp(36px,5vw,96px)/.8 var(--sans);font-variation-settings:"wdth" 125;letter-spacing:-.04em;text-transform:uppercase;background:var(--tex) center/cover;-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 20px 40px rgba(0,0,0,.7))}
+.las .card .ui .c{position:absolute;right:4%;bottom:12%;text-align:right;font:900 clamp(11px,1vw,16px)/1.1 var(--sans);font-variation-settings:"wdth" 125;letter-spacing:-.01em}
+.las .card .ui .c small{display:block;margin-top:6px;font:500 8px/1.6 var(--mono);letter-spacing:.2em;color:var(--dim)}
+.las .card .ui .t{position:absolute;left:4%;top:5%;right:4%;display:flex;justify-content:space-between;font:500 8px/1.6 var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--dim)}
+.las .card .ui .b{position:absolute;left:4%;right:4%;bottom:4%;display:flex;justify-content:space-between;font:500 8px/1.6 var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--dim);border-top:1px solid rgba(255,255,255,.18);padding-top:10px}
 .las .card .bar{position:absolute;left:0;bottom:0;height:2px;width:0;background:#fff;transition:width .15s linear}
-@media (max-width:700px){.las .card .ui .t,.las .card .ui .b{display:none}}
+@media (max-width:1200px){.las .card .ui .t,.las .card .ui .b{display:none}}
 
 .sec.las-top{padding-top:0;margin-top:-6vh}
 /* REEL */
@@ -361,8 +362,8 @@ footer .giant.vwrap svg{position:absolute;inset:0;width:100%;height:100%}
     </div>
     <div class="card" data-las="sea">
       <div class="plane">
-        <img src="media/las/sea.jpg" alt="SEA" width="2560" height="1440" loading="lazy">
-        <video muted playsinline preload="metadata"><source src="media/las/sea.mp4" type="video/mp4"><source src="media/las/sea.webm" type="video/webm"></video>
+        <img src="media/las/sea.jpg?v=2" alt="SEA" width="2560" height="1440" loading="lazy">
+        <video muted playsinline preload="metadata"><source src="media/las/sea.mp4?v=2" type="video/mp4"><source src="media/las/sea.webm?v=2" type="video/webm"></video>
       </div>
       <div class="ui">
         <div class="t"><span>FRAMEXGOD · 神フレーム</span><span>LIGHTWORKS PRODUCTIONS · MMXXVI · 03 / 03</span></div>
