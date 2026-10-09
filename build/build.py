@@ -21,19 +21,19 @@ tpl = open(os.path.join(ROOT, 'build', 'template.html'), encoding='utf-8').read(
 FEATURED = [
     # row-pair A: big | std std | big | std std  (12 cells)
     ('rendido_r1_10s', 'big',  'Rendido', 'JHEX · Director', 'Performer leaping across a mirrored salt flat at sunrise'),
-    ('b71',  '',     '', '', 'Frame'),
-    ('b12',  '',     '', '', 'Frame'),
-    ('b76',  'big',  '', '', 'Frame'),
-    ('b30',  '',     '', '', 'Frame'),
-    ('b25',  '',     '', '', 'Frame'),
+    ('b71',  '',     '', '', 'FRAMEXGOD production still — music video and commercial work, Miami'),
+    ('b12',  '',     '', '', 'FRAMEXGOD production still — music video and commercial work, Miami'),
+    ('b76',  'big',  '', '', 'FRAMEXGOD production still — music video and commercial work, Miami'),
+    ('b30',  '',     '', '', 'FRAMEXGOD production still — music video and commercial work, Miami'),
+    ('b25',  '',     '', '', 'FRAMEXGOD production still — music video and commercial work, Miami'),
     # row B: wide | std std | wide (6 cells)
-    ('b13',  'wide', '', '', 'Frame'),
-    ('b15',  '',     '', '', 'Frame'),
-    ('b95',  '',     '', '', 'Frame'),
-    ('b02',  'wide', '', '', 'Frame'),
+    ('b13',  'wide', '', '', 'FRAMEXGOD production still — music video and commercial work, Miami'),
+    ('b15',  '',     '', '', 'FRAMEXGOD production still — music video and commercial work, Miami'),
+    ('b95',  '',     '', '', 'FRAMEXGOD production still — music video and commercial work, Miami'),
+    ('b02',  'wide', '', '', 'FRAMEXGOD production still — music video and commercial work, Miami'),
     # everything after: even 1x1 rows of six
-    ('b47',  '', '', '', 'Frame'), ('b78', '', '', '', 'Frame'), ('b83', '', '', '', 'Frame'), ('b21', '', '', '', 'Frame'), ('b16', '', '', '', 'Frame'), ('b08', '', '', '', 'Frame'),
-    ('b61',  '', '', '', 'Frame'), ('b64', '', '', '', 'Frame'), ('b33', '', '', '', 'Frame'), ('b40', '', '', '', 'Frame'), ('b56', '', '', '', 'Frame'), ('b11', '', '', '', 'Frame'),
+    ('b47',  '', '', '', 'FRAMEXGOD production still — music video and commercial work, Miami'), ('b78', '', '', '', 'FRAMEXGOD production still — music video and commercial work, Miami'), ('b83', '', '', '', 'FRAMEXGOD production still — music video and commercial work, Miami'), ('b21', '', '', '', 'FRAMEXGOD production still — music video and commercial work, Miami'), ('b16', '', '', '', 'FRAMEXGOD production still — music video and commercial work, Miami'), ('b08', '', '', '', 'FRAMEXGOD production still — music video and commercial work, Miami'),
+    ('b61',  '', '', '', 'FRAMEXGOD production still — music video and commercial work, Miami'), ('b64', '', '', '', 'FRAMEXGOD production still — music video and commercial work, Miami'), ('b33', '', '', '', 'FRAMEXGOD production still — music video and commercial work, Miami'), ('b40', '', '', '', 'FRAMEXGOD production still — music video and commercial work, Miami'), ('b56', '', '', '', 'FRAMEXGOD production still — music video and commercial work, Miami'), ('b11', '', '', '', 'FRAMEXGOD production still — music video and commercial work, Miami'),
 ]
 
 all_clips = sorted(f[:-4] for f in os.listdir(os.path.join(ROOT, 'boom')) if f.endswith('.mp4'))
@@ -60,7 +60,7 @@ feat_html = '\n'.join(
 
 arch_rows = []
 for i, c in enumerate(archive):
-    alt = f'FRAMEXGOD archive clip {i + 1:02d}'
+    alt = f'FRAMEXGOD archive still {i + 1:02d} — music video, commercial and brand film frames shot in Miami, New York and Los Angeles'
     zs = ''
     arch_rows.append(
         f'    <div class="tile"{zs} tabindex="0" role="button" aria-label="{alt} — play the reel">'
