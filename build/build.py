@@ -26,18 +26,14 @@ FEATURED = [
     ('b76',  'big',  '', '', 'Frame'),
     ('b30',  '',     '', '', 'Frame'),
     ('b25',  '',     '', '', 'Frame'),
-    # row-pair B: std std | big 2x2 | std std / std std | std std (12 cells)
-    ('b13',  '',     '', '', 'Frame'),
-    ('b93',  '',     '', '', 'Frame'),
-    ('b95',  'big',  '', '', 'Frame'),
-    ('b02',  '',     '', '', 'Frame'),
-    ('b47',  '',     '', '', 'Frame'),
-    ('b78',  '',     '', '', 'Frame'),
-    ('b83',  '',     '', '', 'Frame'),
-    ('b21',  '',     '', '', 'Frame'),
-    ('b16',  '',     '', '', 'Frame'),
-    # row-pair C: even 1x1 (6 cells)
-    ('b08', '', '', '', 'Frame'), ('b61', '', '', '', 'Frame'), ('b64', '', '', '', 'Frame'), ('b33', '', '', '', 'Frame'), ('b40', '', '', '', 'Frame'), ('b56', '', '', '', 'Frame'),
+    # row B: wide | std std | wide (6 cells)
+    ('b13',  'wide', '', '', 'Frame'),
+    ('b15',  '',     '', '', 'Frame'),
+    ('b95',  '',     '', '', 'Frame'),
+    ('b02',  'wide', '', '', 'Frame'),
+    # everything after: even 1x1 rows of six
+    ('b47',  '', '', '', 'Frame'), ('b78', '', '', '', 'Frame'), ('b83', '', '', '', 'Frame'), ('b21', '', '', '', 'Frame'), ('b16', '', '', '', 'Frame'), ('b08', '', '', '', 'Frame'),
+    ('b61',  '', '', '', 'Frame'), ('b64', '', '', '', 'Frame'), ('b33', '', '', '', 'Frame'), ('b40', '', '', '', 'Frame'), ('b56', '', '', '', 'Frame'), ('b11', '', '', '', 'Frame'),
 ]
 
 all_clips = sorted(f[:-4] for f in os.listdir(os.path.join(ROOT, 'boom')) if f.endswith('.mp4'))
