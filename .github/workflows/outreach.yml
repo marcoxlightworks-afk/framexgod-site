@@ -32,6 +32,6 @@ jobs:
         run: |
           git config user.name "framexgod-outreach"
           git config user.email "info@framexgod.com"
-          git add -A data.sealed status.json inbox
+          git add -A
           git commit -m "outreach $(date -u +%F)" || true
           git push origin outreach
