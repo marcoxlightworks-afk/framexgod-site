@@ -25,6 +25,7 @@ jobs:
       - name: Send
         env:
           OUTREACH_SK: ${{ secrets.OUTREACH_SK }}
+          RESEND_KEY: ${{ secrets.RESEND_KEY }}
           DAILY_CAP: ${{ inputs.cap || '90' }}
         run: python daily.py
       - name: Save state
