@@ -5,8 +5,8 @@ on:
   workflow_dispatch:
     inputs:
       cap:
-        description: 'Max emails today'
-        default: '90'
+        description: 'Max emails today (blank = ramp schedule)'
+        default: ''
 permissions:
   contents: write
 concurrency: outreach
@@ -22,11 +22,23 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install -q pynacl
+      - name: Daily cap (ramp 90 -> 120 -> 150, approved by FRAMEXGOD 2026-10-11)
+        env:
+          CAP_INPUT: ${{ inputs.cap }}
+        run: |
+          if [ -n "$CAP_INPUT" ]; then cap="$CAP_INPUT"
+          else
+            d=$(TZ=America/New_York date +%F)
+            if   [ "$d" \< "2026-10-15" ]; then cap=90
+            elif [ "$d" \< "2026-10-20" ]; then cap=120
+            else cap=150; fi
+          fi
+          echo "DAILY_CAP=$cap" >> "$GITHUB_ENV"
+          echo "cap today: $cap"
       - name: Send
         env:
           OUTREACH_SK: ${{ secrets.OUTREACH_SK }}
           RESEND_KEY: ${{ secrets.RESEND_KEY }}
-          DAILY_CAP: ${{ inputs.cap || '90' }}
         run: python daily.py
       - name: Save state
         if: always()
