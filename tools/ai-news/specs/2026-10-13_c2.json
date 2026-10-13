@@ -1,0 +1,78 @@
+{
+ "date": "2026-10-13",
+ "slug": "c2",
+ "code": "FXG-N002",
+ "tag": "AI × MUSIC",
+ "source": "SRC: MUSIC BUSINESS WORLDWIDE · OCT 09 2026",
+ "slides": [
+  {
+   "bg": "s1",
+   "head": "260,000 AI fakes. One label.",
+   "body": "Sony Music has asked platforms to remove more than 260,000 AI tracks that impersonate its artists.",
+   "size": 52,
+   "focus": [
+    0.46,
+    0.46
+   ],
+   "lift": 100
+  },
+  {
+   "bg": "s2",
+   "head": "The number nearly doubled.",
+   "body": "About 135,000 at the end of March. The fakes copy Harry Styles, Adele and Michael Jackson.",
+   "focus": [
+    0.5,
+    0.45
+   ]
+  },
+  {
+   "bg": "s3",
+   "head": "18 months in prison.",
+   "body": "A North Carolina man was sentenced for an AI-song streaming scheme that earned over $8 million in royalties.",
+   "focus": [
+    0.39,
+    0.36
+   ]
+  },
+  {
+   "bg": "s4",
+   "head": "The U.S. Copyright Office is looking in.",
+   "body": "A new inquiry into streaming fraud. Public comments are due Nov. 23.",
+   "focus": [
+    0.41,
+    0.42
+   ],
+   "lift": 90
+  },
+  {
+   "bg": "s5",
+   "head": "Suno is going live.",
+   "body": "The AI music company hired a Ticketmaster executive to run its live arm, including Songkick.",
+   "focus": [
+    0.49,
+    0.375
+   ]
+  },
+  {
+   "bg": "s6",
+   "tag": "FRAMEXGOD TAKE",
+   "head": "The line is getting clear.",
+   "body": "Making music with AI is fine. Faking an artist, or faking the streams, is not.",
+   "focus": [
+    0.5,
+    0.42
+   ]
+  },
+  {
+   "bg": "s7",
+   "head": "Follow @framexgod\nfor AI × music news.",
+   "body": "New stories every week.",
+   "swipe": "@FRAMEXGOD",
+   "focus": [
+    0.6,
+    0.43
+   ],
+   "lift": 50
+  }
+ ]
+}
