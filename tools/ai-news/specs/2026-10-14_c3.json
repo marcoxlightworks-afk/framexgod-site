@@ -1,0 +1,59 @@
+{
+ "date": "2026-10-14",
+ "slug": "c3",
+ "code": "FXG-N003",
+ "tag": "AI × FILM",
+ "source": "SRC: FAR OUT · HOLLYWOODLIFE · VARIETY",
+ "slides": [
+  {
+   "bg": "s1",
+   "head": "Hollywood made the OpenAI movie.\nIt opens Christmas Day.",
+   "size": 42,
+   "lift": 60,
+   "focus": [
+    0.5,
+    0.31
+   ]
+  },
+  {
+   "bg": "s2",
+   "head": "Artificial.",
+   "body": "Directed by Luca Guadagnino. The story of how OpenAI and ChatGPT began.",
+   "focus": [
+    0.44,
+    0.42
+   ]
+  },
+  {
+   "bg": "s3",
+   "head": "The cast.",
+   "body": "Andrew Garfield as Sam Altman. Ike Barinholtz as Elon Musk. Monica Barbaro as Mira Murati. Yura Borisov as Ilya Sutskever.",
+   "lift": 80,
+   "focus": [
+    0.41,
+    0.36
+   ]
+  },
+  {
+   "bg": "s4",
+   "head": "Amazon passed.\nNEON picked it up.",
+   "body": "Amazon MGM let the film go. Amazon has $50 billion invested in OpenAI. NEON paid about $40 million, per Variety."
+  },
+  {
+   "bg": "s5",
+   "head": "In theaters Dec. 25."
+  },
+  {
+   "bg": "s6",
+   "head": "Follow @framexgod\nfor AI × film news.",
+   "body": "New stories every week.",
+   "swipe": "@FRAMEXGOD",
+   "lift": 50,
+   "focus": [
+    0.6,
+    0.43
+   ],
+   "negative": false
+  }
+ ]
+}
