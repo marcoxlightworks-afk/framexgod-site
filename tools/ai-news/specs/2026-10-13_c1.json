@@ -1,0 +1,78 @@
+{
+ "date": "2026-10-13",
+ "slug": "c1",
+ "code": "FXG-N001",
+ "tag": "AI × FILM",
+ "source": "SRC: COLOMBIA ONE · OCT 09 2026",
+ "slides": [
+  {
+   "bg": "s1",
+   "head": "An AI-made movie got an R rating.\nNow it wants an Oscar.",
+   "size": 42,
+   "focus": [
+    0.44,
+    0.36
+   ]
+  },
+  {
+   "bg": "s2",
+   "head": "Gods Don’t Give Gifts.",
+   "body": "A four-story anthology from YouTuber Gossip Goblin and AI studio Fable. Most of its images are AI-generated.",
+   "focus": [
+    0.5,
+    0.42
+   ],
+   "lift": 20
+  },
+  {
+   "bg": "s3",
+   "head": "In U.S. theaters Dec. 4.",
+   "body": "Fable pushed it back from Oct. 30 to land closer to awards season.",
+   "focus": [
+    0.45,
+    0.47
+   ]
+  },
+  {
+   "bg": "s4",
+   "head": "The target: Best Animated Feature.",
+   "body": "Only one R-rated film has ever been nominated in that category: Anomalisa (2015).",
+   "lift": 120,
+   "focus": [
+    0.45,
+    0.7
+   ]
+  },
+  {
+   "bg": "s5",
+   "head": "The Academy’s rule.",
+   "body": "Performances must be human. Scripts must be human-written. Using AI alone neither helps nor hurts a film’s chances.",
+   "lift": 160,
+   "focus": [
+    0.34,
+    0.58
+   ]
+  },
+  {
+   "bg": "s6",
+   "head": "“This generation’s Toy Story.”",
+   "body": "That’s how Fable’s CEO describes it. Early reactions to the trailer are split.",
+   "lift": 170,
+   "focus": [
+    0.47,
+    0.4
+   ]
+  },
+  {
+   "bg": "s7",
+   "head": "Follow @framexgod\nfor AI × film news.",
+   "body": "New stories every week.",
+   "swipe": "@FRAMEXGOD",
+   "lift": 50,
+   "focus": [
+    0.6,
+    0.43
+   ]
+  }
+ ]
+}
