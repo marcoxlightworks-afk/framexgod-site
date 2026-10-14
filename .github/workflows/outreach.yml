@@ -1,7 +1,7 @@
 name: outreach
 on:
-  schedule:
-    - cron: '5 14 * * 1-5'   # weekdays ~10:05 AM ET
+  # Schedule removed 2026-10-14: FRAMEXGOD consolidated to one sender ("Daily outreach send").
+  # This runner never worked (OUTREACH_SK secret missing). Manual run only.
   workflow_dispatch:
     inputs:
       cap:
