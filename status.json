@@ -1,11 +1,12 @@
 {
- "date": "2026-10-09",
- "followups_sent": 23,
- "new_sent": 100,
- "leads_added": 0,
- "replies_marked": 1,
- "remaining_leads": 148,
- "total_contacted": 280,
- "total_replied": 2,
- "note": "manual run 2026-10-09; 2 bounces"
+ "updated": "2026-10-15T02:24:46.037426Z",
+ "date": "2026-10-14",
+ "new_sent_today": 51,
+ "followups_sent_today": 31,
+ "bounces_total": 21,
+ "total_contacted": 432,
+ "total_replied": 3,
+ "leads_remaining": 86,
+ "next_send": "weekdays 10:05 AM ET",
+ "link_in_emails": "www.Framexgod.com"
 }
