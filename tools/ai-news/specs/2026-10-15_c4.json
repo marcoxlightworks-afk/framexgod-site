@@ -1,0 +1,57 @@
+{
+ "date": "2026-10-15",
+ "slug": "c4",
+ "code": "FXG-N004",
+ "tag": "AI × MUSIC",
+ "source": "SRC: MBW · OCT 14 2026",
+ "slides": [
+  {
+   "bg": "s1",
+   "head": "YouTube Music now tells you\nwhen a song was made by AI.",
+   "size": 42,
+   "lift": 60
+  },
+  {
+   "bg": "s2",
+   "head": "A new label.",
+   "body": "A tag on the player page marks songs made primarily with generative AI. Tap it to see the AI's role in the track."
+  },
+  {
+   "bg": "s3",
+   "head": "Three categories.",
+   "body": "Partners mark each track Fully Gen AI, Partly Gen AI or No Gen AI. Pitch correction like Auto-Tune counts as No Gen AI.",
+   "focus": [
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "bg": "s4",
+   "head": "No disclosure?\nIt checks anyway.",
+   "body": "YouTube adds signals from its own detection tools. Tracks with no AI info can still be labeled."
+  },
+  {
+   "bg": "s5",
+   "head": "90,000 a day.",
+   "body": "Deezer says it gets nearly 90,000 fully AI-generated tracks daily. Spotify and TIDAL already tag AI music. Apple Music plans labels this year."
+  },
+  {
+   "bg": "s6",
+   "tag": "FRAMEXGOD TAKE",
+   "head": "Using AI in a track?\nSay so up front.",
+   "body": "Per TechCrunch, AI use alone does not block a track from monetization."
+  },
+  {
+   "bg": "s7",
+   "head": "Follow @framexgod\nfor AI × music news.",
+   "body": "New stories every week.",
+   "swipe": "@FRAMEXGOD",
+   "lift": 50,
+   "focus": [
+    0.6,
+    0.43
+   ],
+   "negative": false
+  }
+ ]
+}
