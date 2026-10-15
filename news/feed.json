@@ -1,46 +1,56 @@
 {
-  "queue": [],
-  "posted": [
-    {
-      "date": "2026-10-12",
-      "slug": "c1",
-      "n": 7,
-      "topic": "AI film Gods Don't Give Gifts R rating / Oscar bid",
-      "permalink": "https://www.instagram.com/p/DeZnCPknA8n/",
-      "posted_at": "2026-10-12T15:58:40Z",
-      "note": "old look; replaced by 2026-10-13/c1 (Brand Bible look)"
-    },
-    {
-      "date": "2026-10-13",
-      "slug": "c1",
-      "n": 7,
-      "topic": "AI film Gods Don't Give Gifts R rating / Oscar bid (Brand Bible re-post)",
-      "permalink": "https://www.instagram.com/p/DecQ6BjkdSx/",
-      "posted_at": "2026-10-13T16:45:00Z",
-      "via": "instagram.com web"
-    },
-    {
-      "date": "2026-10-13",
-      "slug": "c2",
-      "n": 7,
-      "topic": "Sony Music 260,000 AI deepfake takedowns",
-      "permalink": "https://www.instagram.com/p/DecRHYKkWNL/",
-      "posted_at": "2026-10-13T16:50:00Z",
-      "via": "instagram.com web"
-    },
-    {
-      "date": "2026-10-14",
-      "slug": "c3",
-      "n": 6,
-      "topic": "Artificial (Guadagnino OpenAI film) moves to NEON, opens Dec 25",
-      "permalink": "https://www.instagram.com/p/Def1vKxDFBI/",
-      "posted_at": "2026-10-15T02:02:36Z",
-      "via": "publish.py"
-    }
-  ],
-  "covered_topics": [
-    "Gods Don't Give Gifts (Fable / Gossip Goblin) R rating + Oscar bid",
-    "Sony Music 260,000 AI deepfake takedowns; Michael Smith AI streaming sentence; US Copyright Office streaming-fraud inquiry; Suno hires Ticketmaster exec (Songkick)",
-    "Artificial (Guadagnino OpenAI film) moves to NEON, opens Dec 25"
-  ]
+ "queue": [],
+ "posted": [
+  {
+   "date": "2026-10-12",
+   "slug": "c1",
+   "n": 7,
+   "topic": "AI film Gods Don't Give Gifts R rating / Oscar bid",
+   "permalink": "https://www.instagram.com/p/DeZnCPknA8n/",
+   "posted_at": "2026-10-12T15:58:40Z",
+   "note": "old look; replaced by 2026-10-13/c1 (Brand Bible look)"
+  },
+  {
+   "date": "2026-10-13",
+   "slug": "c1",
+   "n": 7,
+   "topic": "AI film Gods Don't Give Gifts R rating / Oscar bid (Brand Bible re-post)",
+   "permalink": "https://www.instagram.com/p/DecQ6BjkdSx/",
+   "posted_at": "2026-10-13T16:45:00Z",
+   "via": "instagram.com web"
+  },
+  {
+   "date": "2026-10-13",
+   "slug": "c2",
+   "n": 7,
+   "topic": "Sony Music 260,000 AI deepfake takedowns",
+   "permalink": "https://www.instagram.com/p/DecRHYKkWNL/",
+   "posted_at": "2026-10-13T16:50:00Z",
+   "via": "instagram.com web"
+  },
+  {
+   "date": "2026-10-14",
+   "slug": "c3",
+   "n": 6,
+   "topic": "Artificial (Guadagnino OpenAI film) moves to NEON, opens Dec 25",
+   "permalink": "https://www.instagram.com/p/Def1vKxDFBI/",
+   "posted_at": "2026-10-15T02:02:36Z",
+   "via": "publish.py"
+  },
+  {
+   "date": "2026-10-15",
+   "slug": "c4",
+   "n": 7,
+   "topic": "YouTube Music AI-generated song labels (Fully/Partly/No Gen AI)",
+   "permalink": "https://www.instagram.com/p/DeiCxCmlobm/",
+   "posted_at": "2026-10-15T22:34:58Z",
+   "via": "publish.py"
+  }
+ ],
+ "covered_topics": [
+  "Gods Don't Give Gifts (Fable / Gossip Goblin) R rating + Oscar bid",
+  "Sony Music 260,000 AI deepfake takedowns; Michael Smith AI streaming sentence; US Copyright Office streaming-fraud inquiry; Suno hires Ticketmaster exec (Songkick)",
+  "Artificial (Guadagnino OpenAI film) moves to NEON, opens Dec 25",
+  "YouTube Music AI-generated song labels (Fully/Partly/No Gen AI); Deezer 90,000 AI tracks/day"
+ ]
 }
