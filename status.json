@@ -1,12 +1,13 @@
 {
- "updated": "2026-10-15T02:24:46.037426Z",
  "date": "2026-10-14",
- "new_sent_today": 51,
- "followups_sent_today": 31,
- "bounces_total": 21,
+ "new_sent": 51,
+ "followups_sent": 31,
+ "leads_added": 0,
+ "replies_marked": 0,
+ "remaining_leads": 86,
  "total_contacted": 432,
  "total_replied": 3,
- "leads_remaining": 86,
- "next_send": "weekdays 10:05 AM ET",
- "link_in_emails": "www.Framexgod.com"
+ "bounces_total": 21,
+ "note": "bounce guard stopped at 4/81 (4.9%)",
+ "updated": "2026-10-15T02:26:07.753932Z"
 }
