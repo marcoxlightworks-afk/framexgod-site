@@ -1,0 +1,65 @@
+{
+ "date": "2026-10-16",
+ "slug": "c5",
+ "code": "FXG-N005",
+ "tag": "AI × TECH",
+ "source": "SRC: ADOBE NEWSROOM · OCT 15 2026",
+ "slides": [
+  {
+   "bg": "s1",
+   "head": "Adobe just rebuilt Photoshop\nand Premiere for an AI chip.",
+   "size": 42,
+   "lift": 60
+  },
+  {
+   "bg": "s2",
+   "head": "Up to 2x faster.",
+   "body": "Photoshop, Premiere and Substance 3D are now optimized for NVIDIA's new RTX Spark superchip. Adobe claims up to 2x faster AI processing, editing, color and effects.",
+   "focus": [
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "bg": "s3",
+   "head": "Inside Premiere.",
+   "body": "Playback, rendering, color and effects get RTX acceleration. Enhance Speech and Object Mask get faster too.",
+   "focus": [
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "bg": "s4",
+   "head": "Photoshop,\nrearchitected.",
+   "body": "The app is rebuilt around GPU-accelerated compositing. Adobe's examples are the Remove Tool, Gaussian Blur and Light Leaks.",
+   "focus": [
+    0.5,
+    0.37
+   ]
+  },
+  {
+   "bg": "s5",
+   "head": "Frame.io, 5x.",
+   "body": "In the cloud, Frame.io moves media processing to NVIDIA GPUs. Early tests show about 5x faster embedding generation and an 80 percent smaller search proxy."
+  },
+  {
+   "bg": "s6",
+   "tag": "FRAMEXGOD TAKE",
+   "head": "Your edit bay\nis about to get faster.",
+   "body": "Adobe and NVIDIA show the work at Adobe MAX, Nov 10 to 12 in Miami Beach. No ship dates for the apps yet."
+  },
+  {
+   "bg": "s7",
+   "head": "Follow @framexgod\nfor AI × tech news.",
+   "body": "New stories every week.",
+   "swipe": "@FRAMEXGOD",
+   "lift": 50,
+   "focus": [
+    0.6,
+    0.43
+   ],
+   "negative": false
+  }
+ ]
+}
