@@ -1,13 +1,13 @@
 {
- "date": "2026-10-15",
- "new_sent": 25,
+ "date": "2026-10-16",
+ "new_sent": 60,
  "followups_sent": 40,
  "leads_added": 0,
  "replies_marked": 0,
- "remaining_leads": 112,
- "total_contacted": 457,
+ "remaining_leads": 155,
+ "total_contacted": 517,
  "total_replied": 3,
- "bounces_total": 25,
- "note": "STOP: bounce guard at 25 new (2/92 today, 2.2%)",
- "updated": "2026-10-15T14:31:46.190015Z"
+ "bounces_total": 26,
+ "note": "",
+ "updated": "2026-10-16T14:51:38.668824Z"
 }
