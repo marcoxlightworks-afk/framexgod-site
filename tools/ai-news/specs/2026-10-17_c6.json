@@ -1,0 +1,73 @@
+{
+ "date": "2026-10-17",
+ "slug": "c6",
+ "code": "FXG-N006",
+ "tag": "AI × FILM",
+ "source": "SRC: KLING AI · OCT 16 2026",
+ "slides": [
+  {
+   "bg": "s1",
+   "head": "Kling 4.0 is out. One prompt\nnow runs a 30-second take.",
+   "size": 42,
+   "lift": 60
+  },
+  {
+   "bg": "s2",
+   "head": "30 seconds, native.",
+   "body": "Kling 4.0 generates 30-second clips in a single pass. Upload an existing video and it extends the story up to two minutes.",
+   "focus": [
+    0.33,
+    0.56
+   ]
+  },
+  {
+   "bg": "s3",
+   "head": "10 keyframes.\n15 references.",
+   "body": "Omni Reference takes up to 10 keyframes and 15 reference assets: images, video and audio. The aim is one character that holds across shots and episodes.",
+   "focus": [
+    0.5,
+    0.44
+   ]
+  },
+  {
+   "bg": "s4",
+   "head": "Direct the camera.",
+   "body": "Push-ins, pull-outs, pans, tracking and orbit shots stay stable. White-model and depth-map videos can guide performance and camera movement.",
+   "focus": [
+    0.5,
+    0.45
+   ]
+  },
+  {
+   "bg": "s5",
+   "head": "HDR and ultrawide, soon.",
+   "body": "Kling says 10-bit HDR at 4K and 1080p and a 21:9 format are coming. Prompts run to 8,000 tokens. Firefly gets Kling 4.0 soon.",
+   "focus": [
+    0.5,
+    0.585
+   ]
+  },
+  {
+   "bg": "s6",
+   "tag": "FRAMEXGOD TAKE",
+   "head": "Stop prompting clips.\nStart directing scenes.",
+   "body": "Thirty seconds is a scene, not a clip. Camera moves and continuity now decide the result, not the prompt alone. Live on the Kling site today; API later.",
+   "focus": [
+    0.55,
+    0.52
+   ]
+  },
+  {
+   "bg": "s7",
+   "head": "Follow @framexgod\nfor AI × film news.",
+   "body": "New stories every week.",
+   "swipe": "@FRAMEXGOD",
+   "lift": 50,
+   "focus": [
+    0.6,
+    0.43
+   ],
+   "negative": false
+  }
+ ]
+}
