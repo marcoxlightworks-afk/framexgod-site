@@ -1,17 +1,5 @@
 {
- "queue": [
-  {
-   "date": "2026-10-17",
-   "slug": "c6",
-   "n": 7,
-   "code": "FXG-N006",
-   "topic": "Kling 4.0 global launch (Oct 16 2026): native 30-second generation, 10 keyframes / 15 references, 2-minute extension, HDR + 21:9 coming, Kling 4.0 coming to Adobe Firefly",
-   "source": "Kling AI press release (GlobeNewswire), Oct 16 2026",
-   "caption": "FRAMEXGOD // AI NEWS — FXG-N006\nAI × Film\n\nKling 4.0 is out. One prompt now runs a 30-second take.\n\nKling AI launched Kling 4.0 globally on October 16. The model generates 30-second clips natively and can extend an uploaded video up to two minutes. Omni Reference takes up to 10 keyframes and 15 reference assets across images, video and audio, and Kling says 10-bit HDR at 4K and a 21:9 format are coming. Adobe will bring Kling 4.0 to Firefly.\n\nStop prompting clips and start directing scenes. Thirty seconds is a scene, and camera moves and continuity now decide the result.\n\nFollow @framexgod for AI × film news.\n\nSource: Kling AI press release, Oct 16 2026.\n\nFRAMEXGOD — Framexgod.com\n\n#KlingAI #AIFilm #AIVideo",
-   "queued_at": "2026-10-17T22:15:00Z",
-   "reason": "publish.py blocked by Claude Code auto-mode permission classifier on the 2026-10-17 scheduled run; slides live at framexgod.com/news/2026-10-17/"
-  }
- ],
+ "queue": [],
  "posted": [
   {
    "date": "2026-10-12",
@@ -65,6 +53,16 @@
    "topic": "Adobe + NVIDIA expand partnership: Photoshop/Premiere/Substance 3D on RTX Spark (up to 2x), Frame.io on NVIDIA GPUs (~5x)",
    "permalink": "https://www.instagram.com/p/DekkmriD5qb/",
    "posted_at": "2026-10-16T22:09:09+0000"
+  },
+  {
+   "date": "2026-10-17",
+   "slug": "c6",
+   "n": 7,
+   "topic": "Kling 4.0 global launch (Oct 16 2026): native 30-second generation, 10 keyframes / 15 references, 2-minute extension, HDR + 21:9 coming, Kling 4.0 coming to Adobe Firefly",
+   "permalink": "https://www.instagram.com/p/DeptVx3j8Vg/",
+   "posted_at": "2026-10-18T22:01:40+0000",
+   "via": "publish.py (from queue)",
+   "media_id": "17987542752075990"
   }
  ],
  "covered_topics": [
@@ -72,6 +70,7 @@
   "Sony Music 260,000 AI deepfake takedowns; Michael Smith AI streaming sentence; US Copyright Office streaming-fraud inquiry; Suno hires Ticketmaster exec (Songkick)",
   "Artificial (Guadagnino OpenAI film) moves to NEON, opens Dec 25",
   "YouTube Music AI-generated song labels (Fully/Partly/No Gen AI); Deezer 90,000 AI tracks/day",
-  "Adobe + NVIDIA expanded partnership (Oct 15 2026): Photoshop, Premiere, Substance 3D optimized for RTX Spark; Frame.io on NVIDIA GPUs; Brand Concierge on Nemotron"
+  "Adobe + NVIDIA expanded partnership (Oct 15 2026): Photoshop, Premiere, Substance 3D optimized for RTX Spark; Frame.io on NVIDIA GPUs; Brand Concierge on Nemotron",
+  "Kling 4.0 global launch (Oct 16 2026): native 30-second generation, 10 keyframes / 15 references, 2-minute extension, HDR + 21:9 coming, Kling 4.0 coming to Adobe Firefly"
  ]
 }
