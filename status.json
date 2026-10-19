@@ -1,13 +1,13 @@
 {
- "date": "2026-10-16",
+ "date": "2026-10-19",
  "new_sent": 60,
  "followups_sent": 40,
  "leads_added": 0,
  "replies_marked": 0,
- "remaining_leads": 155,
- "total_contacted": 517,
+ "remaining_leads": 264,
+ "total_contacted": 577,
  "total_replied": 3,
- "bounces_total": 26,
+ "bounces_total": 28,
  "note": "",
- "updated": "2026-10-16T14:51:38.668824Z"
+ "updated": "2026-10-19T14:52:33.597788Z"
 }
