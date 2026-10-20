@@ -1,0 +1,79 @@
+{
+ "date": "2026-10-20",
+ "slug": "c7",
+ "code": "FXG-N007",
+ "tag": "AI × MUSIC",
+ "source": "SRC: MACRUMORS · OCT 19 2026",
+ "slides": [
+  {
+   "bg": "s1",
+   "head": "Apple quietly bought the AI tool\nthat edits recorded music like MIDI.",
+   "size": 42,
+   "lift": 60,
+   "focus": [
+    0.51,
+    0.58
+   ]
+  },
+  {
+   "bg": "s2",
+   "head": "Bought in June.\nTold in October.",
+   "body": "Apple took certain assets and some staff of Swiss startup Samplab in June 2026. The deal surfaced on October 19 in the EU's Digital Markets Act acquisitions list. No price was disclosed.",
+   "focus": [
+    0.48,
+    0.37
+   ]
+  },
+  {
+   "bg": "s3",
+   "head": "Audio becomes notes.",
+   "body": "Samplab's desktop app and plugins turned audio into editable MIDI, found and edited chords in key, and split stems.",
+   "focus": [
+    0.5,
+    0.45
+   ]
+  },
+  {
+   "bg": "s4",
+   "head": "Edit one note in a chord.",
+   "body": "Its core trick: change individual notes inside polyphonic audio without altering the original timbre. Logic Pro has Stem Splitter and Chord ID. Polyphonic note editing would be new.",
+   "focus": [
+    0.5,
+    0.49
+   ],
+   "lift": 40
+  },
+  {
+   "bg": "s5",
+   "head": "The app is already gone.",
+   "body": "Samplab shut down on September 17, 2026. Its website now redirects to Apple.com. Apple has not commented on the deal.",
+   "focus": [
+    0.5,
+    0.45
+   ]
+  },
+  {
+   "bg": "s6",
+   "tag": "FRAMEXGOD TAKE",
+   "head": "Sample editing\nmoves into the DAW.",
+   "body": "If this lands in Logic Pro or GarageBand, chord and note editing on any clip becomes a stock tool, not a plugin you buy. Producers who cut samples should watch the next Logic update.",
+   "focus": [
+    0.5,
+    0.23
+   ],
+   "lift": 60
+  },
+  {
+   "bg": "s7",
+   "head": "Follow @framexgod\nfor AI × music news.",
+   "body": "New stories every week.",
+   "swipe": "@FRAMEXGOD",
+   "lift": 50,
+   "focus": [
+    0.6,
+    0.43
+   ],
+   "negative": false
+  }
+ ]
+}
