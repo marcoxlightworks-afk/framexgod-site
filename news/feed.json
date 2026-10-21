@@ -1,87 +1,98 @@
 {
- "queue": [],
- "posted": [
-  {
-   "date": "2026-10-12",
-   "slug": "c1",
-   "n": 7,
-   "topic": "AI film Gods Don't Give Gifts R rating / Oscar bid",
-   "permalink": "https://www.instagram.com/p/DeZnCPknA8n/",
-   "posted_at": "2026-10-12T15:58:40Z",
-   "note": "old look; replaced by 2026-10-13/c1 (Brand Bible look)"
-  },
-  {
-   "date": "2026-10-13",
-   "slug": "c1",
-   "n": 7,
-   "topic": "AI film Gods Don't Give Gifts R rating / Oscar bid (Brand Bible re-post)",
-   "permalink": "https://www.instagram.com/p/DecQ6BjkdSx/",
-   "posted_at": "2026-10-13T16:45:00Z",
-   "via": "instagram.com web"
-  },
-  {
-   "date": "2026-10-13",
-   "slug": "c2",
-   "n": 7,
-   "topic": "Sony Music 260,000 AI deepfake takedowns",
-   "permalink": "https://www.instagram.com/p/DecRHYKkWNL/",
-   "posted_at": "2026-10-13T16:50:00Z",
-   "via": "instagram.com web"
-  },
-  {
-   "date": "2026-10-14",
-   "slug": "c3",
-   "n": 6,
-   "topic": "Artificial (Guadagnino OpenAI film) moves to NEON, opens Dec 25",
-   "permalink": "https://www.instagram.com/p/Def1vKxDFBI/",
-   "posted_at": "2026-10-15T02:02:36Z",
-   "via": "publish.py"
-  },
-  {
-   "date": "2026-10-15",
-   "slug": "c4",
-   "n": 7,
-   "topic": "YouTube Music AI-generated song labels (Fully/Partly/No Gen AI)",
-   "permalink": "https://www.instagram.com/p/DeiCxCmlobm/",
-   "posted_at": "2026-10-15T22:34:58Z",
-   "via": "publish.py"
-  },
-  {
-   "date": "2026-10-16",
-   "slug": "c5",
-   "n": 7,
-   "topic": "Adobe + NVIDIA expand partnership: Photoshop/Premiere/Substance 3D on RTX Spark (up to 2x), Frame.io on NVIDIA GPUs (~5x)",
-   "permalink": "https://www.instagram.com/p/DekkmriD5qb/",
-   "posted_at": "2026-10-16T22:09:09+0000"
-  },
-  {
-   "date": "2026-10-17",
-   "slug": "c6",
-   "n": 7,
-   "topic": "Kling 4.0 global launch (Oct 16 2026): native 30-second generation, 10 keyframes / 15 references, 2-minute extension, HDR + 21:9 coming, Kling 4.0 coming to Adobe Firefly",
-   "permalink": "https://www.instagram.com/p/DeptVx3j8Vg/",
-   "posted_at": "2026-10-18T22:01:40+0000",
-   "via": "publish.py (from queue)",
-   "media_id": "17987542752075990"
-  },
-  {
-   "date": "2026-10-20",
-   "slug": "c7",
-   "n": 7,
-   "topic": "Apple acquires Swiss AI audio startup Samplab (assets + staff, June 2026; disclosed Oct 19 2026 via EU DMA list): audio-to-MIDI, polyphonic note editing, chord detection, stem splitting; app shut Sept 17 2026",
-   "permalink": "https://www.instagram.com/p/DetyLPWlgYV/",
-   "posted_at": "2026-10-20T12:00:53+0000",
-   "via": "publish.py",
-   "media_id": "17952101757051154"
-  }
- ],
- "covered_topics": [
-  "Gods Don't Give Gifts (Fable / Gossip Goblin) R rating + Oscar bid",
-  "Sony Music 260,000 AI deepfake takedowns; Michael Smith AI streaming sentence; US Copyright Office streaming-fraud inquiry; Suno hires Ticketmaster exec (Songkick)",
-  "Artificial (Guadagnino OpenAI film) moves to NEON, opens Dec 25",
-  "YouTube Music AI-generated song labels (Fully/Partly/No Gen AI); Deezer 90,000 AI tracks/day",
-  "Adobe + NVIDIA expanded partnership (Oct 15 2026): Photoshop, Premiere, Substance 3D optimized for RTX Spark; Frame.io on NVIDIA GPUs; Brand Concierge on Nemotron",
-  "Kling 4.0 global launch (Oct 16 2026): native 30-second generation, 10 keyframes / 15 references, 2-minute extension, HDR + 21:9 coming, Kling 4.0 coming to Adobe Firefly",
-  "Apple acquires Samplab (Swiss AI audio editor: audio-to-MIDI, polyphonic note editing, chord detection, stem splitting); deal June 2026, disclosed Oct 19 2026 via EU DMA acquisitions list"
- ]
+  "queue": [],
+  "posted": [
+    {
+      "date": "2026-10-12",
+      "slug": "c1",
+      "n": 7,
+      "topic": "AI film Gods Don't Give Gifts R rating / Oscar bid",
+      "permalink": "https://www.instagram.com/p/DeZnCPknA8n/",
+      "posted_at": "2026-10-12T15:58:40Z",
+      "note": "old look; replaced by 2026-10-13/c1 (Brand Bible look)"
+    },
+    {
+      "date": "2026-10-13",
+      "slug": "c1",
+      "n": 7,
+      "topic": "AI film Gods Don't Give Gifts R rating / Oscar bid (Brand Bible re-post)",
+      "permalink": "https://www.instagram.com/p/DecQ6BjkdSx/",
+      "posted_at": "2026-10-13T16:45:00Z",
+      "via": "instagram.com web"
+    },
+    {
+      "date": "2026-10-13",
+      "slug": "c2",
+      "n": 7,
+      "topic": "Sony Music 260,000 AI deepfake takedowns",
+      "permalink": "https://www.instagram.com/p/DecRHYKkWNL/",
+      "posted_at": "2026-10-13T16:50:00Z",
+      "via": "instagram.com web"
+    },
+    {
+      "date": "2026-10-14",
+      "slug": "c3",
+      "n": 6,
+      "topic": "Artificial (Guadagnino OpenAI film) moves to NEON, opens Dec 25",
+      "permalink": "https://www.instagram.com/p/Def1vKxDFBI/",
+      "posted_at": "2026-10-15T02:02:36Z",
+      "via": "publish.py"
+    },
+    {
+      "date": "2026-10-15",
+      "slug": "c4",
+      "n": 7,
+      "topic": "YouTube Music AI-generated song labels (Fully/Partly/No Gen AI)",
+      "permalink": "https://www.instagram.com/p/DeiCxCmlobm/",
+      "posted_at": "2026-10-15T22:34:58Z",
+      "via": "publish.py"
+    },
+    {
+      "date": "2026-10-16",
+      "slug": "c5",
+      "n": 7,
+      "topic": "Adobe + NVIDIA expand partnership: Photoshop/Premiere/Substance 3D on RTX Spark (up to 2x), Frame.io on NVIDIA GPUs (~5x)",
+      "permalink": "https://www.instagram.com/p/DekkmriD5qb/",
+      "posted_at": "2026-10-16T22:09:09+0000"
+    },
+    {
+      "date": "2026-10-17",
+      "slug": "c6",
+      "n": 7,
+      "topic": "Kling 4.0 global launch (Oct 16 2026): native 30-second generation, 10 keyframes / 15 references, 2-minute extension, HDR + 21:9 coming, Kling 4.0 coming to Adobe Firefly",
+      "permalink": "https://www.instagram.com/p/DeptVx3j8Vg/",
+      "posted_at": "2026-10-18T22:01:40+0000",
+      "via": "publish.py (from queue)",
+      "media_id": "17987542752075990"
+    },
+    {
+      "date": "2026-10-20",
+      "slug": "c7",
+      "n": 7,
+      "topic": "Apple acquires Swiss AI audio startup Samplab (assets + staff, June 2026; disclosed Oct 19 2026 via EU DMA list): audio-to-MIDI, polyphonic note editing, chord detection, stem splitting; app shut Sept 17 2026",
+      "permalink": "https://www.instagram.com/p/DetyLPWlgYV/",
+      "posted_at": "2026-10-20T12:00:53+0000",
+      "via": "publish.py",
+      "media_id": "17952101757051154"
+    },
+    {
+      "date": "2026-10-21",
+      "slug": "c8",
+      "n": 7,
+      "topic": "Spotify 'One Year In' update (Oct 20 2026): 50M+ AI slop/spam tracks removed from recommendations in 2026, 75M+ spam tracks deleted; skip-signal detection, AI Credits, Verified by Spotify, AI Persona badges, 10x less likely to pass 1,000-stream threshold",
+      "permalink": "https://www.instagram.com/p/Dexh8djlqI4/",
+      "posted_at": "2026-10-21T22:56:01+0000",
+      "via": "publish.py",
+      "media_id": "18200134606380896"
+    }
+  ],
+  "covered_topics": [
+    "Gods Don't Give Gifts (Fable / Gossip Goblin) R rating + Oscar bid",
+    "Sony Music 260,000 AI deepfake takedowns; Michael Smith AI streaming sentence; US Copyright Office streaming-fraud inquiry; Suno hires Ticketmaster exec (Songkick)",
+    "Artificial (Guadagnino OpenAI film) moves to NEON, opens Dec 25",
+    "YouTube Music AI-generated song labels (Fully/Partly/No Gen AI); Deezer 90,000 AI tracks/day",
+    "Adobe + NVIDIA expanded partnership (Oct 15 2026): Photoshop, Premiere, Substance 3D optimized for RTX Spark; Frame.io on NVIDIA GPUs; Brand Concierge on Nemotron",
+    "Kling 4.0 global launch (Oct 16 2026): native 30-second generation, 10 keyframes / 15 references, 2-minute extension, HDR + 21:9 coming, Kling 4.0 coming to Adobe Firefly",
+    "Apple acquires Samplab (Swiss AI audio editor: audio-to-MIDI, polyphonic note editing, chord detection, stem splitting); deal June 2026, disclosed Oct 19 2026 via EU DMA acquisitions list",
+    "Spotify removes 50M+ AI slop/spam tracks from recommendations in 2026 (Oct 20 2026 'One Year In' post); 75M spam deletions; AI Credits, Verified, AI Persona badges, 1,000-stream threshold"
+  ]
 }
