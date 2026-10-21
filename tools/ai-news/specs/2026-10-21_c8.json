@@ -1,0 +1,79 @@
+{
+ "date": "2026-10-21",
+ "slug": "c8",
+ "code": "FXG-N008",
+ "tag": "AI × MUSIC",
+ "source": "SRC: SPOTIFY NEWSROOM · OCT 20 2026",
+ "slides": [
+  {
+   "bg": "s1",
+   "head": "Spotify pulled 50 million AI tracks\nout of your recommendations.",
+   "size": 42,
+   "lift": 60,
+   "focus": [
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "bg": "s2",
+   "head": "Hidden, not deleted.",
+   "body": "On October 20, Spotify said it removed more than 50 million slop and spam tracks from recommendations in 2026 alone. Separately, 75 million spammy tracks were deleted from the platform for serious or repeated rule violations.",
+   "focus": [
+    0.4,
+    0.59
+   ],
+   "lift": 200
+  },
+  {
+   "bg": "s3",
+   "head": "Skips gave them away.",
+   "body": "Earlier this year Spotify studied the tracks listeners skipped, ignored or rejected. They were consistently the ones flagged as slop or spam. Over six months it rewrote its recommendation system around that signal.",
+   "focus": [
+    0.5,
+    0.45
+   ]
+  },
+  {
+   "bg": "s4",
+   "head": "Four signals, no single detector.",
+   "body": "Listener feedback, upload patterns, metadata and several third-party AI detection tools. Spotify admits AI detection has limits and will only get harder as generative models improve.",
+   "focus": [
+    0.48,
+    0.37
+   ]
+  },
+  {
+   "bg": "s5",
+   "head": "AI rarely earns a royalty.",
+   "body": "Tracks with a high probability of AI generation are 10 times more likely to miss the 1,000-stream threshold needed to get paid. AI Persona profiles stay out of the feed unless you follow them.",
+   "focus": [
+    0.42,
+    0.41
+   ]
+  },
+  {
+   "bg": "s6",
+   "tag": "FRAMEXGOD TAKE",
+   "head": "Discovery is\nthe new gate.",
+   "body": "The upload is still open. The feed is not. If AI is anywhere in your chain, declare it in AI Credits and get verified, or the algorithm files your release under noise.",
+   "focus": [
+    0.42,
+    0.5
+   ],
+   "lift": 100
+  },
+  {
+   "bg": "s7",
+   "head": "Follow @framexgod\nfor AI × music news.",
+   "body": "New stories every week.",
+   "swipe": "@FRAMEXGOD",
+   "lift": 50,
+   "focus": [
+    0.6,
+    0.43
+   ],
+   "negative": false
+  }
+ ]
+}
