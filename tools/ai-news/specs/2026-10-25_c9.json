@@ -1,0 +1,81 @@
+{
+ "date": "2026-10-25",
+ "slug": "c9",
+ "code": "FXG-N009",
+ "tag": "AI × FILM",
+ "source": "SRC: AFP · OCT 23 2026",
+ "slides": [
+  {
+   "bg": "s1",
+   "head": "China's first all-AI film booked\n10,000 screenings. Not the seats.",
+   "size": 42,
+   "lift": 60,
+   "focus": [
+    0.41,
+    0.53
+   ]
+  },
+  {
+   "bg": "s2",
+   "head": "Two years, 100 people.",
+   "body": "Sanxingdui: Future Past, a sci-fi thriller from Bona Film Group, is billed as China's first fully AI-generated feature film. Nearly 100 people spent more than two years on it. Budget: more than 10 million yuan, about $1.5 million.",
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "lift": 150
+  },
+  {
+   "bg": "s3",
+   "head": "10,000 screenings. Four seats.",
+   "body": "It opened on October 23 with more than 10,000 screenings scheduled, according to ticketing platform Maoyan. At the screening AFP attended, four people sat in the room.",
+   "focus": [
+    0.5,
+    0.6
+   ]
+  },
+  {
+   "bg": "s4",
+   "head": "$43,000 against $1.5 million.",
+   "body": "By Friday evening the film had taken close to 290,000 yuan, about $43,000. Maoyan forecasts a final total near 390,000 yuan. That is under 4 percent of what it cost to make.",
+   "focus": [
+    0.5,
+    0.68
+   ],
+   "lift": 150
+  },
+  {
+   "bg": "s5",
+   "head": "The same AI wins on phones.",
+   "body": "AI-generated short dramas on Douyin, China's TikTok, drew more than 200 billion views in September alone. Audiences accept AI in the feed. They have not paid for it in a cinema.",
+   "focus": [
+    0.52,
+    0.5
+   ],
+   "lift": 150
+  },
+  {
+   "bg": "s6",
+   "tag": "FRAMEXGOD TAKE",
+   "head": "Free scrolls.\nTickets are earned.",
+   "body": "The tools can now carry a feature. The audience still buys a reason to leave the house. Spend the AI budget on the story and the craft, not on proving the pipeline works.",
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "lift": 100
+  },
+  {
+   "bg": "s7",
+   "head": "Follow @framexgod\nfor AI × film news.",
+   "body": "New stories every week.",
+   "swipe": "@FRAMEXGOD",
+   "lift": 50,
+   "focus": [
+    0.6,
+    0.43
+   ],
+   "negative": false
+  }
+ ]
+}
