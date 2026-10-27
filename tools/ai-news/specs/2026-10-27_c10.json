@@ -1,0 +1,82 @@
+{
+ "date": "2026-10-27",
+ "slug": "c10",
+ "code": "FXG-N010",
+ "tag": "AI × FILM",
+ "source": "SRC: TECHCRUNCH · OCT 25 2026",
+ "slides": [
+  {
+   "bg": "s1",
+   "head": "Musk promised a full AI Odyssey.\nGrok shipped seven minutes.",
+   "size": 42,
+   "lift": 60,
+   "focus": [
+    0.37,
+    0.36
+   ]
+  },
+  {
+   "bg": "s2",
+   "head": "Seven minutes, not a film.",
+   "body": "On October 23 the Grok Imagine account posted Episode 1 of an AI Odyssey series on X: seven minutes made with Grok Imagine, in collaboration with AI studio Wonder Studios and director Dev Walker.",
+   "focus": [
+    0.49,
+    0.28
+   ],
+   "lift": 110
+  },
+  {
+   "bg": "s3",
+   "head": "The promise was a feature.",
+   "body": "In July, Elon Musk said Grok would make a full-length, historically accurate movie of The Odyssey before the end of 2026. Three months later, this is the first chapter. The post offered a breakdown of how it was made to anyone who asked.",
+   "focus": [
+    0.44,
+    0.72
+   ],
+   "lift": 130
+  },
+  {
+   "bg": "s4",
+   "head": "Photoreal, until\nPenelope changed.",
+   "body": "Some viewers praised the photorealism. Others pointed to Penelope looking different in each scene, flat voices and glassy eyes. The Telegraph called the effect zombie-like. TechCrunch found no momentum and no reason to care.",
+   "focus": [
+    0.27,
+    0.44
+   ],
+   "lift": 150
+  },
+  {
+   "bg": "s5",
+   "head": "$1.78 billion, mostly practical.",
+   "body": "Christopher Nolan's The Odyssey, shot across six countries with a cast and crew of thousands and built mainly on practical filmmaking, opened in July and has grossed more than $1.78 billion worldwide.",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "lift": 60
+  },
+  {
+   "bg": "s6",
+   "tag": "FRAMEXGOD TAKE",
+   "head": "Shots are cheap.\nScenes are not.",
+   "body": "The footage held up one shot at a time. It fell apart the moment it had to carry a character across two scenes. Continuity, performance and a reason to care are still the work. Generate the shots. Direct the story.",
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "lift": 100
+  },
+  {
+   "bg": "s7",
+   "head": "Follow @framexgod\nfor AI × film news.",
+   "body": "New stories every week.",
+   "swipe": "@FRAMEXGOD",
+   "lift": 50,
+   "focus": [
+    0.6,
+    0.43
+   ],
+   "negative": false
+  }
+ ]
+}
