@@ -1,0 +1,82 @@
+{
+ "date": "2026-10-29",
+ "slug": "c11",
+ "code": "FXG-N011",
+ "tag": "AI × TECH",
+ "source": "SRC: APPLE NEWSROOM · OCT 27 2026",
+ "slides": [
+  {
+   "bg": "s1",
+   "head": "Final Cut gets MotionVFX built in.\nLogic gets an AI assistant.",
+   "size": 42,
+   "lift": 60,
+   "focus": [
+    0.5,
+    0.4
+   ]
+  },
+  {
+   "bg": "s2",
+   "head": "Thousands of effects built in.",
+   "body": "On October 27 Apple announced a November update to Apple Creator Studio. MotionVFX, the plug-in company Apple bought in March, is now built into Final Cut Pro for Mac: thousands of templates, titles and transitions, plus rotoscoping, tracking and color grading tools.",
+   "focus": [
+    0.48,
+    0.55
+   ],
+   "lift": 130
+  },
+  {
+   "bg": "s3",
+   "head": "Logic Pro gets an assistant.",
+   "body": "A beta assistant built on Apple models and OpenAI helps start a song, set up a vocal track from one prompt and refine a project. Stem Splitter now separates drums. It needs macOS 27 on an Apple Intelligence Mac, U.S. English only for now.",
+   "focus": [
+    0.5,
+    0.52
+   ],
+   "lift": 130
+  },
+  {
+   "bg": "s4",
+   "head": "Circle it. Describe the change.",
+   "body": "Pixelmator Pro adds Generate Fill: circle an area, describe the change, and the result matches the lighting, perspective and texture around it. Final Cut Pro adds text-to-image generation inside a project and 23 new transcription languages.",
+   "focus": [
+    0.5,
+    0.3
+   ],
+   "lift": 40
+  },
+  {
+   "bg": "s5",
+   "head": "Free for subscribers in November.",
+   "body": "The update ships on the App Store in November at no extra cost for Creator Studio subscribers. New subscribers pay $12.99 a month or $129 a year. Keynote, Pages and Numbers get assistants and MCP support, so outside AI agents can read and edit documents.",
+   "focus": [
+    0.5,
+    0.35
+   ],
+   "lift": 130
+  },
+  {
+   "bg": "s6",
+   "tag": "FRAMEXGOD TAKE",
+   "head": "The plug-in tax is over.",
+   "body": "Templates, tracking and transitions used to be a second purchase. Now they ship inside the editor, for everyone. The edge moves from owning tools to knowing what a frame should feel like. Learn taste. The buttons are free.",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "lift": 100
+  },
+  {
+   "bg": "s7",
+   "head": "Follow @framexgod\nfor AI × tech news.",
+   "body": "New stories every week.",
+   "swipe": "@FRAMEXGOD",
+   "lift": 50,
+   "focus": [
+    0.6,
+    0.43
+   ],
+   "negative": false
+  }
+ ]
+}
