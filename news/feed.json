@@ -101,6 +101,16 @@
    "posted_at": "2026-10-27T12:02:19+0000",
    "via": "publish.py",
    "media_id": "18109321805228639"
+  },
+  {
+   "date": "2026-10-29",
+   "slug": "c11",
+   "n": 7,
+   "topic": "Apple Creator Studio November update (announced Oct 27 2026): MotionVFX built into Final Cut Pro, Logic Pro beta assistant (Apple models + OpenAI), Stem Splitter drums, Pixelmator Pro Generate Fill, Keynote/Pages/Numbers assistants + MCP; free for subscribers, $12.99/mo or $129/yr",
+   "permalink": "https://www.instagram.com/p/DfGAZEaj7ls/",
+   "posted_at": "2026-10-29T21:46:51+0000",
+   "via": "publish.py",
+   "media_id": "18101879606632231"
   }
  ],
  "covered_topics": [
@@ -113,6 +123,7 @@
   "Apple acquires Samplab (Swiss AI audio editor: audio-to-MIDI, polyphonic note editing, chord detection, stem splitting); deal June 2026, disclosed Oct 19 2026 via EU DMA acquisitions list",
   "Spotify removes 50M+ AI slop/spam tracks from recommendations in 2026 (Oct 20 2026 'One Year In' post); 75M spam deletions; AI Credits, Verified, AI Persona badges, 1,000-stream threshold",
   "Sanxingdui: Future Past, China's first fully AI-generated feature film (Bona Film Group, Oct 23 2026 release): 10,000+ screenings, ~290,000 yuan opening-day box office vs 10M+ yuan budget, Maoyan forecast ~390,000 yuan; Douyin AI short dramas 200B+ views in September 2026",
-  "Grok Imagine / xAI first AI-generated Odyssey episode (7 minutes, Oct 23 2026, Wonder Studios + Dev Walker) vs Musk's promised full-length film; reception; Nolan's Odyssey $1.78B"
+  "Grok Imagine / xAI first AI-generated Odyssey episode (7 minutes, Oct 23 2026, Wonder Studios + Dev Walker) vs Musk's promised full-length film; reception; Nolan's Odyssey $1.78B",
+  "Apple Creator Studio November 2026 update (Oct 27 2026): MotionVFX built into Final Cut Pro, Logic Pro AI assistant beta, Stem Splitter drum separation, Pixelmator Pro Generate Fill, Keynote/Pages/Numbers assistants and MCP support, free for subscribers"
  ]
 }
