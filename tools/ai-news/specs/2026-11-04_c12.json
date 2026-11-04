@@ -1,0 +1,82 @@
+{
+ "date": "2026-11-04",
+ "slug": "c12",
+ "code": "FXG-N012",
+ "tag": "AI × MUSIC",
+ "source": "SRC: MUSIC BUSINESS WORLDWIDE · NOV 02 2026",
+ "slides": [
+  {
+   "bg": "s1",
+   "head": "A shareholder sues Google's board\nover how its music AI learned.",
+   "size": 42,
+   "lift": 60,
+   "focus": [
+    0.4,
+    0.42
+   ]
+  },
+  {
+   "bg": "s2",
+   "head": "13 defendants. 79 pages.",
+   "body": "On October 30 Alphabet shareholder Phil Rosen filed a derivative complaint in federal court in Chicago against Sundar Pichai, Larry Page, Sergey Brin and ten other directors and executives. Music Business Worldwide reported the filing on November 2.",
+   "lift": 120,
+   "focus": [
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "bg": "s3",
+   "head": "280,000 hours of music.",
+   "body": "The complaint says Google built Lyria, Lyria 2, Lyria 3, Mulan and MusicLM on copyrighted recordings, compositions and lyrics, mostly from YouTube. It says MusicLM alone trained on five million clips totaling 280,000 hours, with no rights holders or licenses identified.",
+   "lift": 120,
+   "focus": [
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "bg": "s4",
+   "head": "Ask forgiveness, not approval.",
+   "body": "The filing says leadership chose to 'ask forgiveness not approval', stripped copyright information from recordings and paid no one. It also claims voice products like Gemini Live were built on hundreds of thousands of hours of speech without the consent Illinois' biometric law requires.",
+   "lift": 120,
+   "focus": [
+    0.5,
+    0.45
+   ]
+  },
+  {
+   "bg": "s5",
+   "head": "$169.6 billion in buybacks.",
+   "body": "It is a derivative suit, so any damages go to Alphabet, not the shareholder. The complaint points to 1.147 billion shares bought back for $169.6 billion while the risk went undisclosed, and asks the court to claw back pay and order board oversight of copyright compliance.",
+   "lift": 120,
+   "focus": [
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "bg": "s6",
+   "tag": "FRAMEXGOD TAKE",
+   "head": "The upload is the deal.",
+   "body": "In a related case by independent musicians, Google argues that accepting YouTube's terms licenses their music to Google itself. Every track you upload can be read as training data. Read the terms of every platform you post to. The fight has moved from artists versus AI to shareholders versus the board.",
+   "lift": 100,
+   "focus": [
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "bg": "s7",
+   "head": "Follow @framexgod\nfor AI × music news.",
+   "body": "New stories every week.",
+   "swipe": "@FRAMEXGOD",
+   "lift": 50,
+   "focus": [
+    0.6,
+    0.43
+   ],
+   "negative": false
+  }
+ ]
+}
