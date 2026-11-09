@@ -1,0 +1,82 @@
+{
+ "date": "2026-11-09",
+ "slug": "c13",
+ "code": "FXG-N013",
+ "tag": "AI × MUSIC",
+ "source": "SRC: DETROIT FREE PRESS · NOV 07 2026",
+ "slides": [
+  {
+   "bg": "s1",
+   "head": "Eminem's publisher wants $41 million\nfrom an AI music app.",
+   "size": 42,
+   "lift": 60,
+   "focus": [
+    0.5,
+    0.42
+   ]
+  },
+  {
+   "bg": "s2",
+   "head": "269 songs. $150,000 each.",
+   "body": "Eight Mile Style, which owns the rights to nearly 270 Eminem compositions, sued Suno in federal court in San Francisco late on November 6. It asks for $150,000 per song, about $40.4 million.",
+   "lift": 120,
+   "focus": [
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "bg": "s3",
+   "head": "Copyright data stripped out.",
+   "body": "The suit says Suno removed the copyright information embedded in the songs and asks for another $672,000. It cites leaked Suno source code that allegedly shows Eminem's music and lyrics scraped from YouTube and Genius.",
+   "lift": 120,
+   "focus": [
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "bg": "s4",
+   "head": "No name needed.",
+   "body": "Suno blocks prompts that name an artist. The suit says a string of style words like aggressive rap, rapid-fire flow, dark humor and horrorcore still returns a Slim Shady-style track. Suno says it is always strengthening its guardrails.",
+   "lift": 200,
+   "focus": [
+    0.5,
+    0.31
+   ]
+  },
+  {
+   "bg": "s5",
+   "head": "Elvis is suing too.",
+   "body": "Elvis Presley Enterprises also sued Suno on November 6, in the Northern District of California. It cites Tennessee's ELVIS Act, which bars using AI to copy a performer's voice without permission, and puts Suno's alleged profits above $50 million.",
+   "lift": 120,
+   "focus": [
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "bg": "s6",
+   "tag": "FRAMEXGOD TAKE",
+   "head": "Style words are evidence now.",
+   "body": "Blocking artist names is no longer the defense when a list of style words lands on the same voice. Publishers are suing over songs, voices and the data trail. If you make music with AI, keep your prompts and your sources on file.",
+   "lift": 100,
+   "focus": [
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "bg": "s7",
+   "head": "Follow @framexgod\nfor AI × music news.",
+   "body": "New stories every week.",
+   "swipe": "@FRAMEXGOD",
+   "lift": 50,
+   "focus": [
+    0.6,
+    0.43
+   ],
+   "negative": false
+  }
+ ]
+}
