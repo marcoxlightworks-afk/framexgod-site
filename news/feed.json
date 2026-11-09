@@ -1,5 +1,15 @@
 {
- "queue": [],
+ "queue": [
+  {
+   "date": "2026-11-09",
+   "slug": "c13",
+   "n": 7,
+   "code": "FXG-N013",
+   "topic": "Eight Mile Style (Eminem's publisher) sues Suno, Nov 6 2026, federal court San Francisco: 269 songs x $150,000 (~$40.4M) + $672,000 for stripped copyright info, >$41M total; leaked source code allegedly shows scraping from YouTube/Genius; style-word prompts bypass artist-name block; Elvis Presley Enterprises sues Suno same day under Tennessee ELVIS Act (profits alleged >$50M)",
+   "caption": "FRAMEXGOD // AI NEWS — FXG-N013\nAI × Music\n\nEminem's publisher wants $41 million from an AI music app.\n\nEight Mile Style, which owns the rights to nearly 270 Eminem compositions, sued Suno in federal court in San Francisco on November 6. It asks for $150,000 for each of 269 songs, plus $672,000 for copyright information it says Suno stripped out, and says a string of style words still returns a Slim Shady-style track. Elvis Presley Enterprises sued Suno the same day under Tennessee's ELVIS Act.\n\nBlocking artist names is no longer the defense when style words land on the same voice.\n\nFollow @framexgod for AI × music news.\n\nSource: Detroit Free Press, Nov 7 2026; WMC Action News 5, Nov 9 2026.\n\nFRAMEXGOD — Framexgod.com\n\n#aimusic #musicbusiness #framexgod\n",
+   "queued_reason": "GitHub Pages deploy failed twice on 2026-11-09 (commits 83f9d42, 24813e9); slides are in the repo but not live"
+  }
+ ],
  "posted": [
   {
    "date": "2026-10-12",
@@ -135,6 +145,7 @@
   "Sanxingdui: Future Past, China's first fully AI-generated feature film (Bona Film Group, Oct 23 2026 release): 10,000+ screenings, ~290,000 yuan opening-day box office vs 10M+ yuan budget, Maoyan forecast ~390,000 yuan; Douyin AI short dramas 200B+ views in September 2026",
   "Grok Imagine / xAI first AI-generated Odyssey episode (7 minutes, Oct 23 2026, Wonder Studios + Dev Walker) vs Musk's promised full-length film; reception; Nolan's Odyssey $1.78B",
   "Apple Creator Studio November 2026 update (Oct 27 2026): MotionVFX built into Final Cut Pro, Logic Pro AI assistant beta, Stem Splitter drum separation, Pixelmator Pro Generate Fill, Keynote/Pages/Numbers assistants and MCP support, free for subscribers",
-  "Alphabet shareholder derivative lawsuit over Google AI music training (Lyria, MusicLM 280,000 hours, Oct 30 2026 filing, MBW Nov 2 2026): Pichai, Page, Brin + 10 others; $169.6B buybacks; BIPA voice claims; YouTube terms 'Affiliates' license argument"
+  "Alphabet shareholder derivative lawsuit over Google AI music training (Lyria, MusicLM 280,000 hours, Oct 30 2026 filing, MBW Nov 2 2026): Pichai, Page, Brin + 10 others; $169.6B buybacks; BIPA voice claims; YouTube terms 'Affiliates' license argument",
+  "Eminem publisher Eight Mile Style sues Suno for $41M+ (269 songs, Nov 6 2026) and Elvis Presley Enterprises sues Suno under the ELVIS Act"
  ]
 }
