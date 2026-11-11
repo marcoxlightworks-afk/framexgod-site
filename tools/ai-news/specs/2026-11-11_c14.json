@@ -1,0 +1,82 @@
+{
+ "date": "2026-11-11",
+ "slug": "c14",
+ "code": "FXG-N014",
+ "tag": "AI × MUSIC",
+ "source": "SRC: DECRYPT · NOV 11 2026",
+ "slides": [
+  {
+   "bg": "s1",
+   "head": "A new AI music model just\nknocked Suno off the top spot.",
+   "size": 42,
+   "lift": 60,
+   "focus": [
+    0.41,
+    0.426
+   ]
+  },
+  {
+   "bg": "s2",
+   "head": "1,160 versus 1,144.",
+   "body": "ACE Music v1 from ACE Studio debuted at number one on Artificial Analysis' blind vocal music leaderboard on November 11. It scored 1,160 Elo. Suno v6 scored 1,144.",
+   "lift": 120,
+   "focus": [
+    0.5,
+    0.45
+   ]
+  },
+  {
+   "bg": "s3",
+   "head": "Close race, not a rout.",
+   "body": "The 16-point lead sits inside the margin of error. In Decrypt's tests ACE sounded more natural in mainstream styles, while Suno handled niche genres like melodic death metal better.",
+   "lift": 120,
+   "focus": [
+    0.34,
+    0.437
+   ]
+  },
+  {
+   "bg": "s4",
+   "head": "From vocals to full songs.",
+   "body": "ACE Studio was founded in 2018 to turn MIDI notes and lyrics into sung vocals. ACE Music v1 writes complete songs from a text description, your own lyrics or a hummed melody.",
+   "lift": 120,
+   "focus": [
+    0.5,
+    0.45
+   ]
+  },
+  {
+   "bg": "s5",
+   "head": "Closed now, open later.",
+   "body": "The flagship model has no public API and runs only on ACE's site. Its sibling ACE-Step 1.5, built with StepFun, is open source, and ACE plans to open-source ACE Music v1 Flash in late 2026.",
+   "lift": 120,
+   "focus": [
+    0.5,
+    0.45
+   ]
+  },
+  {
+   "bg": "s6",
+   "tag": "FRAMEXGOD TAKE",
+   "head": "No model keeps the crown.",
+   "body": "A company that started in vocal synthesis now sits above the biggest name in AI music. Test new models on your own songs, and check the commercial rights before you release anything.",
+   "lift": 100,
+   "focus": [
+    0.5,
+    0.45
+   ]
+  },
+  {
+   "bg": "s7",
+   "head": "Follow @framexgod\nfor AI × music news.",
+   "body": "New stories every week.",
+   "swipe": "@FRAMEXGOD",
+   "lift": 50,
+   "focus": [
+    0.6,
+    0.43
+   ],
+   "negative": false
+  }
+ ]
+}
