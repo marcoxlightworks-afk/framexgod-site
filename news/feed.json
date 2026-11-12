@@ -142,6 +142,14 @@
    "via": "publish.py",
    "code": "FXG-N014",
    "media_id": "18005012604007441"
+  },
+  {
+   "date": "2026-11-12",
+   "slug": "c15",
+   "n": 7,
+   "topic": "Adobe MAX 2026 Sneaks (Nov 11 2026, Miami Beach): 10 research previews incl. Scene Sweep, Live Set, On Cue, Screen Test, Sound Bender, Deep Brush, Hands On, Sight Span, Rinse Repeat, Link Up; Deep Brush + Hands On live in Adobe Labs Playground; ~half of Sneaks ship",
+   "permalink": "https://www.instagram.com/p/DfqNVfblu_W/",
+   "posted_at": "2026-11-12T23:12:39+0000"
   }
  ],
  "covered_topics": [
@@ -158,6 +166,7 @@
   "Apple Creator Studio November 2026 update (Oct 27 2026): MotionVFX built into Final Cut Pro, Logic Pro AI assistant beta, Stem Splitter drum separation, Pixelmator Pro Generate Fill, Keynote/Pages/Numbers assistants and MCP support, free for subscribers",
   "Alphabet shareholder derivative lawsuit over Google AI music training (Lyria, MusicLM 280,000 hours, Oct 30 2026 filing, MBW Nov 2 2026): Pichai, Page, Brin + 10 others; $169.6B buybacks; BIPA voice claims; YouTube terms 'Affiliates' license argument",
   "Eminem publisher Eight Mile Style sues Suno for $41M+ (269 songs, Nov 6 2026) and Elvis Presley Enterprises sues Suno under the ELVIS Act",
-  "ACE Music v1 tops Artificial Analysis vocal music leaderboard over Suno v6 (1,160 vs 1,144 Elo, Nov 11 2026)"
+  "ACE Music v1 tops Artificial Analysis vocal music leaderboard over Suno v6 (1,160 vs 1,144 Elo, Nov 11 2026)",
+  "Adobe MAX 2026 Sneaks: ten AI research previews (Nov 11 2026); Deep Brush and Hands On in Adobe Labs Playground"
  ]
 }
