@@ -1,0 +1,82 @@
+{
+ "date": "2026-11-12",
+ "slug": "c15",
+ "code": "FXG-N015",
+ "tag": "AI × TECH",
+ "source": "SRC: REDSHARK NEWS · NOV 12 2026",
+ "slides": [
+  {
+   "bg": "s1",
+   "head": "Ten AI experiments from Adobe\ncould reach your edit next.",
+   "size": 42,
+   "lift": 60,
+   "focus": [
+    0.5,
+    0.45
+   ]
+  },
+  {
+   "bg": "s2",
+   "head": "Ten projects, one night.",
+   "body": "At Adobe MAX in Miami Beach on November 11, Adobe previewed ten research projects in its Sneaks session. They are research previews, not products, and no ship dates were given.",
+   "lift": 120,
+   "focus": [
+    0.62,
+    0.52
+   ]
+  },
+  {
+   "bg": "s3",
+   "head": "One edit, every angle.",
+   "body": "Scene Sweep tracks characters, locations and scenes across a sequence and applies one edit across cuts and camera angles. Live Set changes subject, setting or camera mid-scene.",
+   "lift": 120,
+   "focus": [
+    0.5,
+    0.45
+   ]
+  },
+  {
+   "bg": "s4",
+   "head": "Timing you can draw.",
+   "body": "On Cue sets when an action happens in generated video, from a line drawn by hand or timing taken from video or music. Sound Bender lifts a described sound out of a finished mix.",
+   "lift": 120,
+   "focus": [
+    0.5,
+    0.45
+   ]
+  },
+  {
+   "bg": "s5",
+   "head": "Two you can try today.",
+   "body": "Deep Brush and Hands On are live in the Adobe Labs Playground. Adobe says about half of the projects it shows each year end up in its final software.",
+   "lift": 120,
+   "focus": [
+    0.66,
+    0.5
+   ]
+  },
+  {
+   "bg": "s6",
+   "tag": "FRAMEXGOD TAKE",
+   "head": "Control is the new prompt.",
+   "body": "These tools trade typing for brushes, drags and timing marks. The software is moving toward how editors already work, so the craft of directing a shot matters more, not less.",
+   "lift": 100,
+   "focus": [
+    0.5,
+    0.45
+   ]
+  },
+  {
+   "bg": "s7",
+   "head": "Follow @framexgod\nfor AI × tech news.",
+   "body": "New stories every week.",
+   "swipe": "@FRAMEXGOD",
+   "lift": 50,
+   "focus": [
+    0.6,
+    0.43
+   ],
+   "negative": false
+  }
+ ]
+}
