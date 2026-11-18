@@ -1,0 +1,82 @@
+{
+  "date": "2026-11-18",
+  "slug": "c17",
+  "code": "FXG-N017",
+  "tag": "AI × MUSIC",
+  "source": "SRC: MUSIC BUSINESS WORLDWIDE · NOV 17 2026",
+  "slides": [
+    {
+      "bg": "s1",
+      "head": "Suno now makes video, on a model\nfrom a firm Hollywood is suing.",
+      "size": 42,
+      "lift": 60,
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "bg": "s2",
+      "head": "Suno launches Visuals.",
+      "body": "On November 17 Suno added Visuals on the web. It generates video clips of up to 15 seconds, lyric videos and album art for songs made on Suno.",
+      "lift": 120,
+      "focus": [
+        0.56,
+        0.41
+      ]
+    },
+    {
+      "bg": "s3",
+      "head": "Built on MiniMax H3.",
+      "body": "Suno's FAQ says Visuals runs on H3 Move, which is based on the H3 model from MiniMax, a Shanghai-based AI company listed in Hong Kong.",
+      "lift": 120,
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "bg": "s4",
+      "head": "Three studios are suing.",
+      "body": "Disney, Universal and Warner Bros. Discovery sued MiniMax in September 2025 over its Hailuo AI video tool. In May a judge refused to dismiss the case.",
+      "lift": 120,
+      "focus": [
+        0.287,
+        0.548
+      ]
+    },
+    {
+      "bg": "s5",
+      "head": "Filters and watermarks.",
+      "body": "Suno says new text and visual filters block attempts to depict specific artists, public figures or copyrighted works. Outputs are watermarked before they are shared outside Suno.",
+      "lift": 120,
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "bg": "s6",
+      "tag": "FRAMEXGOD TAKE",
+      "head": "Music apps now make video.",
+      "body": "A 15-second clip for a song is now a built-in feature. If you make visuals for artists, direction and craft are what you sell.",
+      "lift": 100,
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "bg": "s7",
+      "head": "Follow @framexgod\nfor AI × music news.",
+      "body": "New stories every week.",
+      "swipe": "@FRAMEXGOD",
+      "lift": 50,
+      "focus": [
+        0.6,
+        0.43
+      ],
+      "negative": false
+    }
+  ]
+}
