@@ -169,6 +169,17 @@
    "via": "publish.py",
    "code": "FXG-N017",
    "media_id": "18140145706651393"
+  },
+  {
+   "date": "2026-11-19",
+   "slug": "c18",
+   "n": 7,
+   "topic": "Google Genie 4 world model: Project Genie for Google AI Ultra subscribers (Nov 18 2026), Gemini API + Google AI Studio for developers (Nov 19 2026); 720p 24fps with native audio, keyboard control, live text steering, ~$0.10/sec streamed output, sessions up to 120 seconds, SynthID",
+   "permalink": "https://www.instagram.com/p/Df8OKngDwur/",
+   "posted_at": "2026-11-19T23:06:14+0000",
+   "via": "publish.py",
+   "code": "FXG-N018",
+   "media_id": "18134719756760355"
   }
  ],
  "covered_topics": [
@@ -188,6 +199,7 @@
   "ACE Music v1 tops Artificial Analysis vocal music leaderboard over Suno v6 (1,160 vs 1,144 Elo, Nov 11 2026)",
   "Adobe MAX 2026 Sneaks: ten AI research previews (Nov 11 2026); Deep Brush and Hands On in Adobe Labs Playground",
   "Avid ACE editors AI survey (Nov 13 2026): 77.5% use AI, only 7.5% want AI rough cuts",
-  "Suno Visuals AI video tool built on MiniMax H3 (Nov 17 2026); MiniMax sued by Disney, Universal and Warner Bros. Discovery"
+  "Suno Visuals AI video tool built on MiniMax H3 (Nov 17 2026); MiniMax sued by Disney, Universal and Warner Bros. Discovery",
+  "Google Genie 4 interactive world model opens in Project Genie (Nov 18 2026) and the Gemini API / AI Studio (Nov 19 2026): 720p 24fps, native audio, ~$0.10 per second, 120-second sessions"
  ]
 }
