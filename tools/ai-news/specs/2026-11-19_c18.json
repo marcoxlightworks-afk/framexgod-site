@@ -1,0 +1,82 @@
+{
+  "date": "2026-11-19",
+  "slug": "c18",
+  "code": "FXG-N018",
+  "tag": "AI × TECH",
+  "source": "SRC: GOOGLE · NOV 19 2026",
+  "slides": [
+    {
+      "bg": "s1",
+      "head": "Google now rents AI worlds you can\nwalk through, by the second.",
+      "size": 42,
+      "lift": 60,
+      "focus": [
+        0.5,
+        0.52
+      ]
+    },
+    {
+      "bg": "s2",
+      "head": "Genie 4 is out.",
+      "body": "On November 18 Google put Genie 4 in Project Genie for eligible Google AI Ultra subscribers. A day later it opened to developers in the Gemini API and Google AI Studio.",
+      "lift": 120,
+      "focus": [
+        0.55,
+        0.467
+      ]
+    },
+    {
+      "bg": "s3",
+      "head": "Worlds you can steer.",
+      "body": "A text prompt, a reference image, or both, becomes a world you move through with the keyboard. New prompts change weather, lighting or events mid-session.",
+      "lift": 120,
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "bg": "s4",
+      "head": "Sound is built in.",
+      "body": "Google says it is the first Genie model with real-time native audio: ambient sound and character dialogue that adapt to the scene.",
+      "lift": 120,
+      "focus": [
+        0.5,
+        0.64
+      ]
+    },
+    {
+      "bg": "s5",
+      "head": "About 10 cents a second.",
+      "body": "Google's docs list about $0.10 per second of streamed output. Sessions run up to 120 seconds at 720p and 24 fps.",
+      "lift": 120,
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "bg": "s6",
+      "tag": "FRAMEXGOD TAKE",
+      "head": "A sketchpad, not a set.",
+      "body": "Two minutes at 720p does not replace a shoot or a game engine. It is a quick way to walk through an idea before you build it.",
+      "lift": 100,
+      "focus": [
+        0.5,
+        0.36
+      ]
+    },
+    {
+      "bg": "s7",
+      "head": "Follow @framexgod\nfor AI × tech news.",
+      "body": "New stories every week.",
+      "swipe": "@FRAMEXGOD",
+      "lift": 50,
+      "focus": [
+        0.6,
+        0.43
+      ],
+      "negative": false
+    }
+  ]
+}
