@@ -180,6 +180,17 @@
    "via": "publish.py",
    "code": "FXG-N018",
    "media_id": "18134719756760355"
+  },
+  {
+   "date": "2026-11-22",
+   "slug": "c19",
+   "n": 7,
+   "topic": "Critics allege generative AI in David Fincher's The Further Mis-Adventures of Cliff Booth (Netflix; Tarantino script, Brad Pitt; IMAX Nov 25, Netflix Dec 23 2026): Patrick Tomasso 'blatant and egregious AI use', Next Best Picture 'nothing but an eyesore', Louis Peitzman notes 'generative supervisor' credit; Fincher to LA Times (Nov 19) 'Well, it exists. Should we not use it?'; unconfirmed, Netflix no comment (TheWrap, Nov 20 2026)",
+   "permalink": "https://www.instagram.com/p/DgEQNBDlj6V/",
+   "posted_at": "2026-11-23T01:57:57+0000",
+   "via": "publish.py",
+   "code": "FXG-N019",
+   "media_id": "18109017932346454"
   }
  ],
  "covered_topics": [
@@ -200,6 +211,7 @@
   "Adobe MAX 2026 Sneaks: ten AI research previews (Nov 11 2026); Deep Brush and Hands On in Adobe Labs Playground",
   "Avid ACE editors AI survey (Nov 13 2026): 77.5% use AI, only 7.5% want AI rough cuts",
   "Suno Visuals AI video tool built on MiniMax H3 (Nov 17 2026); MiniMax sued by Disney, Universal and Warner Bros. Discovery",
-  "Google Genie 4 interactive world model opens in Project Genie (Nov 18 2026) and the Gemini API / AI Studio (Nov 19 2026): 720p 24fps, native audio, ~$0.10 per second, 120-second sessions"
+  "Google Genie 4 interactive world model opens in Project Genie (Nov 18 2026) and the Gemini API / AI Studio (Nov 19 2026): 720p 24fps, native audio, ~$0.10 per second, 120-second sessions",
+  "Generative AI allegations against David Fincher's The Further Mis-Adventures of Cliff Booth (Netflix): critics' complaints, 'generative supervisor' credit, Fincher's LA Times comments (Nov 19-20 2026)"
  ]
 }
