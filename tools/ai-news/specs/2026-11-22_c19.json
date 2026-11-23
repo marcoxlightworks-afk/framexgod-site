@@ -1,0 +1,82 @@
+{
+  "date": "2026-11-22",
+  "slug": "c19",
+  "code": "FXG-N019",
+  "tag": "AI × FILM",
+  "source": "SRC: THEWRAP · NOV 20 2026",
+  "slides": [
+    {
+      "bg": "s1",
+      "head": "Critics say David Fincher's new film\nuses generative AI. It's unconfirmed.",
+      "size": 42,
+      "lift": 60,
+      "focus": [
+        0.38,
+        0.41
+      ]
+    },
+    {
+      "bg": "s2",
+      "head": "A sequel with big names.",
+      "body": "The Further Mis-Adventures of Cliff Booth is directed by David Fincher from a Quentin Tarantino script, with Brad Pitt back as Cliff Booth. It opens in IMAX November 25 and on Netflix December 23.",
+      "lift": 120,
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "bg": "s3",
+      "head": "The first complaints.",
+      "body": "On November 19, indie filmmaker Patrick Tomasso posted that the film has \"blatant and egregious AI use.\" A Next Best Picture review called it \"nothing but an eyesore.\"",
+      "lift": 120,
+      "focus": [
+        0.43,
+        0.33
+      ]
+    },
+    {
+      "bg": "s4",
+      "head": "A credit raised questions.",
+      "body": "Entertainment writer Louis Peitzman noted a \"generative supervisor\" listed in the credits. Neither review said which scenes may have used AI.",
+      "lift": 120,
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "bg": "s5",
+      "head": "Fincher has not confirmed it.",
+      "body": "Asked about the technology by the LA Times, he said: \"Well, it exists. Should we not use it?\" Netflix did not immediately respond to TheWrap's request for comment.",
+      "lift": 120,
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "bg": "s6",
+      "tag": "FRAMEXGOD TAKE",
+      "head": "Say how you made it.",
+      "body": "This argument started with a credit and a few frames, not a statement. If you use AI in your work, say where, before someone else says it for you.",
+      "lift": 100,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "bg": "s7",
+      "head": "Follow @framexgod\nfor AI × film news.",
+      "body": "New stories every week.",
+      "swipe": "@FRAMEXGOD",
+      "lift": 50,
+      "focus": [
+        0.6,
+        0.43
+      ],
+      "negative": false
+    }
+  ]
+}
