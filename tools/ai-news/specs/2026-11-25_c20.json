@@ -1,0 +1,82 @@
+{
+  "date": "2026-11-25",
+  "slug": "c20",
+  "code": "FXG-N020",
+  "tag": "AI × MUSIC",
+  "source": "SRC: MUSIC BUSINESS WORLDWIDE · NOV 25 2026",
+  "slides": [
+    {
+      "bg": "s1",
+      "head": "The Chicks just joined a lawsuit\nagainst AI music maker Suno.",
+      "size": 42,
+      "lift": 60,
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "bg": "s2",
+      "head": "Sixteen new plaintiffs.",
+      "body": "On November 24, an amended complaint in Boston federal court added 16 names to the proposed class action Jason Isbell and three others filed on August 31. Heirs of Willie Colón and Sam Moore signed on too.",
+      "lift": 120,
+      "focus": [
+        0.37,
+        0.46
+      ]
+    },
+    {
+      "bg": "s3",
+      "head": "It's not a copyright case.",
+      "body": "The suit has no copyright claims. It says Suno built musicians' identities into its models and answers their names with songs that evoke them, without consent. It cites right-of-publicity laws in 14 states and Puerto Rico.",
+      "lift": 120,
+      "focus": [
+        0.485,
+        0.39
+      ]
+    },
+    {
+      "bg": "s4",
+      "head": "The test: type a name.",
+      "body": "The filing says Suno's newer v6 models still accept artist names. It says the prompt \"Emily Strayer\" produced songs with a \"rolling banjo,\" and \"Martie Maguire\" a \"Texas country\" track.",
+      "lift": 120,
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "bg": "s5",
+      "head": "Suno wants it dismissed.",
+      "body": "Suno has asked the court to throw the case out. It argues that artists' names are often used as shorthand for the genre they perform in, and that its interface does not suggest using them.",
+      "lift": 120,
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "bg": "s6",
+      "tag": "FRAMEXGOD TAKE",
+      "head": "Your name is a style prompt.",
+      "body": "Copyright covers the recording. This case asks who controls the sound people expect when they type your name. If your work has a recognizable style, watch it.",
+      "lift": 100,
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "bg": "s7",
+      "head": "Follow @framexgod\nfor AI × music news.",
+      "body": "New stories every week.",
+      "swipe": "@FRAMEXGOD",
+      "lift": 50,
+      "focus": [
+        0.6,
+        0.43
+      ],
+      "negative": false
+    }
+  ]
+}
