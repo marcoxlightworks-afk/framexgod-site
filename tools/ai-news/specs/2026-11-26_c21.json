@@ -1,0 +1,82 @@
+{
+  "date": "2026-11-26",
+  "slug": "c21",
+  "code": "FXG-N021",
+  "tag": "AI × MUSIC",
+  "source": "SRC: MUSIC BUSINESS WORLDWIDE · NOV 24 2026",
+  "slides": [
+    {
+      "bg": "s1",
+      "head": "Tidal is banning fully AI-generated\nmusic from its platform.",
+      "size": 42,
+      "lift": 60,
+      "focus": [
+        0.5,
+        0.42
+      ]
+    },
+    {
+      "bg": "s2",
+      "head": "The ban starts December 9.",
+      "body": "On November 24, Tidal said on X it will reject and remove wholly AI-generated tracks, and bar distributors from delivering them. Tracks assisted by AI tools are still allowed.",
+      "lift": 120,
+      "focus": [
+        0.5,
+        0.42
+      ]
+    },
+    {
+      "bg": "s3",
+      "head": "43% of new deliveries.",
+      "body": "Tidal says 43% of all tracks distributed to it over the past 90 days were detected as wholly AI-generated. On November 6, it was over 60% of that day's deliveries.",
+      "lift": 120,
+      "focus": [
+        0.5,
+        0.42
+      ]
+    },
+    {
+      "bg": "s4",
+      "head": "27 million tracks, few listeners.",
+      "body": "About 27 million tracks on Tidal are tagged as AI, 6.3% of its catalog. Tidal says 96% of them received zero streams in the last three months.",
+      "lift": 120,
+      "focus": [
+        0.36,
+        0.5
+      ]
+    },
+    {
+      "bg": "s5",
+      "head": "Most of it traces to Suno.",
+      "body": "Tidal says 94% of tracks carrying its AI badge are attributed to Suno. It has also taken down more than 65,000 AI tracks over suspected impersonation of artist names.",
+      "lift": 120,
+      "focus": [
+        0.5,
+        0.42
+      ]
+    },
+    {
+      "bg": "s6",
+      "tag": "FRAMEXGOD TAKE",
+      "head": "The tool is fine. The output isn't.",
+      "body": "If AI helps you make the track, you stay. If AI is the whole track, it gets rejected. Watch if other platforms follow.",
+      "lift": 100,
+      "focus": [
+        0.5,
+        0.42
+      ]
+    },
+    {
+      "bg": "s7",
+      "head": "Follow @framexgod\nfor AI × music news.",
+      "body": "New stories every week.",
+      "swipe": "@FRAMEXGOD",
+      "lift": 50,
+      "focus": [
+        0.6,
+        0.43
+      ],
+      "negative": false
+    }
+  ]
+}
