@@ -202,6 +202,17 @@
    "via": "publish.py",
    "code": "FXG-N020",
    "media_id": "18122767991066582"
+  },
+  {
+   "date": "2026-11-26",
+   "slug": "c21",
+   "n": 7,
+   "topic": "Tidal bans wholly AI-generated music from Dec 9 (announced on X Nov 24 2026; MBW Nov 24 2026): rejects and removes tracks, bars distributors; AI-assisted still allowed; 43% of deliveries over past 90 days wholly AI, over 60% on Nov 6; ~27M AI-tagged tracks = 6.3% of catalog, 96% zero streams in three months; 94% of AI-badged tracks attributed to Suno; 65,000+ impersonation takedowns; detection by Ircam Amplify",
+   "permalink": "https://www.instagram.com/p/DgOPmvclhDz/",
+   "posted_at": "2026-11-26T23:05:08+0000",
+   "via": "publish.py",
+   "code": "FXG-N021",
+   "media_id": "18165248665496587"
   }
  ],
  "covered_topics": [
@@ -224,6 +235,7 @@
   "Suno Visuals AI video tool built on MiniMax H3 (Nov 17 2026); MiniMax sued by Disney, Universal and Warner Bros. Discovery",
   "Google Genie 4 interactive world model opens in Project Genie (Nov 18 2026) and the Gemini API / AI Studio (Nov 19 2026): 720p 24fps, native audio, ~$0.10 per second, 120-second sessions",
   "Generative AI allegations against David Fincher's The Further Mis-Adventures of Cliff Booth (Netflix): critics' complaints, 'generative supervisor' credit, Fincher's LA Times comments (Nov 19-20 2026)",
-  "The Chicks, heirs of Willie Colón and Sam Moore and 13 others join Jason Isbell's identity (right-of-publicity) class action against Suno; amended complaint Nov 24 2026 targets v6"
+  "The Chicks, heirs of Willie Colón and Sam Moore and 13 others join Jason Isbell's identity (right-of-publicity) class action against Suno; amended complaint Nov 24 2026 targets v6",
+  "Tidal bans wholly AI-generated music from December 9 (announced Nov 24 2026): 43% of 90-day deliveries, 27 million AI-tagged tracks, 96% zero streams, 94% attributed to Suno, Ircam Amplify detection"
  ]
 }
