@@ -1,0 +1,82 @@
+{
+  "date": "2026-11-27",
+  "slug": "c22",
+  "code": "FXG-N022",
+  "tag": "AI × MUSIC",
+  "source": "SRC: MUSIC BUSINESS WORLDWIDE · NOV 26 2026",
+  "slides": [
+    {
+      "bg": "s1",
+      "head": "ElevenLabs is in early talks to raise\nat a $33 billion valuation.",
+      "size": 42,
+      "lift": 60,
+      "focus": [
+        0.5,
+        0.31
+      ]
+    },
+    {
+      "bg": "s2",
+      "head": "Bloomberg reported the talks.",
+      "body": "On November 25, Bloomberg reported the talks, citing people familiar with the matter. The round would start in the first quarter of 2027. ElevenLabs declined to comment.",
+      "lift": 120,
+      "focus": [
+        0.5,
+        0.42
+      ]
+    },
+    {
+      "bg": "s3",
+      "head": "Up 50% since September.",
+      "body": "$33 billion is 50% above the $22 billion valuation set by a $300 million employee tender offer in September. It is 10 times the $3.3 billion of January 2025.",
+      "lift": 120,
+      "focus": [
+        0.6,
+        0.41
+      ]
+    },
+    {
+      "bg": "s4",
+      "head": "Six times Suno.",
+      "body": "AI music rival Suno reached a $5.4 billion valuation in June. ElevenLabs competes with it through ElevenMusic, launched in August 2025.",
+      "lift": 120,
+      "focus": [
+        0.335,
+        0.555
+      ]
+    },
+    {
+      "bg": "s5",
+      "head": "$700 million a year.",
+      "body": "One person told Bloomberg that ElevenLabs' annual recurring revenue has reached $700 million, up from $600 million in September.",
+      "lift": 120,
+      "focus": [
+        0.5,
+        0.42
+      ]
+    },
+    {
+      "bg": "s6",
+      "tag": "FRAMEXGOD TAKE",
+      "head": "AI audio is now a core tool.",
+      "body": "Investors are pricing AI voice and music as production tools, not experiments. Learn them now, and watch which ones license the music they train on.",
+      "lift": 100,
+      "focus": [
+        0.5,
+        0.42
+      ]
+    },
+    {
+      "bg": "s7",
+      "head": "Follow @framexgod\nfor AI × music news.",
+      "body": "New stories every week.",
+      "swipe": "@FRAMEXGOD",
+      "lift": 50,
+      "focus": [
+        0.6,
+        0.43
+      ],
+      "negative": false
+    }
+  ]
+}
